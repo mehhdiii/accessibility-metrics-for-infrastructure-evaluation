@@ -1,0 +1,64 @@
+<sdf version="1.7">
+  <world name="default">
+    <!-- Ground and sun -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Ramp -->
+    <model name="ramp">
+      <!-- x y z roll pitch yaw -->
+      <pose>0.985 0 0.159 0 0.1745 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>2.0 1.0 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>2.0 1.0 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.7 0.4 0.2 1</ambient>
+            <diffuse>0.7 0.4 0.2 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <!-- Alleyway connected to ramp -->
+<model name="alleyway">
+  <pose>-2.97 0 0.531 0 0 0</pose>
+  <static>true</static>
+  <link name="link">
+    <collision name="collision">
+      <geometry>
+        <box>
+          <size>2.0 1.0 0.05</size>
+        </box>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <geometry>
+        <box>
+          <size>2.0 1.0 0.05</size>
+        </box>
+      </geometry>
+      <material>
+        <ambient>0.5 0.5 0.5 1</ambient>
+        <diffuse>0.5 0.5 0.5 1</diffuse>
+      </material>
+    </visual>
+  </link>
+</model>
+
+  </world>
+</sdf>
