@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="ramp_world">
+
+    <!-- Ground plane from Fuel -->
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/Ground%20Plane</uri>
+    </include>
+
+    <!-- Sun from Fuel -->
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/Sun</uri>
+    </include>
+
+    <!-- Your platform model -->
+    <model name="platform">
+      <static>true</static>
+      <pose>-7 6 1 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>file:///data/custom-sdfs/platform_2_2.stl</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name="collision">
+          <geometry>
+            <mesh>
+              <uri>file:///data/custom-sdfs/platform_2_2.stl</uri>
+            </mesh>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+
+        <!-- Your ramp model -->
+    <model name="ramp">
+      <static>true</static>
+      <pose>0 6 0 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>file:///data/custom-sdfs/ramp_10_2_1.stl</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name="collision">
+          <geometry>
+            <mesh>
+              <uri>file:///data/custom-sdfs/ramp_10_2_1.stl</uri>
+            </mesh>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+
+  </world>
+</sdf>

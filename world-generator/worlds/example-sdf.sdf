@@ -1,0 +1,55 @@
+<sdf version="1.7">
+  <world name="default">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    
+        <model name="ramp">
+            <static>true</static>
+            <pose>0 0.0 0 0 0 0</pose>
+            <link name="link">
+        <visual name="visual">
+            <geometry>
+            <mesh>
+                <uri>file:///data/world-generator/assets/ramp_10_2_1.stl</uri>
+            </mesh>
+            </geometry>
+        </visual>
+        <collision name="collision">
+            <geometry>
+            <mesh>
+                <uri>file:///data/world-generator/assets/ramp_10_2_1.stl</uri>
+            </mesh>
+            </geometry>
+        </collision>
+            </link>
+        </model>
+        
+        <model name="platform">
+            <static>true</static>
+            <pose>-7.0 0.0 1.0 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>file:///data/world-generator/assets/platform_4_4.stl</uri>
+                    </mesh>
+                </geometry>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                    <mesh>
+                    <uri>file:///data/world-generator/assets/platform_4_4.stl</uri>
+                    </mesh>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+        
+
+  </world>
+</sdf>
