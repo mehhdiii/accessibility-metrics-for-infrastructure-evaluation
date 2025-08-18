@@ -15,7 +15,7 @@ class Ramp:
         """
         self.name = name
         self.id = str(uuid.uuid4())  # Generate unique UUID
-        self.y_offset = os.getenv("Y_OFFSET", 2.0)
+        self.y_offset: float = float(os.getenv("Y_OFFSET", 2.0))
 
         self.length = length
         self.width = width

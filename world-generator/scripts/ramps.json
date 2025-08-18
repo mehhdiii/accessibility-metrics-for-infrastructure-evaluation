@@ -4,15 +4,17 @@
             "name": "Valid Case 1",
             "description": "Case 1: Minimum width single wheelchair ramp, short length, gentle slope",
             "root": {
+                "name": "ramp_1",
                 "type": "ramp",
                 "length": 5.0,
                 "width": 0.9,
                 "height": 0.4,
                 "kerb_height": 0.1,
                 "child": {
+                    "name": "platform_1",
                     "type": "platform",
                     "width": 0.9,
-                    "length": 1.5
+                    "length": 2.0
                 }
             }
 
@@ -21,12 +23,14 @@
             "name": "Valid Case 2",
             "description": "Case 2: Two people width ramp, max length with platform at 10m",
             "root": {
+                "name": "ramp_1",
                 "type": "ramp",
                 "length": 12.0,
                 "width": 1.5,
                 "height": 1.0,
                 "kerb_height": 0.1,
                 "child": {
+                    "name":"platform_1",
                     "type": "platform",
                     "width": 1.5,
                     "length": 1.5

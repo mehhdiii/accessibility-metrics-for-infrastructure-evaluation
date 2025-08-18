@@ -68,23 +68,23 @@ class SDFGenerator:
         """
         return sdf_world
     
-    def main(self, ramps, model_type):
+    def generate(self, ramps, model_type):
         for index, specs in enumerate(ramps):
             print(specs.get("name"))
             root = specs.get("root")
             self.parseTree(root, index)
+        return self.sdf_string
 
 
 rampSpecsReader = RampSpecsReader()
 # Create SDFGenerator instance
 sdf_generator = SDFGenerator()
 
-model_string = ''
-model_string = sdf_generator.main(rampSpecsReader.validRamps, "valid")
+model_string = sdf_generator.generate(rampSpecsReader.validRamps, "valid")
 # model_string = sdf_generator.write_ramps_with_platform(model_string, invalid_ramps, "invalid")
 
 # Generate final SDF world
-sdf_world = sdf_generator.place_in_world(sdf_generator.sdf_string)
-# print(sdf_world)
+sdf_world = sdf_generator.place_in_world(model_string)
+print(sdf_world)
 from pprint import pprint
-pprint(sdf_generator.required_assets)
+# pprint(sdf_generator.required_assets)

@@ -13,8 +13,18 @@ class Platform:
         self.assets_url = os.getenv("ASSETS_BASE_URL", None)
         if not self.assets_url:
             raise ValueError("ASSETS_URL environment variable is not set.")
-        self.asset_name = f"platform_{self.length}_{self.width}.stl"
+        self.asset_name = self._buildAssetName()
 
+    def _buildAssetName(self):
+        l = self.length
+        if (self.length == int(self.length)):
+            l = int(self.length)
+        w = self.width
+        if (self.width == int(self.width)):
+            w = int(self.width)
+        return f"platform_{l}_{w}.stl"
+    
+    
     def init(self, ramp: Ramp):
         self.parentRamp = ramp
         self.position = self._calculate_position()
@@ -29,7 +39,7 @@ class Platform:
             raise ValueError("Parent ramp is not set.")
         
         ramp_position = self.parentRamp.position
-        if (ramp_position is None):
+        if (ramp_position is None or len(ramp_position) < 3):
             raise ValueError("Parent ramp position is not set.")
 
         x = self.length/2 + self.parentRamp.length/2

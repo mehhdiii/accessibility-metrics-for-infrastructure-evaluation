@@ -4,3 +4,5 @@ log
 .python3.*
 mehdi-github-key.pub
 mehdi-github-key
+
+__pycache__
