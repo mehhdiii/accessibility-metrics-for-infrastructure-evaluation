@@ -1,5 +1,31 @@
 {
     "valid_ramps": [
+                {
+            "name": "test test",
+            "description": "This is just to test if everything works correctly",
+            "root": {
+                "name": "ramp_test",
+                "type": "ramp",
+                "length": 10.0,
+                "width": 2.0,
+                "height": 1.0,
+                "kerb_height": 0.1,
+                "child": {
+                    "name": "platform_1",
+                    "type": "platform",
+                    "width": 4.0,
+                    "length": 4.0,
+                    "child": {
+                        "name": "ramp_test",
+                        "type": "ramp",
+                        "length": 10.0,
+                        "width": 2.0,
+                        "height": 1.0,
+                        "kerb_height": 0.1
+                    }
+                }
+            }
+        },
         {
             "name": "Valid Case 1",
             "description": "Case 1: Minimum width single wheelchair ramp, short length, gentle slope",
@@ -13,7 +39,7 @@
                 "child": {
                     "name": "platform_1",
                     "type": "platform",
-                    "width": 0.9,
+                    "width": 1.5,
                     "length": 2.0
                 }
             }
@@ -25,7 +51,7 @@
             "root": {
                 "name": "ramp_1",
                 "type": "ramp",
-                "length": 12.0,
+                "length": 10.0,
                 "width": 1.5,
                 "height": 1.0,
                 "kerb_height": 0.1,
@@ -33,92 +59,189 @@
                     "name":"platform_1",
                     "type": "platform",
                     "width": 1.5,
-                    "length": 1.5
+                    "length": 1.5,
+                    "child": {
+                        "name": "ramp_2",
+                        "type": "ramp",
+                        "length": 2.0,
+                        "width": 1.5,
+                        "height": 0.2,
+                        "kerb_height": 0.1,
+                        "child": {
+                            "name":"platform_2",
+                            "type": "platform",
+                            "width": 1.5,
+                            "length": 1.5
+                        }
+                    }
                 }
             }
         },
         {
             "name": "Valid Case 3",
             "description": "Case 3: Platform size using alternative dimensions transverse 1.4m, longitudinal 1.7m",
-            "length": 10.0,
-            "width": 1.5,
-            "height": 0.8,
-            "kerb_height": 0.1,
-            "platforms": [
-                {
-                    "position": 10.0,
+            "root": {
+                "name": "ramp_1",
+                "type": "ramp",
+                "length": 10.0,
+                "width": 1.5,
+                "height": 0.8,
+                "kerb_height": 0.1,
+                "child": {
+                    "name": "platform_1",
+                    "type": "platform",
                     "width": 1.4,
                     "length": 1.7
                 }
-            ]
+            }
         },
         {
             "name": "Valid Case 4 - Platform at 10m, narrow ramp",
             "description": "Case 4: Ramp with intermediate platform exactly at 10m, width 0.9m (wheelchair), gentle slope",
-            "length": 15.0,
-            "width": 0.9,
-            "height": 1.0,
-            "kerb_height": 0.1,
-            "platforms": [
-                {
-                    "position": 10.0,
+            "root": {
+                "name": "ramp_1",
+                "type": "ramp",
+                "length": 10.0,
+                "width": 0.9,
+                "height": 0.66,
+                "kerb_height": 0.1,
+                "child": {
+                    "name": "platform_1",
+                    "type": "platform",
                     "width": 1.5,
-                    "length": 1.5
+                    "length": 1.5,
+                    "child": {
+                        "name": "ramp_2",
+                        "type": "ramp",
+                        "length": 5.0,
+                        "width": 0.9,
+                        "height": 0.33,
+                        "kerb_height": 0.1,
+                        "child": {
+                            "name": "platform_2",
+                            "type": "platform",
+                            "width": 1.5,
+                            "length": 1.5
+                        }
+                    }
                 }
-            ]
+            }
         },
         {
             "name": "Valid Case 5 - Multiple platforms",
             "description": "Case 5: Ramp with multiple platforms every 10m for longer ramp, width 1.5m",
-            "length": 24.0,
-            "width": 1.5,
-            "height": 1.9,
-            "kerb_height": 0.1,
-            "platforms": [
-                {
-                    "position": 10.0,
+            "root": {
+                "name": "ramp_1",
+                "type": "ramp",
+                "length": 24.0,
+                "width": 1.5,
+                "height": 0.79,
+                "kerb_height": 0.1,
+                "child": {
+                    "name": "platform_1",
+                    "type": "platform",
                     "width": 1.5,
-                    "length": 1.5
-                },
-                {
-                    "position": 20.0,
-                    "width": 1.5,
-                    "length": 1.5
+                    "length": 1.5,
+                    "child": {
+                        "name": "ramp_2",
+                        "type": "ramp",
+                        "length": 10.0,
+                        "width": 1.5,
+                        "height": 0.79,
+                        "kerb_height": 0.1,
+                        "child": {
+                            "name": "platform_2",
+                            "type": "platform",
+                            "width": 1.5,
+                            "length": 1.5,
+                            "child": {
+                                "name": "ramp_3",
+                                "type": "ramp",
+                                "length": 4.0,
+                                "width": 1.5,
+                                "height": 0.32,
+                                "kerb_height": 0.1,
+                                "child": {
+                                    "name": "platform_3",
+                                    "type": "platform",
+                                    "width": 1.5,
+                                    "length": 1.5
+                                }
+                            }
+                        }
+
+                    }
                 }
-            ]
+            }
         },
         {
             "name": "Valid Case 6 - Short ramp no platform needed",
             "description": "Case 6: Ramp with slope slightly less than 8%, no platforms because length < 10m",
-            "length": 7.5,
-            "width": 1.2,
-            "height": 0.6,
-            "kerb_height": 0.1,
-            "platforms": []
+            "root": {
+                "name": "ramp_1",
+                "type": "ramp",
+                "length": 7.5,
+                "width": 1.2,
+                "height": 0.6,
+                "kerb_height": 0.1,
+                "child": {
+                    "name": "platform_1",
+                    "type": "platform",
+                    "width": 1.5,
+                    "length": 1.5
+                }
+            }
         },
         {
             "name": "Valid Case 7 - Alternate platform size and width",
             "description": "Case 7: Ramp with alternate platform size transverse 1.4m, longitudinal 1.7m, width 1.0m",
-            "length": 11.0,
-            "width": 1.0,
-            "height": 0.7,
-            "kerb_height": 0.1,
-            "platforms": [
-                {
-                    "position": 10.0,
+            "root": {
+                "name": "ramp_1",
+                "type": "ramp",
+                "length": 10.0,
+                "width": 1.0,
+                "height": 0.64,
+                "kerb_height": 0.1,
+                "child": {
+                    "name": "platform_1",
+                    "type": "platform",
                     "width": 1.4,
-                    "length": 1.7
+                    "length": 1.7,
+                    "child": {
+                        "name": "ramp_2",
+                        "type": "ramp",
+                        "length": 1.0,
+                        "width": 1.0,
+                        "height": 0.064,
+                        "kerb_height": 0.1,
+                        "child": {
+                            "name": "platform_2",
+                            "type": "platform",
+                            "width": 1.4,
+                            "length": 1.7
+                        }
+                    }
                 }
-            ]
+            }
         },
         {
             "name": "Valid Case 8 - Minimal kerb height",
             "description": "Case 8: Minimal kerb height exactly at 10 cm with wheelchair width ramp and slope 8%",
-            "length": 8.0,
-            "width": 0.9,
-            "height": 0.64,
-            "kerb_height": 0.10,
-            "platforms": []
+            "root": {
+                "name": "ramp_1",
+                "type": "ramp",
+                "length": 8.0,
+                "width": 0.9,
+                "height": 0.64,
+                "kerb_height": 0.10,
+                "child": {
+                    "name": "platform_1",
+                    "type": "platform",
+                    "width": 1.5,
+                    "length": 1.5
+                }
+            }
+
         }
     ],
     "invalid_ramps": []

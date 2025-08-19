@@ -1,8 +1,8 @@
 import os
 import uuid
 from Ramp import Ramp
-
-class Platform:
+from interfaces.IPlatform import AbstractPlatform
+class Platform(AbstractPlatform):
     def __init__(self, name: str, length: float, width: float):
         self.name = name
         self.id = str(uuid.uuid4())
@@ -33,6 +33,13 @@ class Platform:
     def dimensions(self):
         """Return the dimensions of the platform as a tuple (length, width)."""
         return (self.length, self.width)
+    @property
+    def pose(self):
+        if not self.position:
+            raise ValueError("Platform position is not set.")
+        if (len(self.position) < 6):
+            raise ValueError("Platform position must have at least 6 elements.")
+        return self.position[0], self.position[1], self.position[2], self.position[3], self.position[4], self.position[5]
 
     def _calculate_position(self):
         if not self.parentRamp:

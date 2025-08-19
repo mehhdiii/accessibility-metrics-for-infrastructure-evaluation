@@ -1,7 +1,7 @@
 import os
 import uuid
-
-class Ramp:
+from interfaces.IPlatform import AbstractPlatform
+class Ramp():
     def __init__(self, name: str, length: float, width: float, height: float, kerb_height: float):
         """
         Initialize a Ramp object.
@@ -21,6 +21,8 @@ class Ramp:
         self.width = width
         self.height = height
         self.kerb_height = kerb_height
+        self.parentPlatform: AbstractPlatform | None = None
+
         self.position: list[float] | None = None
         self.assets_url = os.getenv("ASSETS_BASE_URL", None)
         if not self.assets_url:
@@ -44,9 +46,16 @@ class Ramp:
         self.position = self._calculate_position()
 
     def _calculate_position(self):
-        x = 0
         y = self.index * self.y_offset
+        x = 0
         z = 0
+        if (self.parentPlatform):
+            px, py, pz, _, _, _ = self.parentPlatform.pose
+            x = self.length / 2 + self.parentPlatform.length / 2 + abs(px)
+            #reverse x:
+            x = -x
+            z = pz
+
         return [x, y, z, 0, 0, 0]
 
     @property

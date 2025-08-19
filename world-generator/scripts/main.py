@@ -24,6 +24,7 @@ class SDFGenerator:
         # Implement parsing logic here
         child = root
         ramp = None
+        platform = None
         while (True):
             if child is None:
                 break
@@ -32,6 +33,9 @@ class SDFGenerator:
             if child.get("type") == ElementType.RAMP.value:
                 # Process ramp
                 ramp = RampMapper.rampMapper(child)
+                if (platform):
+                    # print("Setting parent platform for ramp")
+                    ramp.parentPlatform = platform
                 ramp.init(index)
                 self.required_assets.add(ramp.asset_name)
                 self.sdf_string += ramp.render()
@@ -70,9 +74,9 @@ class SDFGenerator:
     
     def generate(self, ramps, model_type):
         for index, specs in enumerate(ramps):
-            print(specs.get("name"))
             root = specs.get("root")
             self.parseTree(root, index)
+            print(f"Parsed {model_type} ramp: {specs.get('name')} at index {index}")
         return self.sdf_string
 
 
@@ -85,6 +89,6 @@ model_string = sdf_generator.generate(rampSpecsReader.validRamps, "valid")
 
 # Generate final SDF world
 sdf_world = sdf_generator.place_in_world(model_string)
-print(sdf_world)
+# print(sdf_world)
 from pprint import pprint
-# pprint(sdf_generator.required_assets)
+pprint(sdf_generator.required_assets)
