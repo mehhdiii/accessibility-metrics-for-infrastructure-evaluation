@@ -1,49 +1,976 @@
 <sdf version="1.7">
-  <world name="default">
-    <include>
-      <uri>model://ground_plane</uri>
-    </include>
-    <include>
-      <uri>model://sun</uri>
-    </include>
+        <world name="default">
+            <!-- Ground plane from Fuel -->
+            <include>
+            <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/Ground%20Plane</uri>
+            </include>
 
-    
-        <model name="ramp">
+                <!-- Sun from Fuel -->
+            <include>
+            <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/Sun</uri>
+            </include>
+
+            
+        <model name="ramp_ramp_test_f1306c59-5b0c-4164-8119-a9509b84de74">
             <static>true</static>
-            <pose>0 0.0 0 0 0 0</pose>
+            <pose>0 4.0 0 0 0 0</pose>
             <link name="link">
         <visual name="visual">
             <geometry>
             <mesh>
-                <uri>file:///data/world-generator/assets/ramp_10_2_1.stl</uri>
+                <uri>model://data/world-generator/assets/ramp_10_2_1.stl</uri>
             </mesh>
             </geometry>
+            <material>
+                <ambient>0.6 0.4 0.2 1</ambient>
+                <diffuse>0.6 0.4 0.2 1</diffuse>
+
+            </material>
         </visual>
         <collision name="collision">
             <geometry>
             <mesh>
-                <uri>file:///data/world-generator/assets/ramp_10_2_1.stl</uri>
+                <uri>model://data/world-generator/assets/ramp_10_2_1.stl</uri>
             </mesh>
             </geometry>
         </collision>
             </link>
         </model>
         
-        <model name="platform">
+        <model name="platform_platform_1_0142910c-fecf-4cc0-9ffe-6de3750da404">
             <static>true</static>
-            <pose>-7.0 0.0 1.0 0 0 0</pose>
+            <pose>7.0 4.0 1.0 0 0 0</pose>
             <link name="link">
                 <visual name="visual">
                 <geometry>
                     <mesh>
-                    <uri>file:///data/world-generator/assets/platform_4_4.stl</uri>
+                    <uri>model://data/world-generator/assets/platform_4_4.stl</uri>
                     </mesh>
                 </geometry>
                 </visual>
                 <collision name="collision">
                 <geometry>
                     <mesh>
-                    <uri>file:///data/world-generator/assets/platform_4_4.stl</uri>
+                    <uri>model://data/world-generator/assets/platform_4_4.stl</uri>
+                    </mesh>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+        
+        <model name="ramp_ramp_test_cef6d558-77e4-47c2-ba26-897c2a2dafee">
+            <static>true</static>
+            <pose>14.0 4.0 1.0 0 0 0</pose>
+            <link name="link">
+        <visual name="visual">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_10_2_1.stl</uri>
+            </mesh>
+            </geometry>
+            <material>
+                <ambient>0.6 0.4 0.2 1</ambient>
+                <diffuse>0.6 0.4 0.2 1</diffuse>
+
+            </material>
+        </visual>
+        <collision name="collision">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_10_2_1.stl</uri>
+            </mesh>
+            </geometry>
+        </collision>
+            </link>
+        </model>
+        
+        <model name="ramp_ramp_1_b7cbd7d3-b0bd-495c-8538-c55a634b728f">
+            <static>true</static>
+            <pose>0 8.0 0 0 0 0</pose>
+            <link name="link">
+        <visual name="visual">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_5_0.9_0.4.stl</uri>
+            </mesh>
+            </geometry>
+            <material>
+                <ambient>0.6 0.4 0.2 1</ambient>
+                <diffuse>0.6 0.4 0.2 1</diffuse>
+
+            </material>
+        </visual>
+        <collision name="collision">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_5_0.9_0.4.stl</uri>
+            </mesh>
+            </geometry>
+        </collision>
+            </link>
+        </model>
+        
+        <model name="platform_platform_1_7a159b39-c41f-47a6-a362-fda2ad1f92e4">
+            <static>true</static>
+            <pose>3.5 8.0 0.4 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_2_1.5.stl</uri>
+                    </mesh>
+                </geometry>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_2_1.5.stl</uri>
+                    </mesh>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+        
+        <model name="ramp_ramp_1_24b02377-1d64-425a-8df7-ff510b85116c">
+            <static>true</static>
+            <pose>0 12.0 0 0 0 0</pose>
+            <link name="link">
+        <visual name="visual">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_10_1.5_1.stl</uri>
+            </mesh>
+            </geometry>
+            <material>
+                <ambient>0.6 0.4 0.2 1</ambient>
+                <diffuse>0.6 0.4 0.2 1</diffuse>
+
+            </material>
+        </visual>
+        <collision name="collision">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_10_1.5_1.stl</uri>
+            </mesh>
+            </geometry>
+        </collision>
+            </link>
+        </model>
+        
+        <model name="platform_platform_1_d4756ea3-d7d2-4328-8f92-80244cf64531">
+            <static>true</static>
+            <pose>5.75 12.0 1.0 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.5_1.5.stl</uri>
+                    </mesh>
+                </geometry>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.5_1.5.stl</uri>
+                    </mesh>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+        
+        <model name="ramp_ramp_2_beb847be-2fb2-4daa-a7ad-9b4343f02b03">
+            <static>true</static>
+            <pose>7.5 12.0 1.0 0 0 0</pose>
+            <link name="link">
+        <visual name="visual">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_2_1.5_0.2.stl</uri>
+            </mesh>
+            </geometry>
+            <material>
+                <ambient>0.6 0.4 0.2 1</ambient>
+                <diffuse>0.6 0.4 0.2 1</diffuse>
+
+            </material>
+        </visual>
+        <collision name="collision">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_2_1.5_0.2.stl</uri>
+            </mesh>
+            </geometry>
+        </collision>
+            </link>
+        </model>
+        
+        <model name="platform_platform_2_edeb3dfc-8dff-4639-98a9-aef372136b5f">
+            <static>true</static>
+            <pose>9.25 12.0 1.2 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.5_1.5.stl</uri>
+                    </mesh>
+                </geometry>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.5_1.5.stl</uri>
+                    </mesh>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+        
+        <model name="ramp_ramp_1_fec7b525-078e-4ffb-b79d-4e4e66097f5f">
+            <static>true</static>
+            <pose>0 16.0 0 0 0 0</pose>
+            <link name="link">
+        <visual name="visual">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_10_1.5_0.8.stl</uri>
+            </mesh>
+            </geometry>
+            <material>
+                <ambient>0.6 0.4 0.2 1</ambient>
+                <diffuse>0.6 0.4 0.2 1</diffuse>
+
+            </material>
+        </visual>
+        <collision name="collision">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_10_1.5_0.8.stl</uri>
+            </mesh>
+            </geometry>
+        </collision>
+            </link>
+        </model>
+        
+        <model name="platform_platform_1_80f24daf-db7b-4495-8084-3ae0d3c46c43">
+            <static>true</static>
+            <pose>5.85 16.0 0.8 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.7_1.4.stl</uri>
+                    </mesh>
+                </geometry>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.7_1.4.stl</uri>
+                    </mesh>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+        
+        <model name="ramp_ramp_1_case4_400f8840-34a3-4be3-bd41-36024772b76d">
+            <static>true</static>
+            <pose>0 20.0 0 0 0 0</pose>
+            <link name="link">
+        <visual name="visual">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_10_0.9_0.66.stl</uri>
+            </mesh>
+            </geometry>
+            <material>
+                <ambient>0.6 0.4 0.2 1</ambient>
+                <diffuse>0.6 0.4 0.2 1</diffuse>
+
+            </material>
+        </visual>
+        <collision name="collision">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_10_0.9_0.66.stl</uri>
+            </mesh>
+            </geometry>
+        </collision>
+            </link>
+        </model>
+        
+        <model name="platform_platform_1_case4_1ed76423-97a9-4b64-8f7f-f5879d380df8">
+            <static>true</static>
+            <pose>5.75 20.0 0.66 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.5_1.5.stl</uri>
+                    </mesh>
+                </geometry>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.5_1.5.stl</uri>
+                    </mesh>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+        
+        <model name="ramp_ramp_2_case4_e0ea845a-4f3d-4405-b025-77e18f2b7f98">
+            <static>true</static>
+            <pose>9.0 20.0 0.66 0 0 0</pose>
+            <link name="link">
+        <visual name="visual">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_5_0.9_0.33.stl</uri>
+            </mesh>
+            </geometry>
+            <material>
+                <ambient>0.6 0.4 0.2 1</ambient>
+                <diffuse>0.6 0.4 0.2 1</diffuse>
+
+            </material>
+        </visual>
+        <collision name="collision">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_5_0.9_0.33.stl</uri>
+            </mesh>
+            </geometry>
+        </collision>
+            </link>
+        </model>
+        
+        <model name="platform_platform_2_case4_6f3b7644-f5e1-4e3b-94d6-02680c1a4edd">
+            <static>true</static>
+            <pose>12.25 20.0 0.99 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.5_1.5.stl</uri>
+                    </mesh>
+                </geometry>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.5_1.5.stl</uri>
+                    </mesh>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+        
+        <model name="ramp_ramp_1_b0b907e1-9609-4029-9379-45f190a05142">
+            <static>true</static>
+            <pose>0 24.0 0 0 0 0</pose>
+            <link name="link">
+        <visual name="visual">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_10_1.5_0.79.stl</uri>
+            </mesh>
+            </geometry>
+            <material>
+                <ambient>0.6 0.4 0.2 1</ambient>
+                <diffuse>0.6 0.4 0.2 1</diffuse>
+
+            </material>
+        </visual>
+        <collision name="collision">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_10_1.5_0.79.stl</uri>
+            </mesh>
+            </geometry>
+        </collision>
+            </link>
+        </model>
+        
+        <model name="platform_platform_1_c8678e4d-ce0d-4ed8-89fc-03d204724358">
+            <static>true</static>
+            <pose>5.75 24.0 0.79 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.5_1.5.stl</uri>
+                    </mesh>
+                </geometry>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.5_1.5.stl</uri>
+                    </mesh>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+        
+        <model name="ramp_ramp_2_0b9ee6bf-6303-4428-804c-1faffdb8be78">
+            <static>true</static>
+            <pose>11.5 24.0 0.79 0 0 0</pose>
+            <link name="link">
+        <visual name="visual">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_10_1.5_0.79.stl</uri>
+            </mesh>
+            </geometry>
+            <material>
+                <ambient>0.6 0.4 0.2 1</ambient>
+                <diffuse>0.6 0.4 0.2 1</diffuse>
+
+            </material>
+        </visual>
+        <collision name="collision">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_10_1.5_0.79.stl</uri>
+            </mesh>
+            </geometry>
+        </collision>
+            </link>
+        </model>
+        
+        <model name="platform_platform_2_eccee0f4-b560-4836-9bda-13cf65f08af9">
+            <static>true</static>
+            <pose>17.25 24.0 1.58 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.5_1.5.stl</uri>
+                    </mesh>
+                </geometry>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.5_1.5.stl</uri>
+                    </mesh>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+        
+        <model name="ramp_ramp_3_963aaf7c-6b03-47d3-8da8-d3733df5f7a0">
+            <static>true</static>
+            <pose>20.0 24.0 1.58 0 0 0</pose>
+            <link name="link">
+        <visual name="visual">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_4_1.5_0.32.stl</uri>
+            </mesh>
+            </geometry>
+            <material>
+                <ambient>0.6 0.4 0.2 1</ambient>
+                <diffuse>0.6 0.4 0.2 1</diffuse>
+
+            </material>
+        </visual>
+        <collision name="collision">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_4_1.5_0.32.stl</uri>
+            </mesh>
+            </geometry>
+        </collision>
+            </link>
+        </model>
+        
+        <model name="platform_platform_3_f3976f20-42e8-4179-b9fa-b5fbc67c4316">
+            <static>true</static>
+            <pose>22.75 24.0 1.9000000000000001 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.5_1.5.stl</uri>
+                    </mesh>
+                </geometry>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.5_1.5.stl</uri>
+                    </mesh>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+        
+        <model name="ramp_ramp_1_e6c737eb-fa84-466c-9f11-d12f97f23e86">
+            <static>true</static>
+            <pose>0 28.0 0 0 0 0</pose>
+            <link name="link">
+        <visual name="visual">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_7.5_1.2_0.6.stl</uri>
+            </mesh>
+            </geometry>
+            <material>
+                <ambient>0.6 0.4 0.2 1</ambient>
+                <diffuse>0.6 0.4 0.2 1</diffuse>
+
+            </material>
+        </visual>
+        <collision name="collision">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_7.5_1.2_0.6.stl</uri>
+            </mesh>
+            </geometry>
+        </collision>
+            </link>
+        </model>
+        
+        <model name="platform_platform_1_6a460194-0b1c-4ca5-8910-48222a9b4fd8">
+            <static>true</static>
+            <pose>4.5 28.0 0.6 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.5_1.5.stl</uri>
+                    </mesh>
+                </geometry>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.5_1.5.stl</uri>
+                    </mesh>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+        
+        <model name="ramp_ramp_1_28e910f1-fd40-402d-9edd-bb8503037e9a">
+            <static>true</static>
+            <pose>0 32.0 0 0 0 0</pose>
+            <link name="link">
+        <visual name="visual">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_10_1_0.64.stl</uri>
+            </mesh>
+            </geometry>
+            <material>
+                <ambient>0.6 0.4 0.2 1</ambient>
+                <diffuse>0.6 0.4 0.2 1</diffuse>
+
+            </material>
+        </visual>
+        <collision name="collision">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_10_1_0.64.stl</uri>
+            </mesh>
+            </geometry>
+        </collision>
+            </link>
+        </model>
+        
+        <model name="platform_platform_1_480273c0-014b-4862-acc9-633f868ca76b">
+            <static>true</static>
+            <pose>5.85 32.0 0.64 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.7_1.4.stl</uri>
+                    </mesh>
+                </geometry>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.7_1.4.stl</uri>
+                    </mesh>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+        
+        <model name="ramp_ramp_2_d95b6228-fca4-464a-baf8-0299792cf7f1">
+            <static>true</static>
+            <pose>7.199999999999999 32.0 0.64 0 0 0</pose>
+            <link name="link">
+        <visual name="visual">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_1_1_0.064.stl</uri>
+            </mesh>
+            </geometry>
+            <material>
+                <ambient>0.6 0.4 0.2 1</ambient>
+                <diffuse>0.6 0.4 0.2 1</diffuse>
+
+            </material>
+        </visual>
+        <collision name="collision">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_1_1_0.064.stl</uri>
+            </mesh>
+            </geometry>
+        </collision>
+            </link>
+        </model>
+        
+        <model name="platform_platform_2_1f86288a-80a5-4cc4-9724-8401414de3ac">
+            <static>true</static>
+            <pose>8.549999999999999 32.0 0.704 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.7_1.4.stl</uri>
+                    </mesh>
+                </geometry>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.7_1.4.stl</uri>
+                    </mesh>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+        
+        <model name="ramp_ramp_1_69f43857-6f90-49e2-b487-caeea4e23c72">
+            <static>true</static>
+            <pose>0 36.0 0 0 0 0</pose>
+            <link name="link">
+        <visual name="visual">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_8_0.9_0.64.stl</uri>
+            </mesh>
+            </geometry>
+            <material>
+                <ambient>0.6 0.4 0.2 1</ambient>
+                <diffuse>0.6 0.4 0.2 1</diffuse>
+
+            </material>
+        </visual>
+        <collision name="collision">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_8_0.9_0.64.stl</uri>
+            </mesh>
+            </geometry>
+        </collision>
+            </link>
+        </model>
+        
+        <model name="platform_platform_1_a1d7439d-b472-49a7-94d7-f16538a23b78">
+            <static>true</static>
+            <pose>4.75 36.0 0.64 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.5_1.5.stl</uri>
+                    </mesh>
+                </geometry>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.5_1.5.stl</uri>
+                    </mesh>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+        
+        <model name="ramp_ramp_1_165158b9-5ee2-49fc-9a96-3a341b2bc709">
+            <static>true</static>
+            <pose>0 -4.0 0 0 0 0</pose>
+            <link name="link">
+        <visual name="visual">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_10_1.5_4.stl</uri>
+            </mesh>
+            </geometry>
+            <material>
+                <ambient>0.6 0.4 0.2 1</ambient>
+                <diffuse>0.6 0.4 0.2 1</diffuse>
+
+            </material>
+        </visual>
+        <collision name="collision">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_10_1.5_4.stl</uri>
+            </mesh>
+            </geometry>
+        </collision>
+            </link>
+        </model>
+        
+        <model name="platform_platform_1_eb1e3114-e6cc-47c4-8f1a-9d2bf881b47e">
+            <static>true</static>
+            <pose>5.75 -4.0 4.0 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.5_1.5.stl</uri>
+                    </mesh>
+                </geometry>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.5_1.5.stl</uri>
+                    </mesh>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+        
+        <model name="ramp_ramp_1_18d57161-6292-4fab-a080-ae761f0a771f">
+            <static>true</static>
+            <pose>0 -8.0 0 0 0 0</pose>
+            <link name="link">
+        <visual name="visual">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_5_0.8_0.25.stl</uri>
+            </mesh>
+            </geometry>
+            <material>
+                <ambient>0.6 0.4 0.2 1</ambient>
+                <diffuse>0.6 0.4 0.2 1</diffuse>
+
+            </material>
+        </visual>
+        <collision name="collision">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_5_0.8_0.25.stl</uri>
+            </mesh>
+            </geometry>
+        </collision>
+            </link>
+        </model>
+        
+        <model name="platform_platform_1_931fe8c3-861e-455c-8960-a252fcff8e4b">
+            <static>true</static>
+            <pose>3.25 -8.0 0.25 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.5_1.5.stl</uri>
+                    </mesh>
+                </geometry>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.5_1.5.stl</uri>
+                    </mesh>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+        
+        <model name="ramp_ramp_1_9d27d829-f223-4f5c-a0af-1f163c7cd38b">
+            <static>true</static>
+            <pose>0 -12.0 0 0 0 0</pose>
+            <link name="link">
+        <visual name="visual">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_15_1.4_0.85.stl</uri>
+            </mesh>
+            </geometry>
+            <material>
+                <ambient>0.6 0.4 0.2 1</ambient>
+                <diffuse>0.6 0.4 0.2 1</diffuse>
+
+            </material>
+        </visual>
+        <collision name="collision">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_15_1.4_0.85.stl</uri>
+            </mesh>
+            </geometry>
+        </collision>
+            </link>
+        </model>
+        
+        <model name="platform_platform_1_1b561996-2c4b-42c6-8abb-6457b2e5b2d3">
+            <static>true</static>
+            <pose>8.25 -12.0 0.85 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.5_1.5.stl</uri>
+                    </mesh>
+                </geometry>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.5_1.5.stl</uri>
+                    </mesh>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+        
+        <model name="ramp_ramp_1_dfdccc30-d6b5-43bd-a7b8-d591ac7ec7ae">
+            <static>true</static>
+            <pose>0 -16.0 0 0 0 0</pose>
+            <link name="link">
+        <visual name="visual">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_20_1.5_1.3.stl</uri>
+            </mesh>
+            </geometry>
+            <material>
+                <ambient>0.6 0.4 0.2 1</ambient>
+                <diffuse>0.6 0.4 0.2 1</diffuse>
+
+            </material>
+        </visual>
+        <collision name="collision">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_20_1.5_1.3.stl</uri>
+            </mesh>
+            </geometry>
+        </collision>
+            </link>
+        </model>
+        
+        <model name="platform_platform_1_5407df03-504f-4d57-bb9c-7159c724f53f">
+            <static>true</static>
+            <pose>10.75 -16.0 1.3 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.5_1.5.stl</uri>
+                    </mesh>
+                </geometry>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.5_1.5.stl</uri>
+                    </mesh>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+        
+        <model name="ramp_ramp_1_ea9c0f6c-6e0f-4dd3-a276-c55257b61fb3">
+            <static>true</static>
+            <pose>0 -20.0 0 0 0 0</pose>
+            <link name="link">
+        <visual name="visual">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_8_1.5_0.8.stl</uri>
+            </mesh>
+            </geometry>
+            <material>
+                <ambient>0.6 0.4 0.2 1</ambient>
+                <diffuse>0.6 0.4 0.2 1</diffuse>
+
+            </material>
+        </visual>
+        <collision name="collision">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_8_1.5_0.8.stl</uri>
+            </mesh>
+            </geometry>
+        </collision>
+            </link>
+        </model>
+        
+        <model name="platform_platform_1_df8d4e2f-1e3a-4b35-bd79-92d44f1c0bd9">
+            <static>true</static>
+            <pose>4.75 -20.0 0.8 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.5_1.5.stl</uri>
+                    </mesh>
+                </geometry>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.5_1.5.stl</uri>
+                    </mesh>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+        
+        <model name="ramp_ramp_1_a931ec48-6fc5-446c-8763-ac23897f7f77">
+            <static>true</static>
+            <pose>0 -24.0 0 0 0 0</pose>
+            <link name="link">
+        <visual name="visual">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_8_1.5_1.4.stl</uri>
+            </mesh>
+            </geometry>
+            <material>
+                <ambient>0.6 0.4 0.2 1</ambient>
+                <diffuse>0.6 0.4 0.2 1</diffuse>
+
+            </material>
+        </visual>
+        <collision name="collision">
+            <geometry>
+            <mesh>
+                <uri>model://data/world-generator/assets/ramp_8_1.5_1.4.stl</uri>
+            </mesh>
+            </geometry>
+        </collision>
+            </link>
+        </model>
+        
+        <model name="platform_platform_1_7efb22c1-2976-4328-ae12-f01032d9265a">
+            <static>true</static>
+            <pose>4.75 -24.0 1.4 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.5_1.5.stl</uri>
+                    </mesh>
+                </geometry>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/platform_1.5_1.5.stl</uri>
                     </mesh>
                 </geometry>
                 </collision>
@@ -51,5 +978,5 @@
         </model>
         
 
-  </world>
+    </world>
 </sdf>

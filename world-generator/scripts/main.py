@@ -5,7 +5,7 @@ from Platform import Platform
 from RampSpecsReader import RampSpecsReader
 from RampMapper import RampMapper
 from PlatformMapper import PlatformMapper
-from enums import ElementType
+from enums import ElementType, RampClassification
 
 import os 
 from dotenv import load_dotenv
@@ -37,8 +37,11 @@ class SDFGenerator:
                     # print("Setting parent platform for ramp")
                     ramp.parentPlatform = platform
                 ramp.init(index)
-                self.required_assets.add(ramp.asset_name)
+                if (index < 0):
+                    self.required_assets.add(ramp.asset_name)
+                
                 self.sdf_string += ramp.render()
+                platform = None  # Reset platform after processing ramp
 
             elif child.get("type") == ElementType.PLATFORM.value:
                 # Process platform
@@ -58,11 +61,14 @@ class SDFGenerator:
     def place_in_world(self, sdf_models): 
         sdf_world = f"""<sdf version="1.7">
         <world name="default">
+            <!-- Ground plane from Fuel -->
             <include>
-            <uri>model://ground_plane</uri>
+            <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/Ground%20Plane</uri>
             </include>
+
+                <!-- Sun from Fuel -->
             <include>
-            <uri>model://sun</uri>
+            <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/Sun</uri>
             </include>
 
             {sdf_models}
@@ -74,9 +80,12 @@ class SDFGenerator:
     
     def generate(self, ramps, model_type):
         for index, specs in enumerate(ramps):
+            idx = index + 1
+            if (model_type == RampClassification.INVALID.value):
+                idx = -idx
             root = specs.get("root")
-            self.parseTree(root, index)
-            print(f"Parsed {model_type} ramp: {specs.get('name')} at index {index}")
+            self.parseTree(root, idx)
+            print(f"Parsed {model_type} ramp: {specs.get('name')} at index {idx}")
         return self.sdf_string
 
 
@@ -84,11 +93,11 @@ rampSpecsReader = RampSpecsReader()
 # Create SDFGenerator instance
 sdf_generator = SDFGenerator()
 
-model_string = sdf_generator.generate(rampSpecsReader.validRamps, "valid")
-# model_string = sdf_generator.write_ramps_with_platform(model_string, invalid_ramps, "invalid")
+model_string = sdf_generator.generate(rampSpecsReader.validRamps, RampClassification.VALID.value)
+model_string = sdf_generator.generate(rampSpecsReader.invalidRamps, RampClassification.INVALID.value)
 
 # Generate final SDF world
 sdf_world = sdf_generator.place_in_world(model_string)
-# print(sdf_world)
+print(sdf_world)
 from pprint import pprint
-pprint(sdf_generator.required_assets)
+# pprint(sdf_generator.required_assets)

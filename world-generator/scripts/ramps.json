@@ -1,6 +1,6 @@
 {
     "valid_ramps": [
-                {
+        {
             "name": "test test",
             "description": "This is just to test if everything works correctly",
             "root": {
@@ -43,7 +43,6 @@
                     "length": 2.0
                 }
             }
-
         },
         {
             "name": "Valid Case 2",
@@ -56,7 +55,7 @@
                 "height": 1.0,
                 "kerb_height": 0.1,
                 "child": {
-                    "name":"platform_1",
+                    "name": "platform_1",
                     "type": "platform",
                     "width": 1.5,
                     "length": 1.5,
@@ -68,7 +67,7 @@
                         "height": 0.2,
                         "kerb_height": 0.1,
                         "child": {
-                            "name":"platform_2",
+                            "name": "platform_2",
                             "type": "platform",
                             "width": 1.5,
                             "length": 1.5
@@ -99,26 +98,26 @@
             "name": "Valid Case 4 - Platform at 10m, narrow ramp",
             "description": "Case 4: Ramp with intermediate platform exactly at 10m, width 0.9m (wheelchair), gentle slope",
             "root": {
-                "name": "ramp_1",
+                "name": "ramp_1_case4",
                 "type": "ramp",
                 "length": 10.0,
                 "width": 0.9,
                 "height": 0.66,
                 "kerb_height": 0.1,
                 "child": {
-                    "name": "platform_1",
+                    "name": "platform_1_case4",
                     "type": "platform",
                     "width": 1.5,
                     "length": 1.5,
                     "child": {
-                        "name": "ramp_2",
+                        "name": "ramp_2_case4",
                         "type": "ramp",
                         "length": 5.0,
                         "width": 0.9,
                         "height": 0.33,
                         "kerb_height": 0.1,
                         "child": {
-                            "name": "platform_2",
+                            "name": "platform_2_case4",
                             "type": "platform",
                             "width": 1.5,
                             "length": 1.5
@@ -133,7 +132,7 @@
             "root": {
                 "name": "ramp_1",
                 "type": "ramp",
-                "length": 24.0,
+                "length": 10.0,
                 "width": 1.5,
                 "height": 0.79,
                 "kerb_height": 0.1,
@@ -169,7 +168,6 @@
                                 }
                             }
                         }
-
                     }
                 }
             }
@@ -241,8 +239,116 @@
                     "length": 1.5
                 }
             }
-
         }
     ],
-    "invalid_ramps": []
+    "invalid_ramps": [
+        {
+            "name": "Invalid Case 1 - Height difference too high",
+            "description": "Height difference exceeds 3.20 m, so not accessible.",
+            "root": {
+                "name": "ramp_1",
+                "type": "ramp",
+                "length": 10.0,
+                "width": 1.5,
+                "height": 4.0,
+                "kerb_height": 0.0,
+                "child": {
+                    "name": "platform_1",
+                    "type": "platform",
+                    "width": 1.5,
+                    "length": 1.5
+                }
+            }
+        },
+        {
+            "name": "Invalid Case 2 - Ramp too narrow for wheelchair",
+            "description": "Ramp width less than minimum 0.90 m required for wheelchair.",
+            "root": {
+                "name": "ramp_1",
+                "type": "ramp",
+                "length": 5.0,
+                "width": 0.8,
+                "height": 0.25,
+                "kerb_height": 0.0,
+                "child": {
+                    "name": "platform_1",
+                    "type": "platform",
+                    "width": 1.5,
+                    "length": 1.5
+                }
+            }
+        },
+        {
+            "name": "Invalid Case 3 - Ramp too narrow for two people",
+            "description": "Ramp width less than 1.50 m required to allow passage of two people.",
+            "root": {
+                "name": "ramp_1",
+                "type": "ramp",
+                "length": 15.0,
+                "width": 1.4,
+                "height": 0.85,
+                "kerb_height": 0.0,
+                "child": {
+                    "name": "platform_1",
+                    "type": "platform",
+                    "width": 1.5,
+                    "length": 1.5
+                }
+            }
+        },
+        {
+            "name": "Invalid Case 4 - No platform after 10m",
+            "description": "Missing horizontal platform every 10 m.",
+            "root": {
+                "name": "ramp_1",
+                "type": "ramp",
+                "length": 20.0,
+                "width": 1.5,
+                "height": 1.3,
+                "kerb_height": 0.0,
+                "child": {
+                    "name": "platform_1",
+                    "type": "platform",
+                    "width": 1.5,
+                    "length": 1.5
+                }
+            }
+        },
+        {
+            "name": "Invalid Case 5 - Kerb missing on open side",
+            "description": "Kerb less than 0.10 m high on non-filled parapet side.",
+            "root": {
+                "name": "ramp_1",
+                "type": "ramp",
+                "length": 8.0,
+                "width": 1.5,
+                "height": 0.8,
+                "kerb_height": 0.05,
+                "child": {
+                    "name": "platform_1",
+                    "type": "platform",
+                    "width": 1.5,
+                    "length": 1.5
+                }
+            }
+        },
+        {
+            "name": "Invalid Case 6 - Ramp slope exceeds 8%",
+            "description": "Ramp slope exceeds maximum 8% allowed for accessibility.",
+            "root": {
+                "name": "ramp_1",
+                "type": "ramp",
+                "length": 8.0,
+                "width": 1.5,
+                "height": 1.4,
+                "kerb_height": 0.0,
+                "child": {
+                    "name": "platform_1",
+                    "type": "platform",
+                    "width": 1.5,
+                    "length": 1.5
+                }
+            }
+        }
+    ]
 }

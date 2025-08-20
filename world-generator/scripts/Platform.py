@@ -49,12 +49,10 @@ class Platform(AbstractPlatform):
         if (ramp_position is None or len(ramp_position) < 3):
             raise ValueError("Parent ramp position is not set.")
 
-        x = self.length/2 + self.parentRamp.length/2
-        #invert x:
-        x = -x
+        x = ramp_position[0] + self.length/2 + self.parentRamp.length/2
 
         y = ramp_position[1] # copy y coordinate of the ramp
-        z = self.parentRamp.height
+        z = ramp_position[2] + self.parentRamp.height
         return [x, y, z, 0, 0, 0]
 
     def __repr__(self):

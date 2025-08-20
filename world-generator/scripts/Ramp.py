@@ -53,7 +53,6 @@ class Ramp():
             px, py, pz, _, _, _ = self.parentPlatform.pose
             x = self.length / 2 + self.parentPlatform.length / 2 + abs(px)
             #reverse x:
-            x = -x
             z = pz
 
         return [x, y, z, 0, 0, 0]
@@ -114,6 +113,11 @@ class Ramp():
                 <uri>{self.assets_url}/{self.asset_name}</uri>
             </mesh>
             </geometry>
+            <material>
+                <ambient>0.6 0.4 0.2 1</ambient>
+                <diffuse>0.6 0.4 0.2 1</diffuse>
+
+            </material>
         </visual>
         <collision name="collision">
             <geometry>
