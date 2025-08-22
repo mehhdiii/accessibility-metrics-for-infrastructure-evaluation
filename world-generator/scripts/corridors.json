@@ -1,0 +1,40 @@
+{
+    "valid_corridors": [
+        {
+            "name": "test test",
+            "description": "This is just to test if everything works correctly",
+            "root": {
+                "name": "corridor 1",
+                "type": "corridor",
+                "length": 10.0,
+                "width": 2.0
+            }
+        }
+    ],
+    "invalid_corridors": [
+        {
+            "name": "test test",
+            "description": "This is just to test if everything works correctly",
+            "root": {
+                "name": "corridor 1",
+                "type": "corridor",
+                "length": 10.0,
+                "width": 5.0,
+                "child": {
+                    "name": "widening 1",
+                    "type": "widening",
+                    "width": 4.0,
+                    "length": 4.0,
+                    "child": {
+                        "name": "ramp_test",
+                        "type": "ramp",
+                        "length": 10.0,
+                        "width": 2.0,
+                        "height": 1.0,
+                        "kerb_height": 0.1
+                    }
+                }
+            }
+        }
+    ]
+}

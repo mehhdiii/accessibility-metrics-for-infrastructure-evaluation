@@ -3,9 +3,11 @@ import math
 from Ramp import Ramp
 from Platform import Platform
 from RampSpecsReader import RampSpecsReader
+from CorridorSpecsReader import CorridorSpecsReader
 from RampMapper import RampMapper
 from PlatformMapper import PlatformMapper
-from enums import ElementType, RampClassification
+from CorridorMapper import CorridorMapper
+from enums import ElementType, SpecClassification
 
 import os 
 from dotenv import load_dotenv
@@ -14,17 +16,20 @@ result = load_dotenv()
 
 class SDFGenerator:
     def __init__(self):
-        self.y_offset = os.getenv("Y_OFFSET", 2.0)
         self.required_assets = set()
         self.models = []
 
         self.sdf_string = ''
 
-    def parseTree(self, root, index):
+    def parseTree(self, root, y_index, x_index):
         # Implement parsing logic here
         child = root
+        #ramp platform
         ramp = None
         platform = None
+
+        # corridor
+        corridor = None
         while (True):
             if child is None:
                 break
@@ -36,9 +41,8 @@ class SDFGenerator:
                 if (platform):
                     # print("Setting parent platform for ramp")
                     ramp.parentPlatform = platform
-                ramp.init(index)
-                if (index < 0):
-                    self.required_assets.add(ramp.asset_name)
+                ramp.init(y_index)
+                self.required_assets.add(ramp.asset_name)
                 
                 self.sdf_string += ramp.render()
                 platform = None  # Reset platform after processing ramp
@@ -53,6 +57,13 @@ class SDFGenerator:
                 self.sdf_string += platform.render()
                 # reinitialize ramp to None
                 ramp = None
+
+            elif child.get("type") == ElementType.CORRIDOR.value:
+                corridor = CorridorMapper.corridorMapper(child)
+                corridor.init(y_index, x_index)
+                self.required_assets.add(corridor.asset_name)
+                self.sdf_string += corridor.render()
+            
             child = child.get("child")
 
 
@@ -78,26 +89,37 @@ class SDFGenerator:
         """
         return sdf_world
     
-    def generate(self, ramps, model_type):
+    def generate(self, ramps, model_type, x_index):
         for index, specs in enumerate(ramps):
-            idx = index + 1
-            if (model_type == RampClassification.INVALID.value):
-                idx = -idx
+            y_index = index + 1
+            if (model_type == SpecClassification.INVALID.value):
+                y_index = -y_index
             root = specs.get("root")
-            self.parseTree(root, idx)
-            print(f"Parsed {model_type} ramp: {specs.get('name')} at index {idx}")
+            self.parseTree(root, y_index, x_index)
+            print(f"Parsed {model_type} ramp: {specs.get('name')} at index {y_index}")
         return self.sdf_string
 
 
+# read ramp specs:
 rampSpecsReader = RampSpecsReader()
+# read corridor specs:
+corridorSpecsReader = CorridorSpecsReader()
+
+
 # Create SDFGenerator instance
 sdf_generator = SDFGenerator()
 
-model_string = sdf_generator.generate(rampSpecsReader.validRamps, RampClassification.VALID.value)
-model_string = sdf_generator.generate(rampSpecsReader.invalidRamps, RampClassification.INVALID.value)
+#generate ramp sdfs
+# sdf_generator.generate(rampSpecsReader.validRamps, SpecClassification.VALID.value, x_index=0)
+# sdf_generator.generate(rampSpecsReader.invalidRamps, SpecClassification.INVALID.value, x_index=0)
+
+
+#generate corridor sdfs
+sdf_generator.generate(corridorSpecsReader.validCorridors, SpecClassification.VALID.value, x_index=1)
+# sdf_generator.generate(corridorSpecsReader.invalidCorridors, SpecClassification.INVALID.value, x_index=1)
 
 # Generate final SDF world
-sdf_world = sdf_generator.place_in_world(model_string)
+sdf_world = sdf_generator.place_in_world(sdf_generator.sdf_string)
 print(sdf_world)
 from pprint import pprint
 # pprint(sdf_generator.required_assets)
