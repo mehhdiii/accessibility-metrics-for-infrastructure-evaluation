@@ -1,7 +1,7 @@
 import os
 import uuid
 from Wall import Wall
-
+from Floor import Floor
 class Corridor:
     def __init__(self, name: str, length: float, width: float):
         self.name = name
@@ -15,10 +15,12 @@ class Corridor:
 
         self._leftWall: Wall | None = None
         self._rightWall: Wall | None = None
+        self._floor: Floor | None = None
 
     def init(self, y_index, x_index):
         self.position = self._calculate_position(y_index, x_index)
         self.initializeWalls()
+        self.initializeFloor()
 
     def _calculate_position(self, y_index, x_index):
         # Calculate the position based on the indices
@@ -42,6 +44,12 @@ class Corridor:
         self._rightWall.init([self.position[0], self.position[1] + (self.width / 2), self.position[2]])
 
 
+    def initializeFloor(self):
+        if (self.position is None):
+            raise ValueError("Corridor position is not set.")
+
+        self._floor = Floor(f"{self.name}_floor", self.length, self.width)
+        self._floor.init([self.position[0], self.position[1], self.position[2]])
 
     @property
     def asset_name(self):
@@ -71,5 +79,7 @@ class Corridor:
             raise ValueError("Corridor position is not set. Please set the position before rendering.")
         if self._leftWall is None or self._rightWall is None:
             raise ValueError("Corridor walls are not initialized.")
+        if self._floor is None:
+            raise ValueError("Corridor floor is not initialized.")
         
-        return self._leftWall.render() + self._rightWall.render()
+        return self._leftWall.render() + self._rightWall.render() + self._floor.render()

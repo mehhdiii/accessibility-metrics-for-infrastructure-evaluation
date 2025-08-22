@@ -11,7 +11,7 @@
             </include>
 
 
-        <model name="wall_corridor 1_left_b7b69f93-e788-4f48-a783-6699f865e385">
+        <model name="wall_corridor 1_left_d65fe213-285e-4cae-948f-eb8185c538a5">
             <static>true</static>
             <pose>25.0 3.0 0.0 0 0 0</pose>
             <link name="link">
@@ -37,7 +37,7 @@
             </link>
         </model>
 
-        <model name="wall_corridor 1_right_9cfe37f7-ce24-4858-b6b5-1ee4875b1415">
+        <model name="wall_corridor 1_right_89856c5e-dde7-4f8c-8872-ba32f885440b">
             <static>true</static>
             <pose>25.0 5.0 0.0 0 0 0</pose>
             <link name="link">
@@ -63,6 +63,32 @@
             </link>
         </model>
 
+        <model name="floor_corridor 1_floor_5908da74-a622-4b85-83ce-c97b64f17417">
+            <static>true</static>
+            <pose>25.0 4.0 0.0 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/floor_unit.stl</uri>
+                    <scale>10.0 2.0 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.6 0.4 0.2 1</ambient>
+                    <diffuse>0.6 0.4 0.2 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>10.0 2.0 1</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
 
-    </world>
-</sdf>
+
+        </world>
+        </sdf>

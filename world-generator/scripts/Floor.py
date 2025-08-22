@@ -2,12 +2,12 @@ import os
 import uuid
 
 class Floor:
-    def __init__(self, name: str, length: float, height: float, thickness: float):
+    def __init__(self, name: str, length: float, width: float):
         self.name = name
         self.id = str(uuid.uuid4())
         self.length = length
-        self.height = height
-        self.thickness = thickness
+        self.width = width
+
         self.position: list[float] | None = None
         self.assets_url = os.getenv("ASSETS_BASE_URL", None)
         if not self.assets_url:
@@ -24,8 +24,8 @@ class Floor:
 
     @property
     def dimensions(self):
-        """Return the dimensions of the floor as a tuple (length, height, thickness)."""
-        return (self.length, self.height, self.thickness)
+        """Return the dimensions of the floor as a tuple (length, width)."""
+        return (self.length, self.width)
 
     @property
     def pose(self):
@@ -36,7 +36,7 @@ class Floor:
         return tuple(self.position)
 
     def __repr__(self):
-        return f"Floor(length={self.length}, height={self.height}, thickness={self.thickness}, position={self.position})"
+        return f"Floor(length={self.length}, width={self.width}, position={self.position})"
 
     def render(self):
         if self.position is None:
@@ -51,7 +51,7 @@ class Floor:
                 <geometry>
                     <mesh>
                     <uri>{self.assets_url}/{self.asset_name}</uri>
-                    <scale>{self.length} 1 1</scale> <!-- dont scale height, thickness -->
+                    <scale>{self.length} {self.width} 1</scale> <!-- dont scale thickness -->
                     </mesh>
                 </geometry>
                 <material>
@@ -62,7 +62,7 @@ class Floor:
                 <collision name="collision">
                 <geometry>
                         <box>
-                            <size>{self.length} {self.thickness} {self.height}</size> <!-- match final scaled size -->
+                            <size>{self.length} {self.width} 1</size> <!-- match final scaled size -->
                         </box>
                 </geometry>
                 </collision>
