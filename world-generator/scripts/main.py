@@ -115,7 +115,7 @@ sdf_generator = SDFGenerator()
 
 
 #generate corridor sdfs
-sdf_generator.generate(corridorSpecsReader.validCorridors, SpecClassification.VALID.value, x_index=1)
+sdf_generator.generate(corridorSpecsReader.validCorridors, SpecClassification.VALID.value, x_index=0)
 # sdf_generator.generate(corridorSpecsReader.invalidCorridors, SpecClassification.INVALID.value, x_index=1)
 
 # Generate final SDF world

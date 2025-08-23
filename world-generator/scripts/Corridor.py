@@ -32,9 +32,9 @@ class Corridor:
     def initializeWalls(self):
         #use fixed thickness and height in the wall:
 
-        self._leftWall = Wall(f"{self.name}_left", self.length, 1.2, 0.1) 
-        self._rightWall = Wall(f"{self.name}_right", self.length, 1.2, 0.1)
-        
+        self._leftWall = Wall(f"{self.name}_left", length=self.length) 
+        self._rightWall = Wall(f"{self.name}_right", length=self.length)
+
         if (self.position is None):
             raise ValueError("Corridor position is not set.")
         

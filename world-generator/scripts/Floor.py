@@ -7,7 +7,7 @@ class Floor:
         self.id = str(uuid.uuid4())
         self.length = length
         self.width = width
-
+        self._thickness = 0.0025  # thickness
         self.position: list[float] | None = None
         self.assets_url = os.getenv("ASSETS_BASE_URL", None)
         if not self.assets_url:
@@ -62,7 +62,7 @@ class Floor:
                 <collision name="collision">
                 <geometry>
                         <box>
-                            <size>{self.length} {self.width} 1</size> <!-- match final scaled size -->
+                            <size>{self.length} {self.width} {self._thickness}</size> <!-- match final scaled size -->
                         </box>
                 </geometry>
                 </collision>

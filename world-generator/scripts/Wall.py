@@ -2,12 +2,12 @@ import os
 import uuid
 
 class Wall:
-    def __init__(self, name: str, length: float, height: float, thickness: float):
+    def __init__(self, name: str, length: float):
         self.name = name
         self.id = str(uuid.uuid4())
         self.length = length
-        self.height = height
-        self.thickness = thickness
+        self.height = 1.2
+        self.thickness = 0.1
         self.position: list[float] | None = None
         self.assets_url = os.getenv("ASSETS_BASE_URL", None)
         if not self.assets_url:

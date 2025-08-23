@@ -11,7 +11,7 @@
             </include>
 
 
-        <model name="wall_corridor 1_left_d65fe213-285e-4cae-948f-eb8185c538a5">
+        <model name="wall_corridor 1_left_e415962f-1dc7-4bf0-9b97-45a04e97a6ed">
             <static>true</static>
             <pose>25.0 3.0 0.0 0 0 0</pose>
             <link name="link">
@@ -37,7 +37,7 @@
             </link>
         </model>
 
-        <model name="wall_corridor 1_right_89856c5e-dde7-4f8c-8872-ba32f885440b">
+        <model name="wall_corridor 1_right_433bd9bd-39fd-447c-861c-edf192a77697">
             <static>true</static>
             <pose>25.0 5.0 0.0 0 0 0</pose>
             <link name="link">
@@ -63,7 +63,7 @@
             </link>
         </model>
 
-        <model name="floor_corridor 1_floor_5908da74-a622-4b85-83ce-c97b64f17417">
+        <model name="floor_corridor 1_floor_94cd546a-054f-49b5-8ba4-f5957489f01a">
             <static>true</static>
             <pose>25.0 4.0 0.0 0 0 0</pose>
             <link name="link">
