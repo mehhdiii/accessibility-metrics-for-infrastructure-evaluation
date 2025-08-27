@@ -2,12 +2,13 @@ import os
 import uuid
 
 class Wall:
-    def __init__(self, name: str, length: float):
+    def __init__(self, name: str, length: float, yaw: float = 0.0):
         self.name = name
         self.id = str(uuid.uuid4())
         self.length = length
         self.height = 1.2
         self.thickness = 0.1
+        self.yaw = yaw  # in radians
         self.position: list[float] | None = None
         self.assets_url = os.getenv("ASSETS_BASE_URL", None)
         if not self.assets_url:
@@ -45,7 +46,7 @@ class Wall:
         return f"""
         <model name="wall_{self.name}_{self.id}">
             <static>true</static>
-            <pose>{" ".join(map(str, self.position))} 0 0 0</pose>
+            <pose>{" ".join(map(str, self.position))} 0 0 {self.yaw}</pose>
             <link name="link">
                 <visual name="visual">
                 <geometry>

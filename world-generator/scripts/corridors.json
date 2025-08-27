@@ -7,7 +7,14 @@
                 "name": "corridor 1",
                 "type": "corridor",
                 "length": 10.0,
-                "width": 2.0
+                "width": 2.0,
+                "child": {
+                    "name": "widening_1",
+                    "type": "widening",
+                    "width": 4.0,
+                    "length": 4.0,
+                    "front_close": true
+                }
             }
         }
     ],

@@ -7,6 +7,7 @@ from CorridorSpecsReader import CorridorSpecsReader
 from RampMapper import RampMapper
 from PlatformMapper import PlatformMapper
 from CorridorMapper import CorridorMapper
+from WideningMapper import WideningMapper
 from enums import ElementType, SpecClassification
 
 import os 
@@ -30,6 +31,7 @@ class SDFGenerator:
 
         # corridor
         corridor = None
+        widening = None
         while (True):
             if child is None:
                 break
@@ -60,10 +62,21 @@ class SDFGenerator:
 
             elif child.get("type") == ElementType.CORRIDOR.value:
                 corridor = CorridorMapper.corridorMapper(child)
+                if (widening):
+                    corridor._previous_widening = widening
                 corridor.init(y_index, x_index)
                 self.required_assets.add(corridor.asset_name)
                 self.sdf_string += corridor.render()
-            
+                widening = None  # Reset widening after processing corridor
+
+            elif child.get("type") == ElementType.WIDENING.value:
+                widening = WideningMapper.wideningMapper(child)
+                if (not corridor):
+                    raise ValueError("Widening specified without a preceding corridor.")
+                widening.init(y_index, x_index, corridor)
+                self.required_assets.add(widening.asset_name)
+                self.sdf_string += widening.render()
+                corridor = None  # Reset corridor after processing widening
             child = child.get("child")
 
 

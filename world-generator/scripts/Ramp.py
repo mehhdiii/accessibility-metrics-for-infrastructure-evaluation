@@ -52,7 +52,6 @@ class Ramp():
         if (self.parentPlatform):
             px, py, pz, _, _, _ = self.parentPlatform.pose
             x = self.length / 2 + self.parentPlatform.length / 2 + abs(px)
-            #reverse x:
             z = pz
 
         return [x, y, z, 0, 0, 0]
