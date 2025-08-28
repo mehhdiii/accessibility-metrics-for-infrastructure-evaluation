@@ -11,234 +11,2496 @@
             </include>
 
 
-        <model name="wall_corridor 1_left_1598e186-f041-4e59-a706-d51a393f1fd5">
+        <model name="riser_riser_2a36a563-49c6-48d2-80e1-d6446497fa2c_0_0119c3f7-8c30-496d-8e3d-0bbc0f594077">
             <static>true</static>
-            <pose>0.0 3.0 0.0 0 0 0.0</pose>
+            <pose>0.15 4.0 0.0 0 0 0</pose>
             <link name="link">
                 <visual name="visual">
                 <geometry>
                     <mesh>
-                    <uri>model://data/world-generator/assets/wall_unit.stl</uri>
-                    <scale>10.0 1 1</scale> <!-- dont scale height, thickness -->
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.2 0.16</scale>
                     </mesh>
                 </geometry>
                 <material>
-                    <ambient>0.6 0.4 0.2 1</ambient>
-                    <diffuse>0.6 0.4 0.2 1</diffuse>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
                 </material>
                 </visual>
                 <collision name="collision">
                 <geometry>
                         <box>
-                            <size>10.0 0.1 1.2</size> <!-- match final scaled size -->
+                            <size>0.01 1.2 0.16</size>
                         </box>
                 </geometry>
                 </collision>
             </link>
         </model>
 
-        <model name="wall_corridor 1_right_4599e726-f398-4646-9b2f-a69921f6e8ea">
-            <static>true</static>
-            <pose>0.0 5.0 0.0 0 0 0.0</pose>
-            <link name="link">
-                <visual name="visual">
-                <geometry>
-                    <mesh>
-                    <uri>model://data/world-generator/assets/wall_unit.stl</uri>
-                    <scale>10.0 1 1</scale> <!-- dont scale height, thickness -->
-                    </mesh>
-                </geometry>
-                <material>
-                    <ambient>0.6 0.4 0.2 1</ambient>
-                    <diffuse>0.6 0.4 0.2 1</diffuse>
-                </material>
-                </visual>
-                <collision name="collision">
-                <geometry>
-                        <box>
-                            <size>10.0 0.1 1.2</size> <!-- match final scaled size -->
-                        </box>
-                </geometry>
-                </collision>
-            </link>
-        </model>
-
-        <model name="floor_corridor 1_floor_c91a6b09-4d99-49df-83a7-a66bf0eae2ed">
+        <model name="tread_tread_2a36a563-49c6-48d2-80e1-d6446497fa2c_0_4710c473-8c2d-4dbc-b403-8445bd01dc68">
             <static>true</static>
             <pose>0.0 4.0 0.0 0 0 0</pose>
             <link name="link">
                 <visual name="visual">
                 <geometry>
                     <mesh>
-                    <uri>model://data/world-generator/assets/floor_unit.stl</uri>
-                    <scale>10.0 2.0 1</scale> <!-- dont scale thickness -->
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.3 1.2 1</scale> <!-- dont scale thickness -->
                     </mesh>
                 </geometry>
                 <material>
-                    <ambient>0.6 0.4 0.2 1</ambient>
-                    <diffuse>0.6 0.4 0.2 1</diffuse>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
                 </material>
                 </visual>
                 <collision name="collision">
                 <geometry>
                         <box>
-                            <size>10.0 2.0 0.0025</size> <!-- match final scaled size -->
+                            <size>0.3 1.2 0.01</size> <!-- match final scaled size -->
                         </box>
                 </geometry>
                 </collision>
             </link>
         </model>
 
-        <model name="wall_widening_1_front_close_8bc633af-9f73-4235-9007-b57b11c0fbbd">
+        <model name="riser_riser_2a36a563-49c6-48d2-80e1-d6446497fa2c_1_cb10d7fc-a2f5-4798-a3fd-5a880dc4c3d0">
             <static>true</static>
-            <pose>9.0 4.0 0.0 0 0 1.57</pose>
+            <pose>0.44999999999999996 4.0 0.16 0 0 0</pose>
             <link name="link">
                 <visual name="visual">
                 <geometry>
                     <mesh>
-                    <uri>model://data/world-generator/assets/wall_unit.stl</uri>
-                    <scale>4.0 1 1</scale> <!-- dont scale height, thickness -->
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.2 0.16</scale>
                     </mesh>
                 </geometry>
                 <material>
-                    <ambient>0.6 0.4 0.2 1</ambient>
-                    <diffuse>0.6 0.4 0.2 1</diffuse>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
                 </material>
                 </visual>
                 <collision name="collision">
                 <geometry>
                         <box>
-                            <size>4.0 0.1 1.2</size> <!-- match final scaled size -->
+                            <size>0.01 1.2 0.16</size>
                         </box>
                 </geometry>
                 </collision>
             </link>
         </model>
 
-        <model name="wall_widening_1_left_1047d8f6-4621-47af-a820-7c2489ecdecd">
+        <model name="tread_tread_2a36a563-49c6-48d2-80e1-d6446497fa2c_1_96350bdf-716a-4de7-99db-7e564e1c5ed9">
             <static>true</static>
-            <pose>7.0 2.0 0.0 0 0 0.0</pose>
+            <pose>0.3 4.0 0.16 0 0 0</pose>
             <link name="link">
                 <visual name="visual">
                 <geometry>
                     <mesh>
-                    <uri>model://data/world-generator/assets/wall_unit.stl</uri>
-                    <scale>4.0 1 1</scale> <!-- dont scale height, thickness -->
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.3 1.2 1</scale> <!-- dont scale thickness -->
                     </mesh>
                 </geometry>
                 <material>
-                    <ambient>0.6 0.4 0.2 1</ambient>
-                    <diffuse>0.6 0.4 0.2 1</diffuse>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
                 </material>
                 </visual>
                 <collision name="collision">
                 <geometry>
                         <box>
-                            <size>4.0 0.1 1.2</size> <!-- match final scaled size -->
+                            <size>0.3 1.2 0.01</size> <!-- match final scaled size -->
                         </box>
                 </geometry>
                 </collision>
             </link>
         </model>
 
-        <model name="wall_widening_1_right_1d4be636-9f0d-4cb2-b4fa-5d8157d6acae">
+        <model name="riser_riser_2a36a563-49c6-48d2-80e1-d6446497fa2c_2_46c80c67-bbb5-443a-99d0-c2f2d21283a3">
             <static>true</static>
-            <pose>7.0 6.0 0.0 0 0 0.0</pose>
+            <pose>0.75 4.0 0.32 0 0 0</pose>
             <link name="link">
                 <visual name="visual">
                 <geometry>
                     <mesh>
-                    <uri>model://data/world-generator/assets/wall_unit.stl</uri>
-                    <scale>4.0 1 1</scale> <!-- dont scale height, thickness -->
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.2 0.16</scale>
                     </mesh>
                 </geometry>
                 <material>
-                    <ambient>0.6 0.4 0.2 1</ambient>
-                    <diffuse>0.6 0.4 0.2 1</diffuse>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
                 </material>
                 </visual>
                 <collision name="collision">
                 <geometry>
                         <box>
-                            <size>4.0 0.1 1.2</size> <!-- match final scaled size -->
+                            <size>0.01 1.2 0.16</size>
                         </box>
                 </geometry>
                 </collision>
             </link>
         </model>
 
-        <model name="floor_widening_1_floor_c2630673-4dcf-4f3e-b050-1f5925b66c78">
+        <model name="tread_tread_2a36a563-49c6-48d2-80e1-d6446497fa2c_2_df5d5058-998d-4d20-bedb-0eaaf7bc96dd">
             <static>true</static>
-            <pose>7.0 4.0 0.0 0 0 0</pose>
+            <pose>0.6 4.0 0.32 0 0 0</pose>
             <link name="link">
                 <visual name="visual">
                 <geometry>
                     <mesh>
-                    <uri>model://data/world-generator/assets/floor_unit.stl</uri>
-                    <scale>4.0 4.0 1</scale> <!-- dont scale thickness -->
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.3 1.2 1</scale> <!-- dont scale thickness -->
                     </mesh>
                 </geometry>
                 <material>
-                    <ambient>0.6 0.4 0.2 1</ambient>
-                    <diffuse>0.6 0.4 0.2 1</diffuse>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
                 </material>
                 </visual>
                 <collision name="collision">
                 <geometry>
                         <box>
-                            <size>4.0 4.0 0.0025</size> <!-- match final scaled size -->
+                            <size>0.3 1.2 0.01</size> <!-- match final scaled size -->
                         </box>
                 </geometry>
                 </collision>
             </link>
         </model>
 
-        <model name="wall_widening_1_left_transition_abe17878-dece-4102-9765-4bde99e50f77">
+        <model name="riser_riser_2a36a563-49c6-48d2-80e1-d6446497fa2c_3_14c5f6be-ae9d-46ef-b383-0788471362fc">
             <static>true</static>
-            <pose>5.0 2.5 0.0 0 0 1.57</pose>
+            <pose>1.05 4.0 0.48 0 0 0</pose>
             <link name="link">
                 <visual name="visual">
                 <geometry>
                     <mesh>
-                    <uri>model://data/world-generator/assets/wall_unit.stl</uri>
-                    <scale>1.0 1 1</scale> <!-- dont scale height, thickness -->
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.2 0.16</scale>
                     </mesh>
                 </geometry>
                 <material>
-                    <ambient>0.6 0.4 0.2 1</ambient>
-                    <diffuse>0.6 0.4 0.2 1</diffuse>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
                 </material>
                 </visual>
                 <collision name="collision">
                 <geometry>
                         <box>
-                            <size>1.0 0.1 1.2</size> <!-- match final scaled size -->
+                            <size>0.01 1.2 0.16</size>
                         </box>
                 </geometry>
                 </collision>
             </link>
         </model>
 
-        <model name="wall_widening_1_right_transition_99c69804-2447-417b-9e85-c722518b82c4">
+        <model name="tread_tread_2a36a563-49c6-48d2-80e1-d6446497fa2c_3_ac3b2233-ac10-44f4-93f9-18ca52b76154">
             <static>true</static>
-            <pose>5.0 5.5 0.0 0 0 1.57</pose>
+            <pose>0.9 4.0 0.48 0 0 0</pose>
             <link name="link">
                 <visual name="visual">
                 <geometry>
                     <mesh>
-                    <uri>model://data/world-generator/assets/wall_unit.stl</uri>
-                    <scale>1.0 1 1</scale> <!-- dont scale height, thickness -->
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.3 1.2 1</scale> <!-- dont scale thickness -->
                     </mesh>
                 </geometry>
                 <material>
-                    <ambient>0.6 0.4 0.2 1</ambient>
-                    <diffuse>0.6 0.4 0.2 1</diffuse>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
                 </material>
                 </visual>
                 <collision name="collision">
                 <geometry>
                         <box>
-                            <size>1.0 0.1 1.2</size> <!-- match final scaled size -->
+                            <size>0.3 1.2 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_2a36a563-49c6-48d2-80e1-d6446497fa2c_4_e93c3362-fab6-4fa6-9db8-15b406aed4d7">
+            <static>true</static>
+            <pose>1.3499999999999999 4.0 0.64 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.2 0.16</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 1.2 0.16</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_2a36a563-49c6-48d2-80e1-d6446497fa2c_4_18757f52-4b97-4ddb-b2a2-88094645764e">
+            <static>true</static>
+            <pose>1.2 4.0 0.64 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.3 1.2 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.3 1.2 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_2a36a563-49c6-48d2-80e1-d6446497fa2c_5_d23a85f0-7c7f-468c-b272-244ce3b334b2">
+            <static>true</static>
+            <pose>1.6499999999999997 4.0 0.8 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.2 0.16</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 1.2 0.16</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_2a36a563-49c6-48d2-80e1-d6446497fa2c_5_9ec005f8-4d21-4401-b3e5-cebec0132f30">
+            <static>true</static>
+            <pose>1.4999999999999998 4.0 0.8 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.3 1.2 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.3 1.2 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_2a36a563-49c6-48d2-80e1-d6446497fa2c_6_15ae9e87-46ac-46e0-848a-29541d40d6b0">
+            <static>true</static>
+            <pose>1.9499999999999995 4.0 0.9600000000000001 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.2 0.16</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 1.2 0.16</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_2a36a563-49c6-48d2-80e1-d6446497fa2c_6_0a80bbe2-e135-4309-8507-77d8823bc195">
+            <static>true</static>
+            <pose>1.7999999999999996 4.0 0.9600000000000001 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.3 1.2 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.3 1.2 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_2a36a563-49c6-48d2-80e1-d6446497fa2c_7_e036e7c9-f0a5-45a5-931e-145b8b5ae5b5">
+            <static>true</static>
+            <pose>2.2499999999999996 4.0 1.12 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.2 0.16</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 1.2 0.16</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_2a36a563-49c6-48d2-80e1-d6446497fa2c_7_d6e0936b-71e4-43a5-abb7-31e344bdf65e">
+            <static>true</static>
+            <pose>2.0999999999999996 4.0 1.12 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.3 1.2 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.3 1.2 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_2a36a563-49c6-48d2-80e1-d6446497fa2c_8_916eeefd-b9dd-4973-a135-73e34c5389ab">
+            <static>true</static>
+            <pose>2.5499999999999994 4.0 1.28 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.2 0.16</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 1.2 0.16</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_2a36a563-49c6-48d2-80e1-d6446497fa2c_8_e163bb0d-7926-4914-bedf-5e1b564e3a1b">
+            <static>true</static>
+            <pose>2.3999999999999995 4.0 1.28 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.3 1.2 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.3 1.2 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_2a36a563-49c6-48d2-80e1-d6446497fa2c_9_5e7b65d2-3ac9-4e73-bd68-e49dd55fd6ce">
+            <static>true</static>
+            <pose>2.849999999999999 4.0 1.44 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.2 0.16</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 1.2 0.16</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_2a36a563-49c6-48d2-80e1-d6446497fa2c_9_2d5e5d3e-3a99-4d1e-8ae7-5a5ea7137172">
+            <static>true</static>
+            <pose>2.6999999999999993 4.0 1.44 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.3 1.2 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.3 1.2 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_52cc53e1-549f-4d82-964e-cbaa9942ad80_0_55d65f9c-9627-420d-99d2-b29b4c52d32c">
+            <static>true</static>
+            <pose>0.15 8.0 0.0 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.5 0.17</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 1.5 0.17</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_52cc53e1-549f-4d82-964e-cbaa9942ad80_0_8a794324-ca63-4ef4-856b-70beed299f40">
+            <static>true</static>
+            <pose>0.0 8.0 0.0 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.3 1.5 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.3 1.5 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_52cc53e1-549f-4d82-964e-cbaa9942ad80_1_1111efff-ac2f-492e-894d-04a92bfcf701">
+            <static>true</static>
+            <pose>0.44999999999999996 8.0 0.17 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.5 0.17</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 1.5 0.17</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_52cc53e1-549f-4d82-964e-cbaa9942ad80_1_6d310406-74ae-4220-ae2d-a3d7bb72c36a">
+            <static>true</static>
+            <pose>0.3 8.0 0.17 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.3 1.5 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.3 1.5 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_52cc53e1-549f-4d82-964e-cbaa9942ad80_2_5ba03fe9-ecf8-4a3a-b081-9379572d436a">
+            <static>true</static>
+            <pose>0.75 8.0 0.34 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.5 0.17</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 1.5 0.17</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_52cc53e1-549f-4d82-964e-cbaa9942ad80_2_91c4caec-d5e1-4565-a84c-445cd42110ca">
+            <static>true</static>
+            <pose>0.6 8.0 0.34 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.3 1.5 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.3 1.5 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_52cc53e1-549f-4d82-964e-cbaa9942ad80_3_6a994ce5-9f95-4429-a58c-28d6f7b733ac">
+            <static>true</static>
+            <pose>1.05 8.0 0.51 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.5 0.17</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 1.5 0.17</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_52cc53e1-549f-4d82-964e-cbaa9942ad80_3_6562aa51-a1c1-4568-9e54-06f02355735a">
+            <static>true</static>
+            <pose>0.9 8.0 0.51 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.3 1.5 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.3 1.5 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_52cc53e1-549f-4d82-964e-cbaa9942ad80_4_3309eab0-c24b-40a7-8f46-dd1aa9beb2f1">
+            <static>true</static>
+            <pose>1.3499999999999999 8.0 0.68 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.5 0.17</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 1.5 0.17</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_52cc53e1-549f-4d82-964e-cbaa9942ad80_4_2ffc54ab-a152-4baa-bce5-0fb86d078021">
+            <static>true</static>
+            <pose>1.2 8.0 0.68 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.3 1.5 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.3 1.5 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_52cc53e1-549f-4d82-964e-cbaa9942ad80_5_d021ab7b-3b32-47bc-92f5-f923deb43248">
+            <static>true</static>
+            <pose>1.6499999999999997 8.0 0.8500000000000001 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.5 0.17</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 1.5 0.17</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_52cc53e1-549f-4d82-964e-cbaa9942ad80_5_b16ec925-ba21-4d62-b459-d6c5e997660f">
+            <static>true</static>
+            <pose>1.4999999999999998 8.0 0.8500000000000001 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.3 1.5 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.3 1.5 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_52cc53e1-549f-4d82-964e-cbaa9942ad80_6_8a075547-f77a-4978-b533-2c1857fb801e">
+            <static>true</static>
+            <pose>1.9499999999999995 8.0 1.02 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.5 0.17</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 1.5 0.17</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_52cc53e1-549f-4d82-964e-cbaa9942ad80_6_f8faedea-ebcf-41b7-b6e4-209b17e90593">
+            <static>true</static>
+            <pose>1.7999999999999996 8.0 1.02 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.3 1.5 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.3 1.5 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_52cc53e1-549f-4d82-964e-cbaa9942ad80_7_3791ce62-de2e-4d0b-895d-d87d23365bd1">
+            <static>true</static>
+            <pose>2.2499999999999996 8.0 1.19 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.5 0.17</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 1.5 0.17</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_52cc53e1-549f-4d82-964e-cbaa9942ad80_7_7e93ce74-50d3-4632-b193-7a7c3dbc0526">
+            <static>true</static>
+            <pose>2.0999999999999996 8.0 1.19 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.3 1.5 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.3 1.5 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_00b5fcab-3113-4100-94b7-d978fd1f663a_0_d448bd5e-c127-451e-9a09-38c53b6650f1">
+            <static>true</static>
+            <pose>0.15 8.0 0.0 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.5 0.17</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 1.5 0.17</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_00b5fcab-3113-4100-94b7-d978fd1f663a_0_c3e792cb-4b9b-4a43-b508-bcab84fb8b38">
+            <static>true</static>
+            <pose>0.0 8.0 0.0 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.3 1.5 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.3 1.5 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_00b5fcab-3113-4100-94b7-d978fd1f663a_1_1f6191ad-8ddf-440e-b70e-63ed4b974c53">
+            <static>true</static>
+            <pose>0.44999999999999996 8.0 0.17 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.5 0.17</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 1.5 0.17</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_00b5fcab-3113-4100-94b7-d978fd1f663a_1_681afd03-0810-4fe9-897e-d115d8d52c67">
+            <static>true</static>
+            <pose>0.3 8.0 0.17 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.3 1.5 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.3 1.5 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_00b5fcab-3113-4100-94b7-d978fd1f663a_2_d0907982-9bca-4402-a779-d244d1d37cd6">
+            <static>true</static>
+            <pose>0.75 8.0 0.34 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.5 0.17</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 1.5 0.17</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_00b5fcab-3113-4100-94b7-d978fd1f663a_2_a90a6855-5465-4625-9af8-bf3b40037c80">
+            <static>true</static>
+            <pose>0.6 8.0 0.34 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.3 1.5 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.3 1.5 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_00b5fcab-3113-4100-94b7-d978fd1f663a_3_4861b282-e879-4206-ad00-cac63013c0f7">
+            <static>true</static>
+            <pose>1.05 8.0 0.51 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.5 0.17</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 1.5 0.17</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_00b5fcab-3113-4100-94b7-d978fd1f663a_3_cd27905d-e7f3-4683-ab44-fe26c5e85860">
+            <static>true</static>
+            <pose>0.9 8.0 0.51 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.3 1.5 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.3 1.5 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_00b5fcab-3113-4100-94b7-d978fd1f663a_4_ec543392-52d5-4701-b1e2-39c7b7292a18">
+            <static>true</static>
+            <pose>1.3499999999999999 8.0 0.68 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.5 0.17</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 1.5 0.17</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_00b5fcab-3113-4100-94b7-d978fd1f663a_4_5814a436-ce76-4f55-a988-e9ef2bccb903">
+            <static>true</static>
+            <pose>1.2 8.0 0.68 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.3 1.5 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.3 1.5 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_00b5fcab-3113-4100-94b7-d978fd1f663a_5_2275b81c-ec25-4fdb-956c-f32ea4dcbf2e">
+            <static>true</static>
+            <pose>1.6499999999999997 8.0 0.8500000000000001 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.5 0.17</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 1.5 0.17</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_00b5fcab-3113-4100-94b7-d978fd1f663a_5_afa0831b-3246-46ec-a6d6-5044bdbf75f9">
+            <static>true</static>
+            <pose>1.4999999999999998 8.0 0.8500000000000001 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.3 1.5 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.3 1.5 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_00b5fcab-3113-4100-94b7-d978fd1f663a_6_04605ddb-42e7-40a1-9b95-d66e26cf37fd">
+            <static>true</static>
+            <pose>1.9499999999999995 8.0 1.02 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.5 0.17</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 1.5 0.17</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_00b5fcab-3113-4100-94b7-d978fd1f663a_6_08449e8d-d36f-4824-8ad1-b392014e0234">
+            <static>true</static>
+            <pose>1.7999999999999996 8.0 1.02 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.3 1.5 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.3 1.5 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_00b5fcab-3113-4100-94b7-d978fd1f663a_7_4c12418e-9c87-4333-827a-ca6ede2493f5">
+            <static>true</static>
+            <pose>2.2499999999999996 8.0 1.19 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.5 0.17</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 1.5 0.17</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_00b5fcab-3113-4100-94b7-d978fd1f663a_7_b7f156cc-fdd2-44e2-a51b-3f86293ed382">
+            <static>true</static>
+            <pose>2.0999999999999996 8.0 1.19 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.3 1.5 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.3 1.5 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_bd20ba88-00d4-4141-8e56-0126f7c4ce83_0_9d30238f-1113-46cc-bb03-6af308b4ca1b">
+            <static>true</static>
+            <pose>0.16 12.0 0.0 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 2.0 0.16</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 2.0 0.16</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_bd20ba88-00d4-4141-8e56-0126f7c4ce83_0_ce5ada9c-3a50-4a77-9e01-0450b5c870a4">
+            <static>true</static>
+            <pose>0.0 12.0 0.0 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.32 2.0 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.32 2.0 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_bd20ba88-00d4-4141-8e56-0126f7c4ce83_1_a4c39c49-38e1-4383-9a20-9143d60bfa62">
+            <static>true</static>
+            <pose>0.48 12.0 0.16 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 2.0 0.16</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 2.0 0.16</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_bd20ba88-00d4-4141-8e56-0126f7c4ce83_1_abf5958d-e452-4501-9224-f4646dc9c8bf">
+            <static>true</static>
+            <pose>0.32 12.0 0.16 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.32 2.0 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.32 2.0 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_bd20ba88-00d4-4141-8e56-0126f7c4ce83_2_2e06afbc-3feb-47ac-97a1-aab066f7a647">
+            <static>true</static>
+            <pose>0.8 12.0 0.32 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 2.0 0.16</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 2.0 0.16</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_bd20ba88-00d4-4141-8e56-0126f7c4ce83_2_8e39915f-dc9c-4288-81e2-51efa0886174">
+            <static>true</static>
+            <pose>0.64 12.0 0.32 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.32 2.0 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.32 2.0 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_bd20ba88-00d4-4141-8e56-0126f7c4ce83_3_4fa1021d-44da-4540-80e8-216fdb6971bf">
+            <static>true</static>
+            <pose>1.12 12.0 0.48 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 2.0 0.16</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 2.0 0.16</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_bd20ba88-00d4-4141-8e56-0126f7c4ce83_3_b58ae87f-4f4d-4069-94fe-525c4a915d7d">
+            <static>true</static>
+            <pose>0.9600000000000001 12.0 0.48 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.32 2.0 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.32 2.0 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_bd20ba88-00d4-4141-8e56-0126f7c4ce83_4_168478aa-18e3-40fd-b2d1-4b4d58c48172">
+            <static>true</static>
+            <pose>1.44 12.0 0.64 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 2.0 0.16</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 2.0 0.16</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_bd20ba88-00d4-4141-8e56-0126f7c4ce83_4_d2c19591-0872-408e-b4a7-5ca92246fb1e">
+            <static>true</static>
+            <pose>1.28 12.0 0.64 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.32 2.0 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.32 2.0 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_bd20ba88-00d4-4141-8e56-0126f7c4ce83_5_2b9ebb31-dd90-4426-80c4-d27398e4dd4f">
+            <static>true</static>
+            <pose>1.7599999999999998 12.0 0.8 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 2.0 0.16</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 2.0 0.16</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_bd20ba88-00d4-4141-8e56-0126f7c4ce83_5_1dbfa8f7-66a1-40a8-a8f4-e8b93d54398a">
+            <static>true</static>
+            <pose>1.5999999999999999 12.0 0.8 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.32 2.0 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.32 2.0 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_bd20ba88-00d4-4141-8e56-0126f7c4ce83_6_534b0f67-521e-41c3-9811-915d7dda291f">
+            <static>true</static>
+            <pose>2.0799999999999996 12.0 0.9600000000000001 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 2.0 0.16</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 2.0 0.16</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_bd20ba88-00d4-4141-8e56-0126f7c4ce83_6_4418357a-257f-469e-8c84-af4c0902c562">
+            <static>true</static>
+            <pose>1.9199999999999997 12.0 0.9600000000000001 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.32 2.0 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.32 2.0 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_bd20ba88-00d4-4141-8e56-0126f7c4ce83_7_bdd02110-521a-4313-8154-7ea7bcb4401d">
+            <static>true</static>
+            <pose>2.4 12.0 1.12 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 2.0 0.16</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 2.0 0.16</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_bd20ba88-00d4-4141-8e56-0126f7c4ce83_7_2af277d9-3787-4b59-bdd5-b342e9eb0615">
+            <static>true</static>
+            <pose>2.2399999999999998 12.0 1.12 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.32 2.0 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.32 2.0 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_bd20ba88-00d4-4141-8e56-0126f7c4ce83_8_c719891d-dbee-4260-8b9b-130403ff3040">
+            <static>true</static>
+            <pose>2.72 12.0 1.28 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 2.0 0.16</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 2.0 0.16</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_bd20ba88-00d4-4141-8e56-0126f7c4ce83_8_7f2df69d-c75e-4992-9b36-ecdfa9d96721">
+            <static>true</static>
+            <pose>2.56 12.0 1.28 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.32 2.0 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.32 2.0 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_bd20ba88-00d4-4141-8e56-0126f7c4ce83_9_942679fb-2a64-4691-b3bd-9f6123c19bf9">
+            <static>true</static>
+            <pose>3.0400000000000005 12.0 1.44 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 2.0 0.16</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 2.0 0.16</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_bd20ba88-00d4-4141-8e56-0126f7c4ce83_9_adcf6c76-5dec-4ec0-9178-8213b26617c5">
+            <static>true</static>
+            <pose>2.8800000000000003 12.0 1.44 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.32 2.0 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.32 2.0 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_bd20ba88-00d4-4141-8e56-0126f7c4ce83_10_6a7f7a40-4dcb-4172-8098-c79dc2585e21">
+            <static>true</static>
+            <pose>3.3600000000000008 12.0 1.5999999999999999 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 2.0 0.16</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 2.0 0.16</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_bd20ba88-00d4-4141-8e56-0126f7c4ce83_10_23e7d397-9d42-4e19-b877-b89dd9314df1">
+            <static>true</static>
+            <pose>3.2000000000000006 12.0 1.5999999999999999 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.32 2.0 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.32 2.0 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_bd20ba88-00d4-4141-8e56-0126f7c4ce83_11_f59ecc5c-b6f7-419f-bb95-69f9f15d1179">
+            <static>true</static>
+            <pose>3.680000000000001 12.0 1.7599999999999998 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 2.0 0.16</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 2.0 0.16</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_bd20ba88-00d4-4141-8e56-0126f7c4ce83_11_ce653b04-934f-473e-b030-6b8664a3f639">
+            <static>true</static>
+            <pose>3.520000000000001 12.0 1.7599999999999998 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.32 2.0 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.32 2.0 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_24ac1bca-2257-491c-a35d-8a1fd6fc1886_0_4e8bc68a-41e6-42f5-9ed3-a3bbb42d0026">
+            <static>true</static>
+            <pose>0.155 16.0 0.0 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.4 0.165</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 1.4 0.165</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_24ac1bca-2257-491c-a35d-8a1fd6fc1886_0_2401c1fb-a3f7-4f92-b42a-45f01dcf4bf3">
+            <static>true</static>
+            <pose>0.0 16.0 0.0 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.31 1.4 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.31 1.4 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_24ac1bca-2257-491c-a35d-8a1fd6fc1886_1_bf8cfab6-2661-4049-b46a-88528b3df873">
+            <static>true</static>
+            <pose>0.46499999999999997 16.0 0.165 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.4 0.165</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 1.4 0.165</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_24ac1bca-2257-491c-a35d-8a1fd6fc1886_1_5efca571-ecfe-432d-a957-5d1a5e5ac272">
+            <static>true</static>
+            <pose>0.31 16.0 0.165 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.31 1.4 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.31 1.4 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_24ac1bca-2257-491c-a35d-8a1fd6fc1886_2_13e212b4-fbef-48ad-8f87-ff1fc9e1ea75">
+            <static>true</static>
+            <pose>0.775 16.0 0.33 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.4 0.165</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 1.4 0.165</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_24ac1bca-2257-491c-a35d-8a1fd6fc1886_2_d8378de0-aaa1-400c-8e6e-58b61d9764c6">
+            <static>true</static>
+            <pose>0.62 16.0 0.33 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.31 1.4 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.31 1.4 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_24ac1bca-2257-491c-a35d-8a1fd6fc1886_3_1e603b28-3776-44fd-a3af-d5c9baf8aa5e">
+            <static>true</static>
+            <pose>1.085 16.0 0.495 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.4 0.165</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 1.4 0.165</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_24ac1bca-2257-491c-a35d-8a1fd6fc1886_3_7a368a25-9ef1-4bfe-bd60-86396667ad1d">
+            <static>true</static>
+            <pose>0.93 16.0 0.495 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.31 1.4 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.31 1.4 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_24ac1bca-2257-491c-a35d-8a1fd6fc1886_4_ce8049b9-bbf6-4226-8627-e95e78ce7663">
+            <static>true</static>
+            <pose>1.395 16.0 0.66 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.4 0.165</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 1.4 0.165</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_24ac1bca-2257-491c-a35d-8a1fd6fc1886_4_e88de804-7556-4c4e-8c9f-e5e79d3fe49e">
+            <static>true</static>
+            <pose>1.24 16.0 0.66 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.31 1.4 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.31 1.4 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_24ac1bca-2257-491c-a35d-8a1fd6fc1886_5_cc7a0a44-a74a-4b30-8be9-aa4e5813d309">
+            <static>true</static>
+            <pose>1.705 16.0 0.8250000000000001 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.4 0.165</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 1.4 0.165</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_24ac1bca-2257-491c-a35d-8a1fd6fc1886_5_588c8bbb-c7f7-4599-ac48-a38efb74453e">
+            <static>true</static>
+            <pose>1.55 16.0 0.8250000000000001 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.31 1.4 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.31 1.4 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_24ac1bca-2257-491c-a35d-8a1fd6fc1886_6_6c43e535-f71a-48c0-ab97-2b2f3d0ccb02">
+            <static>true</static>
+            <pose>2.015 16.0 0.9900000000000001 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.4 0.165</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 1.4 0.165</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_24ac1bca-2257-491c-a35d-8a1fd6fc1886_6_12971364-1baf-4421-964c-ebb0dd68162d">
+            <static>true</static>
+            <pose>1.86 16.0 0.9900000000000001 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.31 1.4 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.31 1.4 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_24ac1bca-2257-491c-a35d-8a1fd6fc1886_7_4960b9a8-4676-47c1-8957-3d5217b29ae7">
+            <static>true</static>
+            <pose>2.3249999999999997 16.0 1.155 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.4 0.165</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 1.4 0.165</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_24ac1bca-2257-491c-a35d-8a1fd6fc1886_7_6fe51943-b490-44ac-9922-8fdb306f4fa1">
+            <static>true</static>
+            <pose>2.17 16.0 1.155 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.31 1.4 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.31 1.4 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_24ac1bca-2257-491c-a35d-8a1fd6fc1886_8_a450ee0c-dda2-4154-a00b-aa8ada53792d">
+            <static>true</static>
+            <pose>2.6349999999999993 16.0 1.32 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.4 0.165</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 1.4 0.165</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_24ac1bca-2257-491c-a35d-8a1fd6fc1886_8_0dfc199f-a688-4430-b5dc-b76c4d749eb0">
+            <static>true</static>
+            <pose>2.4799999999999995 16.0 1.32 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.31 1.4 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.31 1.4 0.01</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="riser_riser_24ac1bca-2257-491c-a35d-8a1fd6fc1886_9_965f00d1-bbe7-494d-ba98-63ef3be0b39b">
+            <static>true</static>
+            <pose>2.944999999999999 16.0 1.485 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/riser_unit.stl</uri>
+                    <scale>1 1.4 0.165</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.01 1.4 0.165</size>
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="tread_tread_24ac1bca-2257-491c-a35d-8a1fd6fc1886_9_eaa91bf2-10bb-4272-9053-ee86d6da2883">
+            <static>true</static>
+            <pose>2.789999999999999 16.0 1.485 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/tread_unit.stl</uri>
+                    <scale>0.31 1.4 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>0.31 1.4 0.01</size> <!-- match final scaled size -->
                         </box>
                 </geometry>
                 </collision>
@@ -246,5 +2508,5 @@
         </model>
 
 
-    </world>
-</sdf>
+        </world>
+        </sdf>

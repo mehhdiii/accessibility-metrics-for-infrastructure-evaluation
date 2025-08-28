@@ -1,5 +1,6 @@
 {
     "valid_staircases": [
+        
         {
             "name": "Valid Stairs 1 - Minimal compliant",
             "description": "Width at minimum 1.2 m, H=0.16 m, D=0.30 m (Blondel 0.62), 10 steps, tactile strips, single handrail",

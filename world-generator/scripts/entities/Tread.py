@@ -64,7 +64,7 @@ class Tread:
                 <collision name="collision">
                 <geometry>
                         <box>
-                            <size>{self.depth} {self.width} 1</size> <!-- match final scaled size -->
+                            <size>{self.depth} {self.width} {self.thickness}</size> <!-- match final scaled size -->
                         </box>
                 </geometry>
                 </collision>

@@ -42,7 +42,6 @@ class Riser:
     def render(self):
         if self.position is None:
             raise ValueError("Riser position is not set. Please set the position before rendering.")
-
         return f"""
         <model name="riser_{self.name}_{self.id}">
             <static>true</static>
@@ -52,7 +51,7 @@ class Riser:
                 <geometry>
                     <mesh>
                     <uri>{self.assets_url}/{self.asset_name}</uri>
-                    <scale>{self.width} 1 {self.height}</scale>
+                    <scale>1 {self.width} {self.height}</scale>
                     </mesh>
                 </geometry>
                 <material>
@@ -63,7 +62,7 @@ class Riser:
                 <collision name="collision">
                 <geometry>
                         <box>
-                            <size>{self.width} {self.thickness} {self.height}</size>
+                            <size>{self.thickness} {self.width} {self.height}</size>
                         </box>
                 </geometry>
                 </collision>

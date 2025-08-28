@@ -1,13 +1,20 @@
+#readers
 from readers.RampSpecsReader import RampSpecsReader
 from readers.CorridorSpecsReader import CorridorSpecsReader
+from readers.StairCaseSpecsReader import StairCaseSpecsReader
+
+#mappers
 from mappers.RampMapper import RampMapper
 from mappers.PlatformMapper import PlatformMapper
 from mappers.CorridorMapper import CorridorMapper
 from mappers.WideningMapper import WideningMapper
+from mappers.StairCaseMapper import StairCaseMapper
+
+#const enums
 from enums import ElementType, SpecClassification
 
+#load env variables
 from dotenv import load_dotenv
-
 result = load_dotenv()
 
 class SDFGenerator:
@@ -72,6 +79,11 @@ class SDFGenerator:
                 self.required_assets.add(widening.asset_name)
                 self.sdf_string += widening.render()
                 corridor = None  # Reset corridor after processing widening
+            elif child.get("type") == ElementType.STAIRCASE.value:
+                staircase = StairCaseMapper.StairCaseMapper(child)
+                staircase.init(y_index, x_index)
+                self.required_assets.add(staircase.asset_name)
+                self.sdf_string += staircase.render()
             child = child.get("child")
 
 
@@ -112,7 +124,8 @@ class SDFGenerator:
 rampSpecsReader = RampSpecsReader()
 # read corridor specs:
 corridorSpecsReader = CorridorSpecsReader()
-
+# read staircase specs:
+staircaseSpecsReader = StairCaseSpecsReader()
 
 # Create SDFGenerator instance
 sdf_generator = SDFGenerator()
@@ -123,8 +136,12 @@ sdf_generator = SDFGenerator()
 
 
 #generate corridor sdfs
-sdf_generator.generate(corridorSpecsReader.validCorridors, SpecClassification.VALID.value, x_index=0)
+# sdf_generator.generate(corridorSpecsReader.validCorridors, SpecClassification.VALID.value, x_index=0)
 # sdf_generator.generate(corridorSpecsReader.invalidCorridors, SpecClassification.INVALID.value, x_index=1)
+
+#generate staircase sdfs
+sdf_generator.generate(staircaseSpecsReader.validStairCases, SpecClassification.VALID.value, x_index=0)
+# sdf_generator.generate(staircaseSpecsReader.invalidStairCases, SpecClassification.INVALID.value, x_index=2)
 
 # Generate final SDF world
 sdf_world = sdf_generator.place_in_world(sdf_generator.sdf_string)

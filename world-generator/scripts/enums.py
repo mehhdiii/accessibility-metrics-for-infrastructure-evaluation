@@ -5,6 +5,7 @@ class ElementType(Enum):
     PLATFORM = "platform"
     CORRIDOR = "corridor"
     WIDENING = "widening"
+    STAIRCASE = "staircase"
 
 class SpecClassification(Enum):
     VALID = "valid"
