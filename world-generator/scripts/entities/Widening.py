@@ -1,8 +1,8 @@
 import os
 import uuid
-from Wall import Wall
-from Floor import Floor
-from Corridor import Corridor
+from entities.Wall import Wall
+from entities.Floor import Floor
+from entities.Corridor import Corridor
 
 class Widening:
     def __init__(self, name: str, length: float, width: float, front_close: bool = False):

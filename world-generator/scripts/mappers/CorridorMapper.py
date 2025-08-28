@@ -1,4 +1,4 @@
-from Corridor import Corridor
+from entities.Corridor import Corridor
 
 class CorridorMapper:
     def __init__(self):

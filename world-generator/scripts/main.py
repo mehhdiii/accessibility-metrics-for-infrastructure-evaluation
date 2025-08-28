@@ -1,16 +1,11 @@
-import json
-import math
-from Ramp import Ramp
-from Platform import Platform
-from RampSpecsReader import RampSpecsReader
-from CorridorSpecsReader import CorridorSpecsReader
-from RampMapper import RampMapper
-from PlatformMapper import PlatformMapper
-from CorridorMapper import CorridorMapper
-from WideningMapper import WideningMapper
+from readers.RampSpecsReader import RampSpecsReader
+from readers.CorridorSpecsReader import CorridorSpecsReader
+from mappers.RampMapper import RampMapper
+from mappers.PlatformMapper import PlatformMapper
+from mappers.CorridorMapper import CorridorMapper
+from mappers.WideningMapper import WideningMapper
 from enums import ElementType, SpecClassification
 
-import os 
 from dotenv import load_dotenv
 
 result = load_dotenv()

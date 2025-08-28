@@ -1,7 +1,7 @@
 import os
 import uuid
-from Wall import Wall
-from Floor import Floor
+from entities.Wall import Wall
+from entities.Floor import Floor
 class Corridor:
     def __init__(self, name: str, length: float, width: float):
         self.name = name

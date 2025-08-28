@@ -1,6 +1,6 @@
 
 
-from Widening import Widening
+from entities.Widening import Widening
 
 class WideningMapper:
     def __init__(self):

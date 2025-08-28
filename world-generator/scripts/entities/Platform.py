@@ -1,6 +1,6 @@
 import os
 import uuid
-from Ramp import Ramp
+from entities.Ramp import Ramp
 from interfaces.IPlatform import AbstractPlatform
 class Platform(AbstractPlatform):
     def __init__(self, name: str, length: float, width: float):

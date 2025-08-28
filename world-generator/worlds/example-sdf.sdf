@@ -11,9 +11,9 @@
             </include>
 
 
-        <model name="wall_corridor 1_left_e415962f-1dc7-4bf0-9b97-45a04e97a6ed">
+        <model name="wall_corridor 1_left_1598e186-f041-4e59-a706-d51a393f1fd5">
             <static>true</static>
-            <pose>25.0 3.0 0.0 0 0 0</pose>
+            <pose>0.0 3.0 0.0 0 0 0.0</pose>
             <link name="link">
                 <visual name="visual">
                 <geometry>
@@ -37,9 +37,9 @@
             </link>
         </model>
 
-        <model name="wall_corridor 1_right_433bd9bd-39fd-447c-861c-edf192a77697">
+        <model name="wall_corridor 1_right_4599e726-f398-4646-9b2f-a69921f6e8ea">
             <static>true</static>
-            <pose>25.0 5.0 0.0 0 0 0</pose>
+            <pose>0.0 5.0 0.0 0 0 0.0</pose>
             <link name="link">
                 <visual name="visual">
                 <geometry>
@@ -63,9 +63,9 @@
             </link>
         </model>
 
-        <model name="floor_corridor 1_floor_94cd546a-054f-49b5-8ba4-f5957489f01a">
+        <model name="floor_corridor 1_floor_c91a6b09-4d99-49df-83a7-a66bf0eae2ed">
             <static>true</static>
-            <pose>25.0 4.0 0.0 0 0 0</pose>
+            <pose>0.0 4.0 0.0 0 0 0</pose>
             <link name="link">
                 <visual name="visual">
                 <geometry>
@@ -82,7 +82,163 @@
                 <collision name="collision">
                 <geometry>
                         <box>
-                            <size>10.0 2.0 1</size> <!-- match final scaled size -->
+                            <size>10.0 2.0 0.0025</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="wall_widening_1_front_close_8bc633af-9f73-4235-9007-b57b11c0fbbd">
+            <static>true</static>
+            <pose>9.0 4.0 0.0 0 0 1.57</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/wall_unit.stl</uri>
+                    <scale>4.0 1 1</scale> <!-- dont scale height, thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.6 0.4 0.2 1</ambient>
+                    <diffuse>0.6 0.4 0.2 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>4.0 0.1 1.2</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="wall_widening_1_left_1047d8f6-4621-47af-a820-7c2489ecdecd">
+            <static>true</static>
+            <pose>7.0 2.0 0.0 0 0 0.0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/wall_unit.stl</uri>
+                    <scale>4.0 1 1</scale> <!-- dont scale height, thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.6 0.4 0.2 1</ambient>
+                    <diffuse>0.6 0.4 0.2 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>4.0 0.1 1.2</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="wall_widening_1_right_1d4be636-9f0d-4cb2-b4fa-5d8157d6acae">
+            <static>true</static>
+            <pose>7.0 6.0 0.0 0 0 0.0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/wall_unit.stl</uri>
+                    <scale>4.0 1 1</scale> <!-- dont scale height, thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.6 0.4 0.2 1</ambient>
+                    <diffuse>0.6 0.4 0.2 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>4.0 0.1 1.2</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="floor_widening_1_floor_c2630673-4dcf-4f3e-b050-1f5925b66c78">
+            <static>true</static>
+            <pose>7.0 4.0 0.0 0 0 0</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/floor_unit.stl</uri>
+                    <scale>4.0 4.0 1</scale> <!-- dont scale thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.6 0.4 0.2 1</ambient>
+                    <diffuse>0.6 0.4 0.2 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>4.0 4.0 0.0025</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="wall_widening_1_left_transition_abe17878-dece-4102-9765-4bde99e50f77">
+            <static>true</static>
+            <pose>5.0 2.5 0.0 0 0 1.57</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/wall_unit.stl</uri>
+                    <scale>1.0 1 1</scale> <!-- dont scale height, thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.6 0.4 0.2 1</ambient>
+                    <diffuse>0.6 0.4 0.2 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>1.0 0.1 1.2</size> <!-- match final scaled size -->
+                        </box>
+                </geometry>
+                </collision>
+            </link>
+        </model>
+
+        <model name="wall_widening_1_right_transition_99c69804-2447-417b-9e85-c722518b82c4">
+            <static>true</static>
+            <pose>5.0 5.5 0.0 0 0 1.57</pose>
+            <link name="link">
+                <visual name="visual">
+                <geometry>
+                    <mesh>
+                    <uri>model://data/world-generator/assets/wall_unit.stl</uri>
+                    <scale>1.0 1 1</scale> <!-- dont scale height, thickness -->
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.6 0.4 0.2 1</ambient>
+                    <diffuse>0.6 0.4 0.2 1</diffuse>
+                </material>
+                </visual>
+                <collision name="collision">
+                <geometry>
+                        <box>
+                            <size>1.0 0.1 1.2</size> <!-- match final scaled size -->
                         </box>
                 </geometry>
                 </collision>
@@ -90,5 +246,5 @@
         </model>
 
 
-        </world>
-        </sdf>
+    </world>
+</sdf>

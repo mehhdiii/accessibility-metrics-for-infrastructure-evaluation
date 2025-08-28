@@ -1,4 +1,4 @@
-from Ramp import Ramp 
+from entities.Ramp import Ramp 
 class RampMapper:
     def __init__(self):
         pass

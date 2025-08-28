@@ -1,4 +1,4 @@
-from Platform import Platform
+from entities.Platform import Platform
 
 class PlatformMapper:
     def __init__(self):
