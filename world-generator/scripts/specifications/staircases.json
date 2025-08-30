@@ -23,21 +23,20 @@
                     {
                         "side": "both",
                         "height": 0.95,
-                        "extension_before": 0.30,
-                        "extension_after": 0.30,
+                        "extension_length": 0.30,
                         "offset_from_wall": 0.04
                     }
                 ]
             }
         },
         {
-            "name": "Valid Stairs 2 - With mid landing",
-            "description": "1.5 m wide, two flights with 8+8 steps and a 1.5×1.5 m landing; H=0.17, D=0.30 (Blondel 0.64); dual handrails",
+            "name": "Valid Stairs - Single Flight",
+            "description": "1.5 m wide, one continuous flight with 16 steps; H=0.17, D=0.30 (Blondel 0.64); dual handrails",
             "root": {
-                "name": "stairs_2_flight_1",
+                "name": "stairs_single_flight",
                 "type": "staircase",
                 "width": 1.5,
-                "num_steps": 8,
+                "num_steps": 16,
                 "riser_height": 0.17,
                 "tread_depth": 0.30,
                 "tactile_strips": {
@@ -52,32 +51,16 @@
                     {
                         "side": "both",
                         "height": 0.95,
-                        "extension_before": 0.30,
-                        "extension_after": 0.30,
+                        "extension_length": 0.30,
                         "offset_from_wall": 0.05
                     },
                     {
                         "side": "both",
                         "height": 0.75,
-                        "extension_before": 0.30,
-                        "extension_after": 0.30,
+                        "extension_length": 0.30,
                         "offset_from_wall": 0.05
                     }
-                ],
-                "child": {
-                    "name": "landing_mid",
-                    "type": "landing",
-                    "length": 1.5,
-                    "width": 1.5,
-                    "child": {
-                        "name": "stairs_2_flight_2",
-                        "type": "staircase",
-                        "width": 1.5,
-                        "num_steps": 8,
-                        "riser_height": 0.17,
-                        "tread_depth": 0.30
-                    }
-                }
+                ]
             }
         },
         {
@@ -102,15 +85,13 @@
                     {
                         "side": "both",
                         "height": 0.92,
-                        "extension_before": 0.30,
-                        "extension_after": 0.30,
+                        "extension_length": 0.30,
                         "offset_from_wall": 0.05
                     },
                     {
                         "side": "both",
                         "height": 0.75,
-                        "extension_before": 0.30,
-                        "extension_after": 0.30,
+                        "extension_length": 0.30,
                         "offset_from_wall": 0.05
                     }
                 ]
@@ -144,8 +125,7 @@
                     {
                         "side": "both",
                         "height": 0.95,
-                        "extension_before": 0.30,
-                        "extension_after": 0.30,
+                        "extension_length": 0.30,
                         "offset_from_wall": 0.04
                     }
                 ]
@@ -175,8 +155,7 @@
                     {
                         "side": "both",
                         "height": 0.95,
-                        "extension_before": 0.30,
-                        "extension_after": 0.30,
+                        "extension_length": 0.30,
                         "offset_from_wall": 0.04
                     }
                 ]
@@ -204,8 +183,7 @@
                     {
                         "side": "both",
                         "height": 0.95,
-                        "extension_before": 0.30,
-                        "extension_after": 0.30,
+                        "extension_length": 0.30,
                         "offset_from_wall": 0.04
                     }
                 ]
@@ -230,8 +208,7 @@
                     {
                         "side": "both",
                         "height": 0.95,
-                        "extension_before": 0.30,
-                        "extension_after": 0.30,
+                        "extension_length": 0.30,
                         "offset_from_wall": 0.04
                     }
                 ]
@@ -259,8 +236,7 @@
                     {
                         "side": "both",
                         "height": 0.95,
-                        "extension_before": 0.30,
-                        "extension_after": 0.30,
+                        "extension_length": 0.30,
                         "offset_from_wall": 0.04
                     }
                 ]
@@ -288,8 +264,7 @@
                     {
                         "side": "both",
                         "height": 1.10,
-                        "extension_before": 0.30,
-                        "extension_after": 0.30,
+                        "extension_length": 0.30,
                         "offset_from_wall": 0.04
                     }
                 ]
@@ -323,8 +298,7 @@
                     {
                         "side": "both",
                         "height": 0.95,
-                        "extension_before": 0.30,
-                        "extension_after": 0.30,
+                        "extension_length": 0.30,
                         "offset_from_wall": 0.04
                     }
                 ]

@@ -1,25 +1,34 @@
 import os
 import uuid
-from entities.Tread import Tread
-from entities.Riser import Riser
+from entities.TactileStrip import TactileStrip
+from entities.HandRail import HandRail
+from entities.Stair import Stair
+from entities.Wall import Wall
 from typing import TypedDict
-
-# type used to store each step's tread and riser
-class StepDict(TypedDict):
-    tread: Tread
-    riser: Riser
+from entities.shared import HandrailSpecs
+import math
 
 class StairCase:
-    def __init__(self, name: str, numberOfSteps: int, width: float, tread_depth: float, riser_height: float):
+    def __init__(self, name: str, numberOfSteps: int, width: float, tread_depth: float, riser_height: float, tactile_strip_attached: bool = False, tactile_strip_before_stairs_distance: float = 0.0, tactile_strip_after_stairs_distance: float = 0.0, handrailSpecs: list[HandrailSpecs] = []):
         self.name = name
         self.id = str(uuid.uuid4())
         self.numberOfSteps = numberOfSteps
         self.width = width
         self.tread_depth = tread_depth
         self.riser_height = riser_height
-        self.tread_riser_dict: list[StepDict] = []
+        self.stairs: list[Stair] = []
         self.y_offset: float = float(os.getenv("Y_OFFSET", -1.0))
         self.x_offset: float = float(os.getenv("X_OFFSET", -1.0))
+        
+        self.tactile_strip_attached: bool = tactile_strip_attached
+        self.tactile_strip_before_stairs_distance: float = tactile_strip_before_stairs_distance
+        self.tactile_strip_after_stairs_distance: float = tactile_strip_after_stairs_distance
+        self.tactile_strip_before: TactileStrip | None = None
+        self.tactile_strip_after: TactileStrip | None = None
+
+        self.handrailSpecs = handrailSpecs
+        self.handrails: list[HandRail] = []
+
 
         if (self.y_offset == -1.0):
             raise ValueError("Y_OFFSET environment variable is not set.")
@@ -29,54 +38,88 @@ class StairCase:
     def init(self, yIndex: int, xIndex: int):
 
         self.position = self._calculate_position(yIndex, xIndex)
-        self.initialize_stair()
+        end_pose = self.initialize_stair()
+        if self.tactile_strip_attached:
+           self.initialize_tactile_strips(end_pose)
+        
+        if len(self.handrailSpecs) > 0:
+            self.initialize_handrails()
 
     @property
     def asset_name(self):
         assetNames = ''
-        for step in self.tread_riser_dict:
-            assetNames += step['tread'].asset_name + ', ' + step['riser'].asset_name + ', '
+        for step in self.stairs:
+            assetNames += step.asset_name + ', '
         return assetNames
 
     def _calculate_position(self, yIndex: int, xIndex: int):
         # Calculate the position based on the indices
-        x =  xIndex * self.x_offset  # calculation for x position
-        y = yIndex * self.y_offset    # calculation for y position
-        z = 0.0               # Fixed z position
-        return [x, y, z, 0, 0, 0]
+        x: float =  xIndex * self.x_offset  # calculation for x position
+        y: float = yIndex * self.y_offset    # calculation for y position
+        z: float = 0.0               # Fixed z position
+        return [x, y, z, 0.0, 0.0, 0.0]
+    
+    def initialize_handrails(self):
+        for i in self.handrailSpecs:
+            #calculate total length along the stairs: 
+            total_length_along_stair = ((self.numberOfSteps*self.riser_height)**2 + (self.numberOfSteps*self.tread_depth)**2)**0.5
+            height = i["height"]
+            protruding_length = i["extension_length"]
+            lefthandrail = HandRail(f"handrail_{self.id}_{i}", total_length_along_stair + 2*protruding_length, height)
+            righthandrail = HandRail(f"handrail_{self.id}_{i}", total_length_along_stair + 2*protruding_length, height)
+
+            #place at the center left and center right of the staircase
+            angle = -math.atan2(self.numberOfSteps*self.riser_height, self.numberOfSteps*self.tread_depth)
+            handrail_position = [self.position[0]+self.tread_depth*self.numberOfSteps/2, self.position[1] - self.width/2, self.position[2] + self.riser_height*self.numberOfSteps/2, 0, angle, 0]
+            lefthandrail.init(handrail_position)
+            handrail_position = [self.position[0]+self.tread_depth*self.numberOfSteps/2, self.position[1] + self.width/2, self.position[2] + self.riser_height*self.numberOfSteps/2, 0, angle, 0]
+            righthandrail.init(handrail_position)
+            
+            #append to master list:
+            self.handrails.append(lefthandrail)
+            self.handrails.append(righthandrail)
+
+    def initialize_tactile_strips(self, end_pose):
+        if (self.position is None):
+            raise ValueError("StairCase position is not set.")
+
+        #create tactile strips with dim: (l, w) = (width/2, width)
+        self.tactile_strip_before = TactileStrip(f"tactile_strip_before_{self.id}", self.width/2, self.width)
+        self.tactile_strip_before.init([self.position[0] - self.tactile_strip_before_stairs_distance - self.tactile_strip_before.length/2, self.position[1], self.position[2]])
+        self.tactile_strip_after = TactileStrip(f"tactile_strip_after_{self.id}", self.width/2, self.width)
+        self.tactile_strip_after.init([end_pose[0] + self.tactile_strip_after_stairs_distance + self.tactile_strip_after.length/2, end_pose[1], end_pose[2]])
 
     def initialize_stair(self):
         if (self.numberOfSteps <= 0):
             raise ValueError("Number of steps must be greater than 0.")
-        self.tread_riser_dict = [] # always clear before filling it up:
-        last_riser = None
+        self.stairs = [] # always clear before filling it up:
+        last_stair = None
         for i in range(self.numberOfSteps):
-            # Initialize each step's position and dimensions
-            tread = Tread(f"tread_{self.id}_{i}", self.tread_depth, self.width)
-            riser = Riser(f"riser_{self.id}_{i}", self.riser_height, self.width)
-
-            tread_position = [self.position[0], self.position[1], self.position[2]]
-
-            if (last_riser is not None):
-                # i != 0 case:
-                if (last_riser.position is None):
-                    raise ValueError("Last riser position is not set.")
-                tread_position = [last_riser.position[0] + self.tread_depth/2, last_riser.position[1], last_riser.position[2] + self.riser_height]   
+            stair = Stair(f"stair_{self.id}_{i}", self.width, self.tread_depth, self.riser_height)
             
-            tread.init(tread_position)
+            if (last_stair is None):
+                # this is the first riser
+                stair_position: list[float] = [self.position[0] + self.tread_depth/2, self.position[1], self.position[2]]
+            else:
+                if (last_stair.position is None):
+                    raise ValueError("Last stair position is not set.")
+                stair_position: list[float] = [last_stair.position[0] + self.tread_depth, last_stair.position[1], last_stair.position[2]+self.riser_height]            
+            stair.init(stair_position)
+            
+            self.stairs.append(stair)
+            last_stair = stair
 
-            if (tread.position is None):
-                raise ValueError("Tread position is not set.")
-            riser_position = [tread.position[0] + self.tread_depth/2, tread.position[1], tread.position[2]]
-            riser.init(riser_position)
-
-            self.tread_riser_dict.append({"tread": tread, "riser": riser})
-            last_riser = riser
+        if (last_stair is None):
+            return
+        if (last_stair.position is None):
+            raise ValueError("Last tread position is not set.")
+        
+        return [last_stair.position[0] + last_stair.depth, last_stair.position[1], last_stair.position[2]+last_stair.height]
 
     @property
     def dimensions(self):
         """Return the dimensions of the stair as a tuple (length, height, thickness)."""
-        return (self.tread_depth, self.riser_height, self.width)
+        return (self.tread_depth*self.numberOfSteps, self.riser_height*self.numberOfSteps, self.width)
 
     @property
     def pose(self):
@@ -90,10 +133,11 @@ class StairCase:
         return f"StairCase(stepCount={self.numberOfSteps}, position={self.position})"
 
     def render(self):
-        rendered = ""
-        for step in self.tread_riser_dict:
-            riser: Riser = step['riser']
-            tread: Tread = step['tread']
-            rendered += riser.render()
-            rendered += tread.render()
+        rendered = self.tactile_strip_before.render() if self.tactile_strip_before is not None else ''
+        rendered += self.tactile_strip_after.render() if self.tactile_strip_after is not None else ''
+        for i in self.handrails:
+            rendered += i.render()
+
+        for stair in self.stairs:
+            rendered += stair.render()
         return rendered

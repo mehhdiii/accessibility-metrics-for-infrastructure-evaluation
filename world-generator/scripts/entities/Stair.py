@@ -1,15 +1,30 @@
 import os
 import uuid
-
+from entities.Riser import Riser 
+from entities.Tread import Tread
 class Stair:
-    def __init__(self, name: str):
+    def __init__(self, name: str, width: float, depth: float, height: float):
         self.name = name
         self.id = str(uuid.uuid4())
+        self.width = width
+        self.depth = depth
+        self.height = height
+        self.riser: Riser = Riser(f"riser_{self.id}", self.height, self.width)
+        self.tread: Tread = Tread(f"tread_{self.id}", self.depth, self.width)
 
     def init(self, position: list[float]):
         self.position = position
+        self.riser.init(position)
 
+        if (self.riser.position is None):
+            raise ValueError("Riser position is not set.")
+        
+        tread_position = [self.riser.position[0]+self.tread.depth/2, self.riser.position[1], self.riser.position[2] + self.riser.height]
+        self.tread.init(tread_position)
 
+    @property
+    def asset_name(self):
+        return self.riser.asset_name + ', ' + self.tread.asset_name + ', '
 
     def _calculate_position(self, yIndex: int, xIndex: int):
         return [0, 0, 0, 0, 0, 0]
@@ -31,4 +46,4 @@ class Stair:
         return f"Stair(position={self.position})"
 
     def render(self):
-        return ""
+        return self.riser.render() + self.tread.render()

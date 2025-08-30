@@ -14,6 +14,7 @@ from mappers.StairCaseMapper import StairCaseMapper
 from enums import ElementType, SpecClassification
 
 #load env variables
+import os
 from dotenv import load_dotenv
 result = load_dotenv()
 
@@ -108,7 +109,13 @@ class SDFGenerator:
         </sdf>
         """
         return sdf_world
-    
+    def write_to_file(self, sdf_string):
+        fileName = os.getenv("OUTPUT_FILE")
+        if fileName is None:
+            raise ValueError("OUTPUT_FILE environment variable is not set.")
+        with open(fileName, "w") as f:
+            f.write(sdf_string)
+
     def generate(self, ramps, model_type, x_index):
         for index, specs in enumerate(ramps):
             y_index = index + 1
@@ -141,10 +148,11 @@ sdf_generator = SDFGenerator()
 
 #generate staircase sdfs
 sdf_generator.generate(staircaseSpecsReader.validStairCases, SpecClassification.VALID.value, x_index=0)
-# sdf_generator.generate(staircaseSpecsReader.invalidStairCases, SpecClassification.INVALID.value, x_index=2)
+sdf_generator.generate(staircaseSpecsReader.invalidStairCases, SpecClassification.INVALID.value, x_index=0)
 
 # Generate final SDF world
 sdf_world = sdf_generator.place_in_world(sdf_generator.sdf_string)
-print(sdf_world)
+sdf_generator.write_to_file(sdf_world)
+print("written to output successfully!")
 from pprint import pprint
 # pprint(sdf_generator.required_assets)
