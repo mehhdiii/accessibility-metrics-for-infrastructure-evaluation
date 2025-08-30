@@ -44,6 +44,7 @@ class StairCase:
         
         if len(self.handrailSpecs) > 0:
             self.initialize_handrails()
+        self.initializeWalls()
 
     @property
     def asset_name(self):
@@ -115,6 +116,18 @@ class StairCase:
             raise ValueError("Last tread position is not set.")
         
         return [last_stair.position[0] + last_stair.depth, last_stair.position[1], last_stair.position[2]+last_stair.height]
+    
+    def initializeWalls(self):
+        self._leftWall = Wall(f"{self.name}_left", length=self.dimensions[0]) 
+        self._rightWall = Wall(f"{self.name}_right", length=self.dimensions[0])
+
+        if (self.position is None):
+            raise ValueError("Widening position is not set.")
+
+        #initialize the left wall to be W/2 from the center of widening
+        self._leftWall.init([self.position[0]+self.dimensions[0]/2, self.position[1] - (self.width / 2) - self._leftWall.thickness/2, self.position[2]])
+        #initialize the right wall to be W/2 from the center of widening
+        self._rightWall.init([self.position[0]+self.dimensions[0]/2, self.position[1] + (self.width / 2) + self._rightWall.thickness/2, self.position[2]])
 
     @property
     def dimensions(self):
@@ -140,4 +153,6 @@ class StairCase:
 
         for stair in self.stairs:
             rendered += stair.render()
+        rendered += self._leftWall.render() if self._leftWall is not None else ''
+        rendered += self._rightWall.render() if self._rightWall is not None else ''
         return rendered
