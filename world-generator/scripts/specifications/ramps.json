@@ -21,7 +21,13 @@
                         "length": 10.0,
                         "width": 2.0,
                         "height": 1.0,
-                        "kerb_height": 0.1
+                        "kerb_height": 0.1,
+                        "child": {
+                            "name": "platform_1",
+                            "type": "platform",
+                            "width": 4.0,
+                            "length": 4.0
+                        }
                     }
                 }
             }

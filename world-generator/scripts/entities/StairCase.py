@@ -4,6 +4,7 @@ from entities.TactileStrip import TactileStrip
 from entities.HandRail import HandRail
 from entities.Stair import Stair
 from entities.Wall import Wall
+from entities.Landing import Landing
 from typing import TypedDict
 from entities.shared import HandrailSpecs
 import math
@@ -19,7 +20,8 @@ class StairCase:
         self.stairs: list[Stair] = []
         self.y_offset: float = float(os.getenv("Y_OFFSET", -1.0))
         self.x_offset: float = float(os.getenv("X_OFFSET", -1.0))
-        
+
+        self.landing: Landing | None = None
         self.tactile_strip_attached: bool = tactile_strip_attached
         self.tactile_strip_before_stairs_distance: float = tactile_strip_before_stairs_distance
         self.tactile_strip_after_stairs_distance: float = tactile_strip_after_stairs_distance
@@ -66,14 +68,15 @@ class StairCase:
             total_length_along_stair = ((self.numberOfSteps*self.riser_height)**2 + (self.numberOfSteps*self.tread_depth)**2)**0.5
             height = i["height"]
             protruding_length = i["extension_length"]
+            offset_from_wall = i["offset_from_wall"]
             lefthandrail = HandRail(f"handrail_{self.id}_{i}", total_length_along_stair + 2*protruding_length, height)
             righthandrail = HandRail(f"handrail_{self.id}_{i}", total_length_along_stair + 2*protruding_length, height)
 
             #place at the center left and center right of the staircase
             angle = -math.atan2(self.numberOfSteps*self.riser_height, self.numberOfSteps*self.tread_depth)
-            handrail_position = [self.position[0]+self.tread_depth*self.numberOfSteps/2, self.position[1] - self.width/2, self.position[2] + self.riser_height*self.numberOfSteps/2, 0, angle, 0]
+            handrail_position = [self.position[0]+self.tread_depth*self.numberOfSteps/2, self.position[1] - self.width/2 + offset_from_wall , self.position[2] + self.riser_height*self.numberOfSteps/2, 0, angle, 0]
             lefthandrail.init(handrail_position)
-            handrail_position = [self.position[0]+self.tread_depth*self.numberOfSteps/2, self.position[1] + self.width/2, self.position[2] + self.riser_height*self.numberOfSteps/2, 0, angle, 0]
+            handrail_position = [self.position[0]+self.tread_depth*self.numberOfSteps/2, self.position[1] + self.width/2 - offset_from_wall, self.position[2] + self.riser_height*self.numberOfSteps/2, 0, angle, 0]
             righthandrail.init(handrail_position)
             
             #append to master list:
@@ -89,7 +92,8 @@ class StairCase:
         self.tactile_strip_before.init([self.position[0] - self.tactile_strip_before_stairs_distance - self.tactile_strip_before.length/2, self.position[1], self.position[2]])
         self.tactile_strip_after = TactileStrip(f"tactile_strip_after_{self.id}", self.width/2, self.width)
         self.tactile_strip_after.init([end_pose[0] + self.tactile_strip_after_stairs_distance + self.tactile_strip_after.length/2, end_pose[1], end_pose[2]])
-
+        self.landing = Landing(f"{self.name}_landing", length=2*(self.tactile_strip_after_stairs_distance + self.tactile_strip_after.length/2), width=self.width)
+        self.landing.init([end_pose[0] + self.tactile_strip_after_stairs_distance + self.tactile_strip_after.length/2, end_pose[1], end_pose[2]], self)
     def initialize_stair(self):
         if (self.numberOfSteps <= 0):
             raise ValueError("Number of steps must be greater than 0.")
@@ -142,6 +146,16 @@ class StairCase:
             raise ValueError("StairCase position must have at least 3 elements.")
         return tuple(self.position)
 
+    @property
+    def height(self):
+        """Return the height of the stair as a float."""
+        return self.riser_height * self.numberOfSteps
+
+    @property
+    def length(self):
+        """Return the length of the stair as a float."""
+        return self.tread_depth * self.numberOfSteps
+
     def __repr__(self):
         return f"StairCase(stepCount={self.numberOfSteps}, position={self.position})"
 
@@ -155,4 +169,5 @@ class StairCase:
             rendered += stair.render()
         rendered += self._leftWall.render() if self._leftWall is not None else ''
         rendered += self._rightWall.render() if self._rightWall is not None else ''
+        rendered += self.landing.render() if self.landing is not None else ''
         return rendered

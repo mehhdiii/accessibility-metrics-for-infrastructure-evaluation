@@ -53,7 +53,7 @@ class Kerb:
                 <geometry>
                     <mesh>
                     <uri>{self.assets_url}/{self.asset_name}</uri>
-                    <scale>{self.length} 1 1</scale>
+                    <scale>{self.length} 1 {self.height}</scale>
                     </mesh>
                 </geometry>
                 <material>

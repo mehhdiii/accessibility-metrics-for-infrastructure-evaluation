@@ -4,11 +4,13 @@ from entities.Ramp import Ramp
 from entities.Kerb import Kerb
 from interfaces.IPlatform import AbstractPlatform
 class Platform(AbstractPlatform):
-    def __init__(self, name: str, length: float, width: float):
+    def __init__(self, name: str, length: float, width: float, front_kerb: bool = False, kerbed: bool = False):
         self.name = name
         self.id = str(uuid.uuid4())
         self.length = length
         self.width = width
+        self.front_kerb = front_kerb
+        self.kerbed = kerbed
         self.parentRamp: Ramp | None = None
         self.position: list[float] | None = None
         self.assets_url = os.getenv("ASSETS_BASE_URL", None)
@@ -16,7 +18,7 @@ class Platform(AbstractPlatform):
         self._rightTransitionStartKerb: Kerb | None = None
         self._leftTransitionEndKerb: Kerb | None = None
         self._rightTransitionEndKerb: Kerb | None = None
-
+        self.front_close_kerb: Kerb | None = None
         self._leftKerb: Kerb | None = None
         self._rightKerb: Kerb | None = None
         if not self.assets_url:
@@ -38,8 +40,11 @@ class Platform(AbstractPlatform):
         self.position = self._calculate_position()
         if self.isTransitionKerbRequired():
             self.initializeTransitionKerbs()
-        self.initializeKerbs()
-    
+        if (self.kerbed):
+            self.initializeKerbs()
+        if self.front_kerb:
+            self.initializeFrontCloseKerb()
+
     def initializeKerbs(self):
         if self.parentRamp is None:
             raise ValueError("No parent ramp connected to platform.")
@@ -68,18 +73,27 @@ class Platform(AbstractPlatform):
         transitionWidth = abs(transitionDelta)
         self._leftTransitionStartKerb = Kerb(f"{self.name}_left_transition", length=transitionWidth, height= self.parentRamp.kerb_height, yaw=1.57)
         self._rightTransitionStartKerb = Kerb(f"{self.name}_right_transition", length=transitionWidth, height= self.parentRamp.kerb_height, yaw=1.57)
-
-        self._leftTransitionEndKerb = Kerb(f"{self.name}_left_transition_end", length=transitionWidth, height= self.parentRamp.kerb_height, yaw=1.57)
-        self._rightTransitionEndKerb = Kerb(f"{self.name}_right_transition_end", length=transitionWidth, height= self.parentRamp.kerb_height, yaw=1.57)
-
         #initialize the left wall to be W/2 from the center of widening
         self._leftTransitionStartKerb.init([self.position[0] - self.length/2, self.position[1] - (self.width / 2) + transitionDelta/2 , self.position[2]])
         #initialize the right wall to be W/2 from the center of widening
         self._rightTransitionStartKerb.init([self.position[0] - self.length/2, self.position[1] + (self.width / 2) - transitionDelta/2, self.position[2]])
 
-        self._leftTransitionEndKerb.init([self.position[0] + self.length/2, self.position[1] - (self.width / 2) + transitionDelta/2, self.position[2]])
-        self._rightTransitionEndKerb.init([self.position[0] + self.length/2, self.position[1] + (self.width / 2) - transitionDelta/2, self.position[2]])
 
+        if (not self.front_kerb):
+
+            self._leftTransitionEndKerb = Kerb(f"{self.name}_left_transition_end", length=transitionWidth, height= self.parentRamp.kerb_height, yaw=1.57)
+            self._rightTransitionEndKerb = Kerb(f"{self.name}_right_transition_end", length=transitionWidth, height= self.parentRamp.kerb_height, yaw=1.57)
+
+            self._leftTransitionEndKerb.init([self.position[0] + self.length/2, self.position[1] - (self.width / 2) + transitionDelta/2, self.position[2]])
+            self._rightTransitionEndKerb.init([self.position[0] + self.length/2, self.position[1] + (self.width / 2) - transitionDelta/2, self.position[2]])
+
+    def initializeFrontCloseKerb(self):
+        if self.parentRamp is None:
+            raise ValueError("No parent ramp connected to platform.")
+        if self.position is None:
+            raise ValueError("Platform position is not set.")
+        self.front_close_kerb = Kerb(f"{self.name}_front_close", length=self.width, height=self.parentRamp.kerb_height, yaw=1.57)
+        self.front_close_kerb.init([self.position[0] + self.length/2, self.position[1], self.position[2]])
     def isTransitionKerbRequired(self):
         if not self.parentRamp:
             raise ValueError("Parent ramp is not set.")
@@ -118,9 +132,12 @@ class Platform(AbstractPlatform):
         if self.position is None:
             raise ValueError("Platform position is not set. Please set the position before rendering.")
         rendered = ''
-        if self._leftTransitionStartKerb is not None and self._rightTransitionStartKerb is not None and self._leftTransitionEndKerb is not None and self._rightTransitionEndKerb is not None:
+        if self._leftTransitionStartKerb is not None and self._rightTransitionStartKerb is not None:
             rendered += self._leftTransitionStartKerb.render() + self._rightTransitionStartKerb.render()
+        if self._leftTransitionEndKerb is not None and self._rightTransitionEndKerb is not None:
             rendered += self._leftTransitionEndKerb.render() + self._rightTransitionEndKerb.render()
+        if self.front_close_kerb:
+            rendered += self.front_close_kerb.render()
         rendered += self._leftKerb.render() if self._leftKerb is not None else ''
         rendered += self._rightKerb.render() if self._rightKerb is not None else ''
 

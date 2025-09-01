@@ -32,9 +32,10 @@ class StairCaseMapper:
 
                 extension_length = i.get("extension_length")
                 handrail_height = i.get("height")
-                if (extension_length is None or handrail_height is None):
+                offset_from_wall = i.get("offset_from_wall")
+                if (extension_length is None or handrail_height is None or offset_from_wall is None):
                     raise ValueError("Missing handrail lengths in stair case item.")
-                handRails.append(HandrailSpecs(height=handrail_height, extension_length=extension_length))
+                handRails.append(HandrailSpecs(height=handrail_height, extension_length=extension_length, offset_from_wall=offset_from_wall))
 
         if number_of_steps is None:
             raise ValueError("Missing 'num_steps' in stair case item.")

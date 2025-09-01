@@ -138,8 +138,8 @@ staircaseSpecsReader = StairCaseSpecsReader()
 sdf_generator = SDFGenerator()
 
 #generate ramp sdfs
-sdf_generator.generate(rampSpecsReader.validRamps, SpecClassification.VALID.value, x_index=0)
-sdf_generator.generate(rampSpecsReader.invalidRamps, SpecClassification.INVALID.value, x_index=0)
+# sdf_generator.generate(rampSpecsReader.validRamps, SpecClassification.VALID.value, x_index=0)
+# sdf_generator.generate(rampSpecsReader.invalidRamps, SpecClassification.INVALID.value, x_index=0)
 
 
 # #generate corridor sdfs
@@ -147,8 +147,8 @@ sdf_generator.generate(rampSpecsReader.invalidRamps, SpecClassification.INVALID.
 # sdf_generator.generate(corridorSpecsReader.invalidCorridors, SpecClassification.INVALID.value, x_index=1)
 
 #generate staircase sdfs
-# sdf_generator.generate(staircaseSpecsReader.validStairCases, SpecClassification.VALID.value, x_index=0)
-# sdf_generator.generate(staircaseSpecsReader.invalidStairCases, SpecClassification.INVALID.value, x_index=0)
+sdf_generator.generate(staircaseSpecsReader.validStairCases, SpecClassification.VALID.value, x_index=0)
+sdf_generator.generate(staircaseSpecsReader.invalidStairCases, SpecClassification.INVALID.value, x_index=0)
 
 # Generate final SDF world
 sdf_world = sdf_generator.place_in_world(sdf_generator.sdf_string)
