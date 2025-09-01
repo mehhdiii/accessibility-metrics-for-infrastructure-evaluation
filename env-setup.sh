@@ -34,6 +34,9 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-
 sudo apt-get update
 sudo apt-get install ignition-fortress
 
+sudo apt install ros-humble-robot-localization
+
+
 
 #install pip
 sudo apt update

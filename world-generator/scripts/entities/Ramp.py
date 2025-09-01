@@ -1,6 +1,9 @@
+import math
 import os
 import uuid
 from interfaces.IPlatform import AbstractPlatform
+from entities.Kerb import Kerb
+
 class Ramp():
     def __init__(self, name: str, length: float, width: float, height: float, kerb_height: float):
         """
@@ -22,12 +25,17 @@ class Ramp():
         self.height = height
         self.kerb_height = kerb_height
         self.parentPlatform: AbstractPlatform | None = None
-
+        self.kerb_left: Kerb = Kerb(self.name, self.ramp_hypotenuse, self.kerb_height, pitch=-self.calculate_slope_angle)
+        self.kerb_right: Kerb = Kerb(self.name, self.ramp_hypotenuse, self.kerb_height, pitch=-self.calculate_slope_angle)
         self.position: list[float] | None = None
         self.assets_url = os.getenv("ASSETS_BASE_URL", None)
         if not self.assets_url:
             raise ValueError("ASSETS_URL environment variable is not set.")
         self.asset_name = self.buildAssetName()
+
+    @property
+    def ramp_hypotenuse(self):
+        return math.hypot(self.length, self.height)
 
     def buildAssetName(self):
         l = self.length
@@ -44,6 +52,13 @@ class Ramp():
     def init(self, index): 
         self.index = index
         self.position = self._calculate_position()
+        self.initialize_kerb()
+
+    def initialize_kerb(self):
+        if self.position is None:
+            raise ValueError("Ramp position is not set. Please set the position before initializing the kerb.")
+        self.kerb_left.init([self.position[0], self.position[1] - (self.width / 2), self.position[2] + self.height/2])
+        self.kerb_right.init([self.position[0], self.position[1] + (self.width / 2), self.position[2] + self.height/2])
 
     def _calculate_position(self):
         y = self.index * self.y_offset
@@ -68,6 +83,10 @@ class Ramp():
             return 0
         return (self.height / self.length) * 100
     
+    @property
+    def calculate_slope_angle(self):
+        return math.atan(self.height / self.length)
+
     @property
     def is_valid_slope(self):
         """Check if the ramp slope is within valid range (≤ 8%)."""
@@ -100,8 +119,10 @@ class Ramp():
     def render(self):
         if self.position is None:
             raise ValueError("Ramp position is not set. Please set the position before rendering.")
+        rendered = self.kerb_left.render() + self.kerb_right.render()
         
-        return f"""
+        
+        rendered += f"""
         <model name="ramp_{self.name}_{self.id}">
             <static>true</static>
             <pose>{" ".join(map(str, self.position))}</pose>
@@ -128,3 +149,5 @@ class Ramp():
             </link>
         </model>
         """
+
+        return rendered
