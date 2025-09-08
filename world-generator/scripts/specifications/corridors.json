@@ -1,45 +1,115 @@
 {
     "valid_corridors": [
         {
-            "name": "test test",
-            "description": "This is just to test if everything works correctly",
+            "name": "Valid Corridor 1 - Minimum width and widening at end",
+            "description": "1.0 m wide, 8 m long, widening 2x2 m at the end; complies with minimum width and maneuvering space requirement.",
             "root": {
-                "name": "corridor 1",
+                "name": "corridor_1",
                 "type": "corridor",
-                "length": 10.0,
-                "width": 2.0,
+                "length": 8.0,
+                "width": 1.0,
                 "child": {
                     "name": "widening_1",
                     "type": "widening",
-                    "width": 4.0,
-                    "length": 4.0,
+                    "width": 2.0,
+                    "length": 2.0,
                     "front_close": true
+                }
+            }
+        },
+        {
+            "name": "Valid Corridor 2 - 15m corridor with mid widening",
+            "description": "2.0 m wide, 15 m long corridor with a 3x3 m widening at 10 m; complies with requirement for widening every 10 m.",
+            "root": {
+                "name": "corridor_2",
+                "type": "corridor",
+                "length": 15.0,
+                "width": 2.0,
+                "child": {
+                    "name": "widening_mid",
+                    "type": "widening",
+                    "width": 3.0,
+                    "length": 3.0,
+                    "front_close": false
+                }
+            }
+        },
+        {
+            "name": "Valid Corridor 3 - Corridor with door and proper widening",
+            "description": "1.5 m wide, 10 m corridor with 2.5x2.5 m widening at the end to allow turning and door clearance.",
+            "root": {
+                "name": "corridor_3",
+                "type": "corridor",
+                "length": 10.0,
+                "width": 1.5,
+                "child": {
+                    "name": "widening_door",
+                    "type": "widening",
+                    "width": 2.5,
+                    "length": 2.5,
+                    "front_close": true
+                }
+            }
+        },
+        {
+            "name": "Valid Corridor 4 - Corridor followed by widening and another corridor",
+            "description": "1.2 m wide, 8 m long corridor with a 2.5x2.5 m widening, then a second 6 m corridor; complies with minimum width and intermediate widening rule.",
+            "root": {
+                "name": "corridor_4a",
+                "type": "corridor",
+                "length": 8.0,
+                "width": 1.2,
+                "child": {
+                    "name": "widening_between",
+                    "type": "widening",
+                    "width": 2.5,
+                    "length": 2.5,
+                    "front_close": false,
+                    "child": {
+                        "name": "corridor_4b",
+                        "type": "corridor",
+                        "length": 6.0,
+                        "width": 1.2
+                    }
                 }
             }
         }
     ],
     "invalid_corridors": [
         {
-            "name": "test test",
-            "description": "This is just to test if everything works correctly",
+            "name": "Invalid Corridor 1 - Too narrow",
+            "description": "0.8 m width corridor; below the minimum 1.0 m requirement.",
             "root": {
-                "name": "corridor 1",
+                "name": "corridor_narrow",
                 "type": "corridor",
-                "length": 10.0,
-                "width": 5.0,
+                "length": 6.0,
+                "width": 0.8
+            }
+        },
+        {
+            "name": "Invalid Corridor 2 - Too long without widening",
+            "description": "20 m corridor with no widening; violates requirement for widening every 10 m.",
+            "root": {
+                "name": "corridor_long",
+                "type": "corridor",
+                "length": 20.0,
+                "width": 1.5
+            }
+        },
+        {
+            "name": "Invalid Corridor 3 - Widening placed incorrectly",
+            "description": "12 m corridor but widening is at 12 m instead of ≤10 m.",
+            "root": {
+                "name": "corridor_wrong_widening",
+                "type": "corridor",
+                "length": 12.0,
+                "width": 1.5,
                 "child": {
-                    "name": "widening 1",
+                    "name": "widening_late",
                     "type": "widening",
-                    "width": 4.0,
-                    "length": 4.0,
-                    "child": {
-                        "name": "ramp_test",
-                        "type": "ramp",
-                        "length": 10.0,
-                        "width": 2.0,
-                        "height": 1.0,
-                        "kerb_height": 0.1
-                    }
+                    "width": 2.0,
+                    "length": 2.0,
+                    "front_close": true
                 }
             }
         }
