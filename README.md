@@ -100,4 +100,4 @@ Use the `--enable-viewer` flag to visualize the processed point cloud.
 ---
 
 **Author:**  
-*Generated for the TurtleBot4 + Ignition + PCL simulation pipeline.*
+Mehdi Raza Khorasani
