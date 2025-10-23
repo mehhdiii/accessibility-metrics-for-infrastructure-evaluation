@@ -1,7 +1,5 @@
 # accessibility-metrics-for-infrastructure-evaluation
 
-# TurtleBot4 + Ignition + PCL Pipeline
-
 This guide describes how to run a TurtleBot4 simulation in Ignition Gazebo, bridge ROS 2 topics, collect point cloud data, and run point cloud processing algorithms.
 
 use the compose file to create relevant containers for:
