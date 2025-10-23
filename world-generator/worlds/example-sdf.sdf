@@ -11,7 +11,7 @@
             </include>
 
             
-        <model name="tactile_strip_tactile_strip_before_ea727472-6a59-4b47-936a-ad559ce66d7e_0f030bbb-c00a-40f2-9adf-09b09a55ce2b">
+        <model name="tactile_strip_tactile_strip_before_2380114d-61c0-4db8-95cd-3a11f1002797_8a8556f7-3a6e-456c-b705-32682d6e687a">
             <static>true</static>
             <pose>-0.6 4.0 0.0 0 0 0</pose>
             <link name="link">
@@ -37,7 +37,7 @@
             </link>
         </model>
         
-        <model name="tactile_strip_tactile_strip_after_ea727472-6a59-4b47-936a-ad559ce66d7e_9ac42aea-15e9-4185-9150-c54214661e0d">
+        <model name="tactile_strip_tactile_strip_after_2380114d-61c0-4db8-95cd-3a11f1002797_c2bafa8b-1b6a-454e-ac4f-f03ee88ef546">
             <static>true</static>
             <pose>3.749999999999999 4.0 1.5999999999999999 0 0 0</pose>
             <link name="link">
@@ -63,7 +63,7 @@
             </link>
         </model>
         
-        <model name="handrail_handrail_ea727472-6a59-4b47-936a-ad559ce66d7e_{'height': 0.95, 'extension_length': 0.3, 'offset_from_wall': 0.04}_03bc8eff-57cc-4c2d-8707-c4413e8b18ee">
+        <model name="handrail_handrail_2380114d-61c0-4db8-95cd-3a11f1002797_{'height': 0.95, 'extension_length': 0.3, 'offset_from_wall': 0.04}_dd895d16-0f13-45a6-bb25-cd8e64cd3b47">
             <static>true</static>
             <pose>1.5 3.44 1.75 0 -0.48995732625372834 0</pose>
             <link name="link">
@@ -90,7 +90,7 @@
             </link>
         </model>
         
-        <model name="handrail_handrail_ea727472-6a59-4b47-936a-ad559ce66d7e_{'height': 0.95, 'extension_length': 0.3, 'offset_from_wall': 0.04}_64c6847b-7e43-4039-9875-653a4972286a">
+        <model name="handrail_handrail_2380114d-61c0-4db8-95cd-3a11f1002797_{'height': 0.95, 'extension_length': 0.3, 'offset_from_wall': 0.04}_a3f463f3-668c-4367-9701-24da02bdedce">
             <static>true</static>
             <pose>1.5 4.56 1.75 0 -0.48995732625372834 0</pose>
             <link name="link">
@@ -117,7 +117,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_649379af-bec8-440d-893d-437f9e1080dd_b77843fe-4f95-4ebd-b8f1-ed161c9c6bbe">
+        <model name="riser_riser_0f4c67bf-021a-45f8-92c6-092875decb3c_0b168ed3-7ea6-4166-9fbf-4b085acc85c7">
             <static>true</static>
             <pose>0.15 4.0 0.0 0 0 0</pose>
             <link name="link">
@@ -143,7 +143,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_649379af-bec8-440d-893d-437f9e1080dd_0f64d978-9ad9-46f2-b833-bc5b98719fad">
+        <model name="tread_tread_0f4c67bf-021a-45f8-92c6-092875decb3c_ba8c0faf-473b-4bb6-97ef-b95077030f7a">
             <static>true</static>
             <pose>0.3 4.0 0.16 0 0 0</pose>
             <link name="link">
@@ -169,7 +169,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_1e7b5ee5-48cd-4851-aa1c-09ed071de987_e9995cf6-b682-4dc6-8538-3f479c6f2963">
+        <model name="riser_riser_56ba4ca1-7edb-4753-bffd-d643aa920a7e_2e5eaf9a-eeb9-49a0-b7e6-5f50fb1637c4">
             <static>true</static>
             <pose>0.44999999999999996 4.0 0.16 0 0 0</pose>
             <link name="link">
@@ -195,7 +195,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_1e7b5ee5-48cd-4851-aa1c-09ed071de987_2fda39c4-ec12-4e2e-b9e9-3b7aa2f8ef7e">
+        <model name="tread_tread_56ba4ca1-7edb-4753-bffd-d643aa920a7e_7cebb722-8ebc-4a2b-befd-baac31850a1c">
             <static>true</static>
             <pose>0.6 4.0 0.32 0 0 0</pose>
             <link name="link">
@@ -221,7 +221,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_e8196e7b-4d13-4e25-9c7d-13ba7f0f48b9_1b9364ef-0c6c-4dbb-aa38-058e71b9f8f3">
+        <model name="riser_riser_aa39482c-cc10-46a6-8c8d-65e14d5c979c_4f6b79d0-e20d-4615-96da-080c0f4155cb">
             <static>true</static>
             <pose>0.75 4.0 0.32 0 0 0</pose>
             <link name="link">
@@ -247,7 +247,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_e8196e7b-4d13-4e25-9c7d-13ba7f0f48b9_287a7623-2e91-4e18-8511-9fafe2c1eedf">
+        <model name="tread_tread_aa39482c-cc10-46a6-8c8d-65e14d5c979c_85737465-fbff-4193-91f3-8c40b6828c89">
             <static>true</static>
             <pose>0.9 4.0 0.48 0 0 0</pose>
             <link name="link">
@@ -273,7 +273,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_cf36749b-d642-4010-bb4c-ccda76b2e47c_3164cd2a-5cd3-4c06-aa03-2813bf3ca80b">
+        <model name="riser_riser_aef47aba-85f2-47a9-a8ad-6f19306f6455_f2d67954-2f8a-49c9-b6d3-07291a93f0e0">
             <static>true</static>
             <pose>1.05 4.0 0.48 0 0 0</pose>
             <link name="link">
@@ -299,7 +299,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_cf36749b-d642-4010-bb4c-ccda76b2e47c_e4da0260-3c97-457a-8ad1-6ec99e0c3138">
+        <model name="tread_tread_aef47aba-85f2-47a9-a8ad-6f19306f6455_87e18f8f-4ef2-4edd-88ba-d0cb079e62c0">
             <static>true</static>
             <pose>1.2 4.0 0.64 0 0 0</pose>
             <link name="link">
@@ -325,7 +325,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_cb9a66d9-ed3c-437f-b8ea-14ae22022cb5_13ddbfb2-65ce-4665-a0a9-e40fb740a18a">
+        <model name="riser_riser_650e838f-bc9c-4ae9-829d-48057fdc0816_bafde185-910b-4c3f-a148-b1685ad74749">
             <static>true</static>
             <pose>1.35 4.0 0.64 0 0 0</pose>
             <link name="link">
@@ -351,7 +351,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_cb9a66d9-ed3c-437f-b8ea-14ae22022cb5_a6373ea8-6e23-4913-84a3-8505ed46c149">
+        <model name="tread_tread_650e838f-bc9c-4ae9-829d-48057fdc0816_7200a6fe-bc62-4f8c-80ea-6f6df288562e">
             <static>true</static>
             <pose>1.5 4.0 0.8 0 0 0</pose>
             <link name="link">
@@ -377,7 +377,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_6105fc93-85d8-4361-8ba0-8473fa2f58a0_95749013-c013-4ea3-8a0e-e5a3210eb6f3">
+        <model name="riser_riser_a17315cc-52c6-4d6a-b655-59889c3cf503_74edd328-1a46-45c3-be21-85d3eb1bb8e6">
             <static>true</static>
             <pose>1.6500000000000001 4.0 0.8 0 0 0</pose>
             <link name="link">
@@ -403,7 +403,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_6105fc93-85d8-4361-8ba0-8473fa2f58a0_1a1c3f63-ee52-4d43-9d3f-23704e26ba3d">
+        <model name="tread_tread_a17315cc-52c6-4d6a-b655-59889c3cf503_f08fe829-f1e8-4142-9ac6-2d8de40a66ef">
             <static>true</static>
             <pose>1.8 4.0 0.9600000000000001 0 0 0</pose>
             <link name="link">
@@ -429,7 +429,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_1084f0c3-3c91-41af-bbaa-ee8efbeb3f47_4f297f6b-02e5-4c47-84bc-8bff34d3161e">
+        <model name="riser_riser_0e743970-89c8-4c1c-b477-505d78edf11f_32cb2962-36df-4b33-b5bc-f68f71a99067">
             <static>true</static>
             <pose>1.9500000000000002 4.0 0.9600000000000001 0 0 0</pose>
             <link name="link">
@@ -455,7 +455,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_1084f0c3-3c91-41af-bbaa-ee8efbeb3f47_0a1e9c87-4953-4d53-915b-cd2359a36eed">
+        <model name="tread_tread_0e743970-89c8-4c1c-b477-505d78edf11f_eb1e1b93-a3b1-4d2a-abb9-c2d29f6eada3">
             <static>true</static>
             <pose>2.1 4.0 1.12 0 0 0</pose>
             <link name="link">
@@ -481,7 +481,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_e3759ec7-16f4-4e92-922c-05d844840e78_6c09e8cd-0118-488e-bd61-b78510a0da28">
+        <model name="riser_riser_ee1d7364-8cf7-4684-8c33-de820b228c25_21e7b03e-a898-4749-81aa-2e965841548e">
             <static>true</static>
             <pose>2.25 4.0 1.12 0 0 0</pose>
             <link name="link">
@@ -507,7 +507,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_e3759ec7-16f4-4e92-922c-05d844840e78_7cc8c414-5ebb-4009-b1ef-8bd938dcb057">
+        <model name="tread_tread_ee1d7364-8cf7-4684-8c33-de820b228c25_7bd1aa61-3dba-4309-badf-bb2c4616a3ef">
             <static>true</static>
             <pose>2.4 4.0 1.28 0 0 0</pose>
             <link name="link">
@@ -533,7 +533,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_546a57c1-4f2d-4cb7-ae17-3d2184c4840b_4c18bd43-af70-4a7f-b37f-c766b3b872b3">
+        <model name="riser_riser_8e4c708e-b4e6-4325-8917-a5818f8687a9_7c611999-69f5-4d79-bab2-1ccb9a942b64">
             <static>true</static>
             <pose>2.55 4.0 1.28 0 0 0</pose>
             <link name="link">
@@ -559,7 +559,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_546a57c1-4f2d-4cb7-ae17-3d2184c4840b_117266b7-5348-4abd-b1c4-2f040f0622b0">
+        <model name="tread_tread_8e4c708e-b4e6-4325-8917-a5818f8687a9_4cd29f55-d831-46fc-9186-35ff761dabaf">
             <static>true</static>
             <pose>2.6999999999999997 4.0 1.44 0 0 0</pose>
             <link name="link">
@@ -585,7 +585,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_b081ccca-dd77-466c-bf24-a9ac5952eee4_1b4b866a-a9f3-4727-9f63-d42b9f2b2524">
+        <model name="riser_riser_4d2f33eb-3987-4c9b-b705-4a46a4b2c9cc_3a343302-66c3-4624-9ba4-09040606d264">
             <static>true</static>
             <pose>2.8499999999999996 4.0 1.44 0 0 0</pose>
             <link name="link">
@@ -611,7 +611,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_b081ccca-dd77-466c-bf24-a9ac5952eee4_73edc02e-2c2d-4ff5-a781-3416acef6ec0">
+        <model name="tread_tread_4d2f33eb-3987-4c9b-b705-4a46a4b2c9cc_e1862640-844e-4f8d-857c-cb0caeb4c5be">
             <static>true</static>
             <pose>2.9999999999999996 4.0 1.5999999999999999 0 0 0</pose>
             <link name="link">
@@ -637,7 +637,7 @@
             </link>
         </model>
         
-        <model name="wall_staircase_1_left_e2defa62-6323-4ec4-9b20-4ae17dd1c26d">
+        <model name="wall_staircase_1_left_fc63aef7-f557-46f6-b317-942239e3bee1">
             <static>true</static>
             <pose>1.5 3.35 0.0 0 0 0.0</pose>
             <link name="link">
@@ -663,7 +663,7 @@
             </link>
         </model>
         
-        <model name="wall_staircase_1_right_7b6f4ad0-6aab-4d1b-84b0-d41c79082ba0">
+        <model name="wall_staircase_1_right_12936ddd-f6f5-4d0c-b6a4-6eaac51be5f9">
             <static>true</static>
             <pose>1.5 4.6499999999999995 0.0 0 0 0.0</pose>
             <link name="link">
@@ -689,7 +689,7 @@
             </link>
         </model>
         
-        <model name="platform_staircase_1_landing_6df97550-6c20-4af2-b7e1-4c3cc0cac31f">
+        <model name="platform_staircase_1_landing_359a9a06-f22f-4184-8473-b10db1d0b27e">
             <static>true</static>
             <pose>3.749999999999999 4.0 1.5999999999999999 0 0 0</pose>
             <link name="link">
@@ -711,7 +711,7 @@
             </link>
         </model>
         
-        <model name="tactile_strip_tactile_strip_before_502eb9e9-1b06-430d-b518-63093dd29ec7_1c1a6eff-c1c1-413a-b053-2519f418e253">
+        <model name="tactile_strip_tactile_strip_before_e99f2752-ab1f-4d2a-a1d9-9a706f787795_b9c07315-d704-40d7-b5e5-395025c992d8">
             <static>true</static>
             <pose>-0.675 8.0 0.0 0 0 0</pose>
             <link name="link">
@@ -737,7 +737,7 @@
             </link>
         </model>
         
-        <model name="tactile_strip_tactile_strip_after_502eb9e9-1b06-430d-b518-63093dd29ec7_1051fc6e-fbb7-4239-9290-56229588dd6b">
+        <model name="tactile_strip_tactile_strip_after_e99f2752-ab1f-4d2a-a1d9-9a706f787795_514fd597-a8f3-4561-81c5-7cfd90c532dc">
             <static>true</static>
             <pose>5.624999999999998 8.0 2.7199999999999993 0 0 0</pose>
             <link name="link">
@@ -763,7 +763,7 @@
             </link>
         </model>
         
-        <model name="handrail_handrail_502eb9e9-1b06-430d-b518-63093dd29ec7_{'height': 0.95, 'extension_length': 0.3, 'offset_from_wall': 0.05}_8355c7ce-f503-4347-9b44-42d6e725b546">
+        <model name="handrail_handrail_e99f2752-ab1f-4d2a-a1d9-9a706f787795_{'height': 0.95, 'extension_length': 0.3, 'offset_from_wall': 0.05}_4281d745-f4f5-41e8-b2f1-ba8e8f079b40">
             <static>true</static>
             <pose>2.4 7.3 2.31 0 -0.5155490074589791 0</pose>
             <link name="link">
@@ -790,7 +790,7 @@
             </link>
         </model>
         
-        <model name="handrail_handrail_502eb9e9-1b06-430d-b518-63093dd29ec7_{'height': 0.95, 'extension_length': 0.3, 'offset_from_wall': 0.05}_3f06ebcc-0245-41e5-961e-3a95778192e7">
+        <model name="handrail_handrail_e99f2752-ab1f-4d2a-a1d9-9a706f787795_{'height': 0.95, 'extension_length': 0.3, 'offset_from_wall': 0.05}_4e0cbe52-9989-4e63-aa49-a05e3eff6bc6">
             <static>true</static>
             <pose>2.4 8.7 2.31 0 -0.5155490074589791 0</pose>
             <link name="link">
@@ -817,7 +817,7 @@
             </link>
         </model>
         
-        <model name="handrail_handrail_502eb9e9-1b06-430d-b518-63093dd29ec7_{'height': 0.75, 'extension_length': 0.3, 'offset_from_wall': 0.05}_e3a2cc6f-cac4-4971-a26a-ea937de32733">
+        <model name="handrail_handrail_e99f2752-ab1f-4d2a-a1d9-9a706f787795_{'height': 0.75, 'extension_length': 0.3, 'offset_from_wall': 0.05}_4aece168-5643-4394-8c12-1170bd99f4e0">
             <static>true</static>
             <pose>2.4 7.3 2.1100000000000003 0 -0.5155490074589791 0</pose>
             <link name="link">
@@ -844,7 +844,7 @@
             </link>
         </model>
         
-        <model name="handrail_handrail_502eb9e9-1b06-430d-b518-63093dd29ec7_{'height': 0.75, 'extension_length': 0.3, 'offset_from_wall': 0.05}_7c7ab829-219d-4204-9a69-52a88c3dec73">
+        <model name="handrail_handrail_e99f2752-ab1f-4d2a-a1d9-9a706f787795_{'height': 0.75, 'extension_length': 0.3, 'offset_from_wall': 0.05}_c0779a72-7dce-4da5-b469-8b89622a1f1a">
             <static>true</static>
             <pose>2.4 8.7 2.1100000000000003 0 -0.5155490074589791 0</pose>
             <link name="link">
@@ -871,7 +871,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_c08a367a-4862-43e3-8d84-fb6861fa53a0_7eb52265-6b6c-4765-baf1-c6dc4089c10f">
+        <model name="riser_riser_9279e2e1-6e9f-4bb0-81bc-6a40666967ec_043a1877-ea40-40bc-ae3c-dd26e49cc3e2">
             <static>true</static>
             <pose>0.15 8.0 0.0 0 0 0</pose>
             <link name="link">
@@ -897,7 +897,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_c08a367a-4862-43e3-8d84-fb6861fa53a0_da163abd-0d0a-4931-8171-d7dbf5a1e6e9">
+        <model name="tread_tread_9279e2e1-6e9f-4bb0-81bc-6a40666967ec_f2cf72e9-f58e-4b9f-9529-f72cd26cca5d">
             <static>true</static>
             <pose>0.3 8.0 0.17 0 0 0</pose>
             <link name="link">
@@ -923,7 +923,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_1d8a0147-60f5-4a2e-88ec-1f04960bf04f_f9683d26-4398-444a-ac7c-63a960b2dfc7">
+        <model name="riser_riser_a43ab379-733a-400a-8d28-5ad033e78ae4_2ded8f81-8b93-46ff-9e88-c8a0ccf28432">
             <static>true</static>
             <pose>0.44999999999999996 8.0 0.17 0 0 0</pose>
             <link name="link">
@@ -949,7 +949,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_1d8a0147-60f5-4a2e-88ec-1f04960bf04f_42604519-5ba7-493d-bca9-185167604a64">
+        <model name="tread_tread_a43ab379-733a-400a-8d28-5ad033e78ae4_5350b075-c981-495c-ac28-fa5cc424dc46">
             <static>true</static>
             <pose>0.6 8.0 0.34 0 0 0</pose>
             <link name="link">
@@ -975,7 +975,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_322fc390-a3af-4061-aee4-1cacb9b7e485_4ce7f786-d2ee-4d45-a302-45a303e3caf3">
+        <model name="riser_riser_f6267ff2-eea4-447a-8004-f271e1d8e42b_fa8ed3f1-3ff9-4700-8cf1-3847c70e3324">
             <static>true</static>
             <pose>0.75 8.0 0.34 0 0 0</pose>
             <link name="link">
@@ -1001,7 +1001,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_322fc390-a3af-4061-aee4-1cacb9b7e485_26751acb-b6d4-4e04-b330-c4bea5a446d4">
+        <model name="tread_tread_f6267ff2-eea4-447a-8004-f271e1d8e42b_e24db7b3-d03e-4871-8b83-9969cafd79f9">
             <static>true</static>
             <pose>0.9 8.0 0.51 0 0 0</pose>
             <link name="link">
@@ -1027,7 +1027,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_03c3f1a0-7051-489e-818a-d9bb1e39113b_528bb2a3-8223-4228-986e-4aef3f59b5b7">
+        <model name="riser_riser_685879c6-fb81-41a2-a4d1-3b52f1c5dab6_7fd22378-8c4c-460a-b61f-0bb088b6a48c">
             <static>true</static>
             <pose>1.05 8.0 0.51 0 0 0</pose>
             <link name="link">
@@ -1053,7 +1053,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_03c3f1a0-7051-489e-818a-d9bb1e39113b_756621e4-9272-4701-804a-0d2879c1dbdc">
+        <model name="tread_tread_685879c6-fb81-41a2-a4d1-3b52f1c5dab6_c6945999-2770-4ab3-8da1-2a45acf96295">
             <static>true</static>
             <pose>1.2 8.0 0.68 0 0 0</pose>
             <link name="link">
@@ -1079,7 +1079,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_54140df2-272d-4b07-801a-201da916e4bd_779aa6a6-fcc5-4566-92b9-60978f920c93">
+        <model name="riser_riser_40349897-c3ab-4b66-9dcf-2767a300302b_2c7cd6ee-ca1e-4143-b250-db4054511e5a">
             <static>true</static>
             <pose>1.35 8.0 0.68 0 0 0</pose>
             <link name="link">
@@ -1105,7 +1105,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_54140df2-272d-4b07-801a-201da916e4bd_fc0c1a52-f07c-4b46-a92d-f4abd57ea89d">
+        <model name="tread_tread_40349897-c3ab-4b66-9dcf-2767a300302b_d99eba55-acf8-4e03-bc78-bd36ca20b9a6">
             <static>true</static>
             <pose>1.5 8.0 0.8500000000000001 0 0 0</pose>
             <link name="link">
@@ -1131,7 +1131,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_f37cc923-0a85-4b50-a752-914c46249a5c_78c621a4-31ca-44a9-8f5f-53a2cc0dd82f">
+        <model name="riser_riser_d326e7a7-658c-4800-a5f3-da62ebdc0ae2_8bf8be7a-5fbd-45b1-b0d9-92574366be86">
             <static>true</static>
             <pose>1.6500000000000001 8.0 0.8500000000000001 0 0 0</pose>
             <link name="link">
@@ -1157,7 +1157,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_f37cc923-0a85-4b50-a752-914c46249a5c_6e01b7cd-8568-4167-8f77-671c66b30929">
+        <model name="tread_tread_d326e7a7-658c-4800-a5f3-da62ebdc0ae2_17a9427e-6b10-4dfa-b3b1-8c6cc8537347">
             <static>true</static>
             <pose>1.8 8.0 1.02 0 0 0</pose>
             <link name="link">
@@ -1183,7 +1183,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_fab1be6a-e0cd-4b33-99c5-f49967d15e80_7f25f606-57eb-494b-8d6e-71ec1321a4d9">
+        <model name="riser_riser_106647b5-8b85-4093-895f-2d1a50ac950b_bd218183-47c5-4515-9107-e2ebf88c227e">
             <static>true</static>
             <pose>1.9500000000000002 8.0 1.02 0 0 0</pose>
             <link name="link">
@@ -1209,7 +1209,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_fab1be6a-e0cd-4b33-99c5-f49967d15e80_a9c3d138-4c84-45c1-8413-50a33d641ae4">
+        <model name="tread_tread_106647b5-8b85-4093-895f-2d1a50ac950b_11d78ac1-1972-481a-a688-3f9ccc2ad5e0">
             <static>true</static>
             <pose>2.1 8.0 1.19 0 0 0</pose>
             <link name="link">
@@ -1235,7 +1235,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_50e8f6de-1b49-455f-8108-1e3d00168f78_b30531d4-5f88-4859-a585-21a0f01d764a">
+        <model name="riser_riser_70d5e60e-101b-49a8-9775-bf4cb220a134_5b0fa1b0-189c-4769-bbe2-bc9fa8a426d7">
             <static>true</static>
             <pose>2.25 8.0 1.19 0 0 0</pose>
             <link name="link">
@@ -1261,7 +1261,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_50e8f6de-1b49-455f-8108-1e3d00168f78_de2d6f5d-daab-478e-888c-982f68421ef1">
+        <model name="tread_tread_70d5e60e-101b-49a8-9775-bf4cb220a134_0a733a62-37db-46d7-b073-93d77b6a6694">
             <static>true</static>
             <pose>2.4 8.0 1.3599999999999999 0 0 0</pose>
             <link name="link">
@@ -1287,7 +1287,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_9d519618-4765-406e-a5bb-7cf5e8e76b2e_4380797c-7c56-4c70-a58c-ade8e2a8ddef">
+        <model name="riser_riser_7f58af73-5285-4088-8d29-ced0b5c631ed_1576f5b9-5923-4c76-a85a-d97effd3f1ce">
             <static>true</static>
             <pose>2.55 8.0 1.3599999999999999 0 0 0</pose>
             <link name="link">
@@ -1313,7 +1313,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_9d519618-4765-406e-a5bb-7cf5e8e76b2e_3b70205f-0ef6-44ae-b85a-d905ce8e75cb">
+        <model name="tread_tread_7f58af73-5285-4088-8d29-ced0b5c631ed_71082955-edc7-413f-8e9a-aab8a2c2a449">
             <static>true</static>
             <pose>2.6999999999999997 8.0 1.5299999999999998 0 0 0</pose>
             <link name="link">
@@ -1339,7 +1339,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_3aa6ac97-6fc9-4ec9-ab7d-8e76bd6970c5_b8bf82af-c850-4325-82ae-3a2a87dd5295">
+        <model name="riser_riser_e186d29a-a671-4bb2-af89-5989b9bc7903_474552ea-487b-4f61-9c23-02fbe9d76db0">
             <static>true</static>
             <pose>2.8499999999999996 8.0 1.5299999999999998 0 0 0</pose>
             <link name="link">
@@ -1365,7 +1365,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_3aa6ac97-6fc9-4ec9-ab7d-8e76bd6970c5_8743fc84-9a50-4aa7-b98c-6427070a4c80">
+        <model name="tread_tread_e186d29a-a671-4bb2-af89-5989b9bc7903_2d290801-df7e-4319-91f1-c324112f9c4f">
             <static>true</static>
             <pose>2.9999999999999996 8.0 1.6999999999999997 0 0 0</pose>
             <link name="link">
@@ -1391,7 +1391,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_cc8ca262-b378-4d16-9d05-364d9aa4e9f4_b089a6f9-0f66-41a5-a12a-09b2bce4497f">
+        <model name="riser_riser_8a2d66bd-610a-4c22-898d-7c5158cfe98a_7b48eccf-0824-4db7-b37e-d10716b933ae">
             <static>true</static>
             <pose>3.1499999999999995 8.0 1.6999999999999997 0 0 0</pose>
             <link name="link">
@@ -1417,7 +1417,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_cc8ca262-b378-4d16-9d05-364d9aa4e9f4_b20e8468-2053-452f-9240-f6e600f404ef">
+        <model name="tread_tread_8a2d66bd-610a-4c22-898d-7c5158cfe98a_6ec3be5a-c61c-4002-907e-246c3f142968">
             <static>true</static>
             <pose>3.2999999999999994 8.0 1.8699999999999997 0 0 0</pose>
             <link name="link">
@@ -1443,7 +1443,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_a2511275-cf8f-41aa-a07f-5a5dfa95b9f1_e9fa21b7-a2c8-439f-93e0-6774dc3acc7d">
+        <model name="riser_riser_408af33a-df1b-4398-ba9f-c0f7def514e7_bfa01fc2-e137-41ef-a7ac-d5e229311a45">
             <static>true</static>
             <pose>3.4499999999999993 8.0 1.8699999999999997 0 0 0</pose>
             <link name="link">
@@ -1469,7 +1469,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_a2511275-cf8f-41aa-a07f-5a5dfa95b9f1_9342c8bd-6b33-4826-9eaa-dea62bfeb55a">
+        <model name="tread_tread_408af33a-df1b-4398-ba9f-c0f7def514e7_d282233a-8f7b-4b3a-a84e-25aba5cd2765">
             <static>true</static>
             <pose>3.599999999999999 8.0 2.0399999999999996 0 0 0</pose>
             <link name="link">
@@ -1495,7 +1495,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_8be08614-0d98-4321-a2f2-84b6bf0af43c_5d4fa4b3-c7f2-411c-845a-9f024cf37a4a">
+        <model name="riser_riser_41ccc42d-1cc5-4bfa-9c6c-4adf6c871611_fe7c1311-df24-4163-a91f-0cc55218e23f">
             <static>true</static>
             <pose>3.749999999999999 8.0 2.0399999999999996 0 0 0</pose>
             <link name="link">
@@ -1521,7 +1521,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_8be08614-0d98-4321-a2f2-84b6bf0af43c_2f3209f1-3350-4e4c-b540-e71a7f7fbfdb">
+        <model name="tread_tread_41ccc42d-1cc5-4bfa-9c6c-4adf6c871611_16b341dd-90eb-4fb5-a094-6296ccbb4446">
             <static>true</static>
             <pose>3.899999999999999 8.0 2.2099999999999995 0 0 0</pose>
             <link name="link">
@@ -1547,7 +1547,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_856edd44-c577-4534-9d5e-b9ea4dfdefd4_ec41e14f-e3bf-4f96-bb35-966ee1c27cdf">
+        <model name="riser_riser_0e819c5d-6a93-46c0-a9ff-613c3ab32ddb_d1b86434-2ce1-4829-97a3-e57eea6dc603">
             <static>true</static>
             <pose>4.049999999999999 8.0 2.2099999999999995 0 0 0</pose>
             <link name="link">
@@ -1573,7 +1573,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_856edd44-c577-4534-9d5e-b9ea4dfdefd4_6cd94717-a3c2-412b-84d1-1ca59ab103d7">
+        <model name="tread_tread_0e819c5d-6a93-46c0-a9ff-613c3ab32ddb_85d830c2-6660-48bf-91e0-17b972e8d9f7">
             <static>true</static>
             <pose>4.199999999999999 8.0 2.3799999999999994 0 0 0</pose>
             <link name="link">
@@ -1599,7 +1599,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_b519e41c-027d-4bc9-b83a-20ef0667518d_0bdf51b9-f02e-4f29-85d5-9dcfe119f50c">
+        <model name="riser_riser_8ed4610e-6e04-4517-a38a-cca709721bdd_89f0c0a3-1fd0-4cf4-a1f5-6c6990491fa8">
             <static>true</static>
             <pose>4.349999999999999 8.0 2.3799999999999994 0 0 0</pose>
             <link name="link">
@@ -1625,7 +1625,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_b519e41c-027d-4bc9-b83a-20ef0667518d_b9d6626e-4003-42e1-b3e6-67aaaebd8c58">
+        <model name="tread_tread_8ed4610e-6e04-4517-a38a-cca709721bdd_d80d52b6-78d8-4d32-857c-af89e4f8471d">
             <static>true</static>
             <pose>4.499999999999999 8.0 2.5499999999999994 0 0 0</pose>
             <link name="link">
@@ -1651,7 +1651,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_55630607-2f48-45a1-9e65-b7761342db2f_c3c9cb4f-e1b1-4059-bdcd-590049d77c0c">
+        <model name="riser_riser_68b2cc15-30e8-4c36-a15a-e7701679fc83_7f7ccbd5-ee7b-43f9-9608-7ec573315ec1">
             <static>true</static>
             <pose>4.649999999999999 8.0 2.5499999999999994 0 0 0</pose>
             <link name="link">
@@ -1677,7 +1677,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_55630607-2f48-45a1-9e65-b7761342db2f_31ab78ee-0448-4565-af7b-15b4f39eb896">
+        <model name="tread_tread_68b2cc15-30e8-4c36-a15a-e7701679fc83_7895b200-2e63-481c-b7a3-126d9ac79810">
             <static>true</static>
             <pose>4.799999999999999 8.0 2.7199999999999993 0 0 0</pose>
             <link name="link">
@@ -1703,7 +1703,7 @@
             </link>
         </model>
         
-        <model name="wall_stairs_single_flight_left_aed7b117-4376-4156-badf-a0fe61cd9b66">
+        <model name="wall_stairs_single_flight_left_f1f274e6-447f-40af-b96e-c4f48927b3f7">
             <static>true</static>
             <pose>2.4 7.2 0.0 0 0 0.0</pose>
             <link name="link">
@@ -1729,7 +1729,7 @@
             </link>
         </model>
         
-        <model name="wall_stairs_single_flight_right_a877bebb-719b-46d6-b2a9-56d955bc41e8">
+        <model name="wall_stairs_single_flight_right_8a9d1c2e-b309-403f-81af-117c11bf0747">
             <static>true</static>
             <pose>2.4 8.8 0.0 0 0 0.0</pose>
             <link name="link">
@@ -1755,7 +1755,7 @@
             </link>
         </model>
         
-        <model name="platform_stairs_single_flight_landing_cc4dcb8b-0e54-4e12-b3d9-3e90bae9708f">
+        <model name="platform_stairs_single_flight_landing_e4347f66-9b4a-4370-9b18-dd551f726a3b">
             <static>true</static>
             <pose>5.624999999999998 8.0 2.7199999999999993 0 0 0</pose>
             <link name="link">
@@ -1777,7 +1777,7 @@
             </link>
         </model>
         
-        <model name="tactile_strip_tactile_strip_before_e247dbde-80e9-4c3c-a197-fb8139d55de5_fb52c9ba-7122-450d-9c4d-5c512f1a627f">
+        <model name="tactile_strip_tactile_strip_before_817106a5-c30b-49ad-9c9e-73a6f7a4562b_079eb2d5-0e05-4f57-b725-a9f4de5cbb58">
             <static>true</static>
             <pose>-0.8 12.0 0.0 0 0 0</pose>
             <link name="link">
@@ -1803,7 +1803,7 @@
             </link>
         </model>
         
-        <model name="tactile_strip_tactile_strip_after_e247dbde-80e9-4c3c-a197-fb8139d55de5_542e9e7b-71bf-44a9-a483-7a6c5a86f060">
+        <model name="tactile_strip_tactile_strip_after_817106a5-c30b-49ad-9c9e-73a6f7a4562b_f385c036-54c2-42f3-a181-c4ce01cb619b">
             <static>true</static>
             <pose>4.799999999999999 12.0 1.9199999999999997 0 0 0</pose>
             <link name="link">
@@ -1829,7 +1829,7 @@
             </link>
         </model>
         
-        <model name="handrail_handrail_e247dbde-80e9-4c3c-a197-fb8139d55de5_{'height': 0.92, 'extension_length': 0.3, 'offset_from_wall': 0.05}_08bdd181-68a0-4c3c-8441-e78053d56d1d">
+        <model name="handrail_handrail_817106a5-c30b-49ad-9c9e-73a6f7a4562b_{'height': 0.92, 'extension_length': 0.3, 'offset_from_wall': 0.05}_a5023ef4-65f4-4ebd-9fd3-0c7590a298f1">
             <static>true</static>
             <pose>1.92 11.05 1.88 0 -0.4636476090008061 0</pose>
             <link name="link">
@@ -1856,7 +1856,7 @@
             </link>
         </model>
         
-        <model name="handrail_handrail_e247dbde-80e9-4c3c-a197-fb8139d55de5_{'height': 0.92, 'extension_length': 0.3, 'offset_from_wall': 0.05}_83c15f0f-c939-493c-b7fa-b26acf7c3bde">
+        <model name="handrail_handrail_817106a5-c30b-49ad-9c9e-73a6f7a4562b_{'height': 0.92, 'extension_length': 0.3, 'offset_from_wall': 0.05}_169be045-e5ca-420a-96e6-f7e57d24af40">
             <static>true</static>
             <pose>1.92 12.95 1.88 0 -0.4636476090008061 0</pose>
             <link name="link">
@@ -1883,7 +1883,7 @@
             </link>
         </model>
         
-        <model name="handrail_handrail_e247dbde-80e9-4c3c-a197-fb8139d55de5_{'height': 0.75, 'extension_length': 0.3, 'offset_from_wall': 0.05}_bd04e427-08e7-48ba-a052-daff01a786d5">
+        <model name="handrail_handrail_817106a5-c30b-49ad-9c9e-73a6f7a4562b_{'height': 0.75, 'extension_length': 0.3, 'offset_from_wall': 0.05}_fc9253a9-f1dc-400d-917d-17734c4851c7">
             <static>true</static>
             <pose>1.92 11.05 1.71 0 -0.4636476090008061 0</pose>
             <link name="link">
@@ -1910,7 +1910,7 @@
             </link>
         </model>
         
-        <model name="handrail_handrail_e247dbde-80e9-4c3c-a197-fb8139d55de5_{'height': 0.75, 'extension_length': 0.3, 'offset_from_wall': 0.05}_cf886db3-1e40-4670-8844-c8301b7afa70">
+        <model name="handrail_handrail_817106a5-c30b-49ad-9c9e-73a6f7a4562b_{'height': 0.75, 'extension_length': 0.3, 'offset_from_wall': 0.05}_f16e0197-0557-437e-82ed-b646c5b52c56">
             <static>true</static>
             <pose>1.92 12.95 1.71 0 -0.4636476090008061 0</pose>
             <link name="link">
@@ -1937,7 +1937,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_258be736-1401-460e-bebf-091b86329764_c0a9f8cc-0e36-47d1-87a5-916af2b5d973">
+        <model name="riser_riser_60859e8f-9047-4913-9e3b-cdc2966f3d5b_4af5236f-e78a-472f-ad24-ed929725d123">
             <static>true</static>
             <pose>0.16 12.0 0.0 0 0 0</pose>
             <link name="link">
@@ -1963,7 +1963,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_258be736-1401-460e-bebf-091b86329764_3464860f-a62a-4216-84d1-1a944fb76347">
+        <model name="tread_tread_60859e8f-9047-4913-9e3b-cdc2966f3d5b_c02a25d1-084b-48ec-9887-69bec51480d9">
             <static>true</static>
             <pose>0.32 12.0 0.16 0 0 0</pose>
             <link name="link">
@@ -1989,7 +1989,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_13503478-5c67-4ad6-b454-ac4b87e52ce4_cc49d765-db3c-4a0e-9adf-42535a92cdc8">
+        <model name="riser_riser_4d6d418d-06ac-4b28-8186-5007275ddba2_b9c4956c-f1d7-4ae7-9b2b-74297c135da9">
             <static>true</static>
             <pose>0.48 12.0 0.16 0 0 0</pose>
             <link name="link">
@@ -2015,7 +2015,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_13503478-5c67-4ad6-b454-ac4b87e52ce4_e0c78193-e2da-42bb-ba2c-a75b73e0fbdc">
+        <model name="tread_tread_4d6d418d-06ac-4b28-8186-5007275ddba2_ec0c7449-5088-41dd-afda-2bdd4b91dd40">
             <static>true</static>
             <pose>0.64 12.0 0.32 0 0 0</pose>
             <link name="link">
@@ -2041,7 +2041,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_19493bd2-135f-4ea7-ae4b-4088cb98a3ca_4207edd2-5d56-403a-9684-206cbfc82f0e">
+        <model name="riser_riser_7f3fb4a0-753d-4ece-b73a-d27928db897c_22f09366-dbf8-466d-a356-964fe852d6d9">
             <static>true</static>
             <pose>0.8 12.0 0.32 0 0 0</pose>
             <link name="link">
@@ -2067,7 +2067,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_19493bd2-135f-4ea7-ae4b-4088cb98a3ca_8276d855-7fab-45f0-b21c-e1deb1aed57d">
+        <model name="tread_tread_7f3fb4a0-753d-4ece-b73a-d27928db897c_5d4e9195-879b-45cb-a3f1-bab3b8df29cd">
             <static>true</static>
             <pose>0.9600000000000001 12.0 0.48 0 0 0</pose>
             <link name="link">
@@ -2093,7 +2093,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_b3375ed8-0055-40ad-b08b-fa2660d256d0_c1f6c00f-a6ec-4a06-8941-c75b6c16237a">
+        <model name="riser_riser_f01b9740-160f-411d-bbb9-41b453ddd582_a5d63bdb-9c5f-4c6d-8176-d91d710af556">
             <static>true</static>
             <pose>1.12 12.0 0.48 0 0 0</pose>
             <link name="link">
@@ -2119,7 +2119,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_b3375ed8-0055-40ad-b08b-fa2660d256d0_3fcfabeb-f657-4162-9ad9-470c36eab455">
+        <model name="tread_tread_f01b9740-160f-411d-bbb9-41b453ddd582_fa19a3d8-ac1f-4345-9d6d-b40768ea3ebc">
             <static>true</static>
             <pose>1.28 12.0 0.64 0 0 0</pose>
             <link name="link">
@@ -2145,7 +2145,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_39427753-897f-4bd0-aa13-9a908fd205ac_9b3aa3ac-5e4e-4724-bbd1-965ccd5b30df">
+        <model name="riser_riser_d2326db4-6c51-438b-b310-f0656f99d33f_9740ca08-2308-4970-9044-0da3f588fd1e">
             <static>true</static>
             <pose>1.4400000000000002 12.0 0.64 0 0 0</pose>
             <link name="link">
@@ -2171,7 +2171,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_39427753-897f-4bd0-aa13-9a908fd205ac_58ae0773-a631-4aa0-b3a3-a6a973388e5e">
+        <model name="tread_tread_d2326db4-6c51-438b-b310-f0656f99d33f_2574512b-a61d-4f05-a7ac-33e243880570">
             <static>true</static>
             <pose>1.6 12.0 0.8 0 0 0</pose>
             <link name="link">
@@ -2197,7 +2197,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_5f0b232d-0bea-4709-97d7-7e89e9932610_da5bc2c2-a72e-471d-9b4d-e914f104d27b">
+        <model name="riser_riser_0447e8a4-d497-4ffb-8084-a50caf41e02d_36e6a4c5-48bd-44f2-9bbc-2a297dc89f92">
             <static>true</static>
             <pose>1.7600000000000002 12.0 0.8 0 0 0</pose>
             <link name="link">
@@ -2223,7 +2223,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_5f0b232d-0bea-4709-97d7-7e89e9932610_4074d423-7ae7-4ec1-9892-cb66dd468a14">
+        <model name="tread_tread_0447e8a4-d497-4ffb-8084-a50caf41e02d_f9af6665-73ed-4cff-9d93-54e0b1f22b34">
             <static>true</static>
             <pose>1.9200000000000002 12.0 0.9600000000000001 0 0 0</pose>
             <link name="link">
@@ -2249,7 +2249,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_23f5bfb4-5053-48d1-8a34-dd3e45298c37_603f534f-7b2a-4201-a657-5aac0d1a5308">
+        <model name="riser_riser_66c54df9-f43e-4ccf-8276-c6a87882a647_e933c164-602c-4da4-9fa8-39ad1291ee04">
             <static>true</static>
             <pose>2.08 12.0 0.9600000000000001 0 0 0</pose>
             <link name="link">
@@ -2275,7 +2275,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_23f5bfb4-5053-48d1-8a34-dd3e45298c37_53d80ba6-b47f-49ab-8389-248343926183">
+        <model name="tread_tread_66c54df9-f43e-4ccf-8276-c6a87882a647_29acf61b-4488-4575-8d31-6c362dc0f5b6">
             <static>true</static>
             <pose>2.24 12.0 1.12 0 0 0</pose>
             <link name="link">
@@ -2301,7 +2301,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_9a7b52c3-68fa-4c9d-8df0-68d92d7ba7a7_07284454-6d41-4ab1-8052-f59fd481ef8d">
+        <model name="riser_riser_54d968d7-f680-473b-89ae-0577398d9c61_c31b982b-5ff0-4e51-af22-24c00cd6c813">
             <static>true</static>
             <pose>2.4 12.0 1.12 0 0 0</pose>
             <link name="link">
@@ -2327,7 +2327,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_9a7b52c3-68fa-4c9d-8df0-68d92d7ba7a7_46c5512f-077a-41b5-94f2-409891e745ef">
+        <model name="tread_tread_54d968d7-f680-473b-89ae-0577398d9c61_99437eaf-8671-4f9b-ba3d-b208a92a67e6">
             <static>true</static>
             <pose>2.56 12.0 1.28 0 0 0</pose>
             <link name="link">
@@ -2353,7 +2353,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_2737a406-87da-4400-8ad0-95495af161be_f787be38-7c09-4c31-8288-34add02b07de">
+        <model name="riser_riser_30348ee2-5861-4671-8c72-7b4808a80d94_39935a83-18cc-4cab-97dc-5f3f0c011bbe">
             <static>true</static>
             <pose>2.7199999999999998 12.0 1.28 0 0 0</pose>
             <link name="link">
@@ -2379,7 +2379,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_2737a406-87da-4400-8ad0-95495af161be_f6bf382e-0058-48c8-b711-277a46136dd5">
+        <model name="tread_tread_30348ee2-5861-4671-8c72-7b4808a80d94_c03d59d8-ed6b-489a-964b-ecef92493851">
             <static>true</static>
             <pose>2.88 12.0 1.44 0 0 0</pose>
             <link name="link">
@@ -2405,7 +2405,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_4210b021-ad9c-4045-9fd7-1412a3e68648_467f3363-c4d9-4303-90c2-17d5f4af081f">
+        <model name="riser_riser_9e1fa094-8c91-47dc-83ac-0b97b33951f8_64d1853f-7d5b-48b1-9e85-0a9643a8689c">
             <static>true</static>
             <pose>3.0399999999999996 12.0 1.44 0 0 0</pose>
             <link name="link">
@@ -2431,7 +2431,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_4210b021-ad9c-4045-9fd7-1412a3e68648_043dfbf5-8aca-43d5-9a13-e9e821eebb6d">
+        <model name="tread_tread_9e1fa094-8c91-47dc-83ac-0b97b33951f8_96d80693-5658-489a-822f-daf099bc52f9">
             <static>true</static>
             <pose>3.1999999999999997 12.0 1.5999999999999999 0 0 0</pose>
             <link name="link">
@@ -2457,7 +2457,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_9fdec094-67fa-4f3a-bfa6-3cd02e4c0de8_63c27fb9-4f3a-45cd-87d0-cbbe744a502d">
+        <model name="riser_riser_4272bc71-1e53-4c97-9278-36210c16e1b6_b9173340-6494-480c-ba5a-7ca464d0b036">
             <static>true</static>
             <pose>3.3599999999999994 12.0 1.5999999999999999 0 0 0</pose>
             <link name="link">
@@ -2483,7 +2483,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_9fdec094-67fa-4f3a-bfa6-3cd02e4c0de8_e194782d-cde4-43fc-93ab-fccf0aac1245">
+        <model name="tread_tread_4272bc71-1e53-4c97-9278-36210c16e1b6_5f6c034e-995a-45f2-a9eb-93a5c3635585">
             <static>true</static>
             <pose>3.5199999999999996 12.0 1.7599999999999998 0 0 0</pose>
             <link name="link">
@@ -2509,7 +2509,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_de4e730e-eb4e-4c0a-8a6b-a3a694c25c96_4128aac9-2340-4c8b-8595-f1c22934850d">
+        <model name="riser_riser_b97e880f-3c15-4672-966e-1b3995b3e23b_c62c9528-dc23-4916-90c4-0b6cc0e002d4">
             <static>true</static>
             <pose>3.6799999999999993 12.0 1.7599999999999998 0 0 0</pose>
             <link name="link">
@@ -2535,7 +2535,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_de4e730e-eb4e-4c0a-8a6b-a3a694c25c96_20115758-c129-4f00-9175-5434e367e610">
+        <model name="tread_tread_b97e880f-3c15-4672-966e-1b3995b3e23b_398cf07d-9324-4da8-a021-5333aa5d9ad8">
             <static>true</static>
             <pose>3.8399999999999994 12.0 1.9199999999999997 0 0 0</pose>
             <link name="link">
@@ -2561,7 +2561,7 @@
             </link>
         </model>
         
-        <model name="wall_staircase_3_left_8c0faa81-85aa-4f80-8a1d-4a3e771c987d">
+        <model name="wall_staircase_3_left_be99c784-be5d-46ef-8f56-80f141c6423c">
             <static>true</static>
             <pose>1.92 10.95 0.0 0 0 0.0</pose>
             <link name="link">
@@ -2587,7 +2587,7 @@
             </link>
         </model>
         
-        <model name="wall_staircase_3_right_821e7c84-5ae6-41b6-b23b-507bd8a663db">
+        <model name="wall_staircase_3_right_8a267ada-459d-482a-a087-a92764a9908c">
             <static>true</static>
             <pose>1.92 13.05 0.0 0 0 0.0</pose>
             <link name="link">
@@ -2613,7 +2613,7 @@
             </link>
         </model>
         
-        <model name="platform_staircase_3_landing_8b013ee7-a951-4394-b28a-e3eec2d67934">
+        <model name="platform_staircase_3_landing_e483b29a-2fe8-499b-abe0-60b1feed6f01">
             <static>true</static>
             <pose>4.799999999999999 12.0 1.9199999999999997 0 0 0</pose>
             <link name="link">
@@ -2635,7 +2635,7 @@
             </link>
         </model>
         
-        <model name="tactile_strip_tactile_strip_before_ac8e0ced-6d5e-4e71-8c7c-0fbca5cec3c5_667041a0-c5cc-4efc-831b-124447df6478">
+        <model name="tactile_strip_tactile_strip_before_e36abb49-b542-44c7-8812-dedb34ffd287_a8b23317-f1dc-4bdc-9dcd-2cf0de8e9844">
             <static>true</static>
             <pose>-0.6499999999999999 16.0 0.0 0 0 0</pose>
             <link name="link">
@@ -2661,7 +2661,7 @@
             </link>
         </model>
         
-        <model name="tactile_strip_tactile_strip_after_ac8e0ced-6d5e-4e71-8c7c-0fbca5cec3c5_8678577e-0333-46db-bf5c-72b843756cd3">
+        <model name="tactile_strip_tactile_strip_after_e36abb49-b542-44c7-8812-dedb34ffd287_4293bdb1-4ae0-4c99-9a49-409e5eed1985">
             <static>true</static>
             <pose>3.9050000000000002 16.0 1.6500000000000001 0 0 0</pose>
             <link name="link">
@@ -2687,7 +2687,7 @@
             </link>
         </model>
         
-        <model name="handrail_handrail_ac8e0ced-6d5e-4e71-8c7c-0fbca5cec3c5_{'height': 0.95, 'extension_length': 0.3, 'offset_from_wall': 0.04}_35af3e70-dc23-4b16-9242-c01a3ed0c004">
+        <model name="handrail_handrail_e36abb49-b542-44c7-8812-dedb34ffd287_{'height': 0.95, 'extension_length': 0.3, 'offset_from_wall': 0.04}_fd5f6d40-3d95-4369-aff4-687989071b10">
             <static>true</static>
             <pose>1.55 15.34 1.775 0 -0.4891198055115287 0</pose>
             <link name="link">
@@ -2714,7 +2714,7 @@
             </link>
         </model>
         
-        <model name="handrail_handrail_ac8e0ced-6d5e-4e71-8c7c-0fbca5cec3c5_{'height': 0.95, 'extension_length': 0.3, 'offset_from_wall': 0.04}_fd049a99-7fb2-483a-91e3-3ec6fd9268ef">
+        <model name="handrail_handrail_e36abb49-b542-44c7-8812-dedb34ffd287_{'height': 0.95, 'extension_length': 0.3, 'offset_from_wall': 0.04}_46324cd8-ac39-454e-8299-36fdf67e2049">
             <static>true</static>
             <pose>1.55 16.66 1.775 0 -0.4891198055115287 0</pose>
             <link name="link">
@@ -2741,7 +2741,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_e701cd7c-53aa-4ac7-bce9-0a9cb836df5d_f44b888f-a171-4590-88f0-f8802c80038e">
+        <model name="riser_riser_83c14b63-c0e9-4660-9677-eb5c935dbb13_f8b04cb4-7147-452f-b928-7ab9296ead32">
             <static>true</static>
             <pose>0.155 16.0 0.0 0 0 0</pose>
             <link name="link">
@@ -2767,7 +2767,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_e701cd7c-53aa-4ac7-bce9-0a9cb836df5d_83818ab6-a131-4601-8dbf-6ac7ff8855fc">
+        <model name="tread_tread_83c14b63-c0e9-4660-9677-eb5c935dbb13_49b17cab-0023-4448-a70a-cdc3259af3d6">
             <static>true</static>
             <pose>0.31 16.0 0.165 0 0 0</pose>
             <link name="link">
@@ -2793,7 +2793,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_c855570c-eb94-4684-85d6-6f696f464762_e72bf8f9-27d0-4492-bd81-8b90d6fefdd6">
+        <model name="riser_riser_cd3fc805-6ba8-460d-881b-817b3506393a_3c793191-6ce9-4d9c-b792-82735fba29ab">
             <static>true</static>
             <pose>0.46499999999999997 16.0 0.165 0 0 0</pose>
             <link name="link">
@@ -2819,7 +2819,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_c855570c-eb94-4684-85d6-6f696f464762_c444991e-0ae1-40f9-acee-b1e0e22c4786">
+        <model name="tread_tread_cd3fc805-6ba8-460d-881b-817b3506393a_b3363ae2-8c34-414d-827d-0d0687857f64">
             <static>true</static>
             <pose>0.62 16.0 0.33 0 0 0</pose>
             <link name="link">
@@ -2845,7 +2845,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_3ad48587-7812-43d3-9d01-5f8686c971a9_1cf2eac4-6d19-4dd9-909b-1f1a79650479">
+        <model name="riser_riser_8854112d-5c34-4948-a525-cdc3c7ee2952_d6b0c1a2-2411-4c9b-b209-d39ac507fa95">
             <static>true</static>
             <pose>0.7749999999999999 16.0 0.33 0 0 0</pose>
             <link name="link">
@@ -2871,7 +2871,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_3ad48587-7812-43d3-9d01-5f8686c971a9_a01377c9-41ce-4c15-b3e2-9be3db2893d8">
+        <model name="tread_tread_8854112d-5c34-4948-a525-cdc3c7ee2952_c18b603b-e889-4af2-a6b7-6588c8471a53">
             <static>true</static>
             <pose>0.9299999999999999 16.0 0.495 0 0 0</pose>
             <link name="link">
@@ -2897,7 +2897,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_4efca51c-5c4b-4b20-92cd-5400c747435c_03c25a1a-a085-4bd9-8d93-d330227a67b3">
+        <model name="riser_riser_48faa7bb-57e8-4a9b-8549-d11afe79a981_1db5cd11-ba82-4c24-8cb2-0064cfb6c297">
             <static>true</static>
             <pose>1.085 16.0 0.495 0 0 0</pose>
             <link name="link">
@@ -2923,7 +2923,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_4efca51c-5c4b-4b20-92cd-5400c747435c_5c040597-ce62-465b-a5d2-77c4b3bf30c1">
+        <model name="tread_tread_48faa7bb-57e8-4a9b-8549-d11afe79a981_55374e34-b075-4477-8cb2-49c06a232e71">
             <static>true</static>
             <pose>1.24 16.0 0.66 0 0 0</pose>
             <link name="link">
@@ -2949,7 +2949,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_107001cb-7dc4-4561-b6b0-9cdca107d64b_531e9b89-889e-48f5-b4d7-bc11f0e75f10">
+        <model name="riser_riser_f9f695dd-d5a8-4b15-b152-ebd794464c0e_405866c0-4766-497e-89ba-7062d57e36e0">
             <static>true</static>
             <pose>1.395 16.0 0.66 0 0 0</pose>
             <link name="link">
@@ -2975,7 +2975,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_107001cb-7dc4-4561-b6b0-9cdca107d64b_eb7451c8-4a4a-4a3f-9f1a-ba1016e45ab0">
+        <model name="tread_tread_f9f695dd-d5a8-4b15-b152-ebd794464c0e_b6d9978b-4557-4587-977e-fdc6025be7ae">
             <static>true</static>
             <pose>1.55 16.0 0.8250000000000001 0 0 0</pose>
             <link name="link">
@@ -3001,7 +3001,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_af9b5b06-a1d9-473c-98a6-6ce29d5ca8f5_f780cde6-2c00-49c0-b4e9-46ef820d861d">
+        <model name="riser_riser_79499e3d-4412-4141-a36c-c334ccffa4e7_a6ec0505-113d-4f32-b2a5-57c3f168e2d0">
             <static>true</static>
             <pose>1.705 16.0 0.8250000000000001 0 0 0</pose>
             <link name="link">
@@ -3027,7 +3027,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_af9b5b06-a1d9-473c-98a6-6ce29d5ca8f5_94f85c95-3fc2-48c5-8fc8-7e334a0d755e">
+        <model name="tread_tread_79499e3d-4412-4141-a36c-c334ccffa4e7_f1bf0bba-ead7-4a5d-b249-c5a8cf108310">
             <static>true</static>
             <pose>1.86 16.0 0.9900000000000001 0 0 0</pose>
             <link name="link">
@@ -3053,7 +3053,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_639c8ef6-2513-4781-a6ff-bac5574387eb_0d2768f7-26e9-44c6-9ad6-d6a5310ec3e9">
+        <model name="riser_riser_78bdb059-15ee-4d0e-9c5f-4ef162ba5c70_898721fc-9300-4f73-87a4-c5528b6b66b9">
             <static>true</static>
             <pose>2.015 16.0 0.9900000000000001 0 0 0</pose>
             <link name="link">
@@ -3079,7 +3079,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_639c8ef6-2513-4781-a6ff-bac5574387eb_f4db8c92-de09-44f8-b9a8-d85664aa07a0">
+        <model name="tread_tread_78bdb059-15ee-4d0e-9c5f-4ef162ba5c70_f6f44208-2591-4433-abe7-06516b18e48f">
             <static>true</static>
             <pose>2.17 16.0 1.155 0 0 0</pose>
             <link name="link">
@@ -3105,7 +3105,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_d7c71bd2-19fe-4834-b0bb-722a42130a2d_66f676ae-a0f0-47f7-b1b1-f9e8ef43b2a3">
+        <model name="riser_riser_c4b88beb-eb3a-4035-8a67-5f8600e96eda_cb75a815-2a58-47f3-bad7-6171297532a6">
             <static>true</static>
             <pose>2.325 16.0 1.155 0 0 0</pose>
             <link name="link">
@@ -3131,7 +3131,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_d7c71bd2-19fe-4834-b0bb-722a42130a2d_512b681a-221e-417a-a8e0-b9458b302f68">
+        <model name="tread_tread_c4b88beb-eb3a-4035-8a67-5f8600e96eda_188bee58-fdc8-46ea-b31a-ff8e93b76d09">
             <static>true</static>
             <pose>2.48 16.0 1.32 0 0 0</pose>
             <link name="link">
@@ -3157,7 +3157,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_0977cc08-2807-4a06-92bf-6d450a5cb668_fc671347-9724-406b-8bff-51a1cf407a62">
+        <model name="riser_riser_c7d3d2a4-8ffd-401f-8254-0cd32a9de52a_b6f07712-f208-41e1-8bba-7af928be6d90">
             <static>true</static>
             <pose>2.6350000000000002 16.0 1.32 0 0 0</pose>
             <link name="link">
@@ -3183,7 +3183,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_0977cc08-2807-4a06-92bf-6d450a5cb668_2efc24f7-6426-48f1-8fba-2540da567661">
+        <model name="tread_tread_c7d3d2a4-8ffd-401f-8254-0cd32a9de52a_621a74ac-ccba-49a6-89d9-8efeed3d208c">
             <static>true</static>
             <pose>2.79 16.0 1.485 0 0 0</pose>
             <link name="link">
@@ -3209,7 +3209,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_02b01409-f016-425f-ab1e-0e3d7f00b8f5_42e3a0d7-e990-4443-85ae-91fc10e9c5ba">
+        <model name="riser_riser_189e5e1d-5cf2-45c1-a9ce-160c27d2ddeb_88f5f0cd-bd93-49e0-9eb2-2fc39c4e0b6e">
             <static>true</static>
             <pose>2.9450000000000003 16.0 1.485 0 0 0</pose>
             <link name="link">
@@ -3235,7 +3235,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_02b01409-f016-425f-ab1e-0e3d7f00b8f5_e0d99815-6d42-4933-b722-ada99ebc547f">
+        <model name="tread_tread_189e5e1d-5cf2-45c1-a9ce-160c27d2ddeb_3919efe9-17a4-4609-8963-0d2ec9d7cd78">
             <static>true</static>
             <pose>3.1 16.0 1.6500000000000001 0 0 0</pose>
             <link name="link">
@@ -3261,7 +3261,7 @@
             </link>
         </model>
         
-        <model name="wall_staircase_4_left_fa7eed86-844d-42ee-97ec-9d8964bedbf3">
+        <model name="wall_staircase_4_left_aaf5bcb4-f415-4911-9d70-418ade560c8c">
             <static>true</static>
             <pose>1.55 15.25 0.0 0 0 0.0</pose>
             <link name="link">
@@ -3287,7 +3287,7 @@
             </link>
         </model>
         
-        <model name="wall_staircase_4_right_a206ef7f-9bc0-402e-8a4f-6020a5d441dd">
+        <model name="wall_staircase_4_right_64ac0490-efb8-4102-9a6f-f19913e97756">
             <static>true</static>
             <pose>1.55 16.75 0.0 0 0 0.0</pose>
             <link name="link">
@@ -3313,7 +3313,7 @@
             </link>
         </model>
         
-        <model name="platform_staircase_4_landing_06d2e3c2-6d3c-468f-b315-b0a0c90900cc">
+        <model name="platform_staircase_4_landing_c6441fb6-069f-4c7d-bcea-093cb418c50f">
             <static>true</static>
             <pose>3.9050000000000002 16.0 1.6500000000000001 0 0 0</pose>
             <link name="link">
@@ -3335,7 +3335,7 @@
             </link>
         </model>
         
-        <model name="tactile_strip_tactile_strip_before_bb460643-dabd-4cfc-adae-08d65774d0d6_cd5dd6f4-b84b-4b70-98cc-7a900874d009">
+        <model name="tactile_strip_tactile_strip_before_2ea9241b-6679-40a4-8127-7ab0cb15bdbf_c2c6a656-e32f-45da-b116-349af31b64a5">
             <static>true</static>
             <pose>-0.55 -4.0 0.0 0 0 0</pose>
             <link name="link">
@@ -3361,7 +3361,7 @@
             </link>
         </model>
         
-        <model name="tactile_strip_tactile_strip_after_bb460643-dabd-4cfc-adae-08d65774d0d6_08f62e05-fa08-4f24-a23a-fa49175e2d3f">
+        <model name="tactile_strip_tactile_strip_after_2ea9241b-6679-40a4-8127-7ab0cb15bdbf_17362fed-5841-430b-b9f4-dcb36aaf7513">
             <static>true</static>
             <pose>3.6999999999999993 -4.0 1.5999999999999999 0 0 0</pose>
             <link name="link">
@@ -3387,7 +3387,7 @@
             </link>
         </model>
         
-        <model name="handrail_handrail_bb460643-dabd-4cfc-adae-08d65774d0d6_{'height': 0.95, 'extension_length': 0.3, 'offset_from_wall': 0.04}_81409317-29f8-4dd6-9334-8f97d180a0ea">
+        <model name="handrail_handrail_2ea9241b-6679-40a4-8127-7ab0cb15bdbf_{'height': 0.95, 'extension_length': 0.3, 'offset_from_wall': 0.04}_c8f82a00-c45e-48f0-8d3c-32c5e0694542">
             <static>true</static>
             <pose>1.5 -4.46 1.75 0 -0.48995732625372834 0</pose>
             <link name="link">
@@ -3414,7 +3414,7 @@
             </link>
         </model>
         
-        <model name="handrail_handrail_bb460643-dabd-4cfc-adae-08d65774d0d6_{'height': 0.95, 'extension_length': 0.3, 'offset_from_wall': 0.04}_a3348f38-972f-470e-afa4-e3284e30a805">
+        <model name="handrail_handrail_2ea9241b-6679-40a4-8127-7ab0cb15bdbf_{'height': 0.95, 'extension_length': 0.3, 'offset_from_wall': 0.04}_0713e387-e1f9-4762-b25e-c83af67adc54">
             <static>true</static>
             <pose>1.5 -3.54 1.75 0 -0.48995732625372834 0</pose>
             <link name="link">
@@ -3441,7 +3441,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_58158de6-fa7f-4e5d-befc-aa3813307cb8_8dc82cc2-d463-4661-be72-0487b3269a92">
+        <model name="riser_riser_9c76fb18-e7ad-4141-a3b4-28d66b0b2baf_ae0d0122-3ccc-4c39-b0f9-e13f284c8048">
             <static>true</static>
             <pose>0.15 -4.0 0.0 0 0 0</pose>
             <link name="link">
@@ -3467,7 +3467,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_58158de6-fa7f-4e5d-befc-aa3813307cb8_c9b275b1-65b1-43cb-80de-2403f3391f60">
+        <model name="tread_tread_9c76fb18-e7ad-4141-a3b4-28d66b0b2baf_21921306-0041-4415-80ab-e9c167a21be0">
             <static>true</static>
             <pose>0.3 -4.0 0.16 0 0 0</pose>
             <link name="link">
@@ -3493,7 +3493,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_95f89225-990e-48e2-a3c1-053dceb2409b_d84a1951-0c29-4921-8b8a-8182048e972b">
+        <model name="riser_riser_8db3b6ca-0b78-4a82-8ecd-57da0543a603_c8e3f588-3edf-4c48-967c-43171e06ea8c">
             <static>true</static>
             <pose>0.44999999999999996 -4.0 0.16 0 0 0</pose>
             <link name="link">
@@ -3519,7 +3519,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_95f89225-990e-48e2-a3c1-053dceb2409b_ad22ca06-a49f-491a-b1bd-7881cd288082">
+        <model name="tread_tread_8db3b6ca-0b78-4a82-8ecd-57da0543a603_78b97644-2187-4be0-bde1-c196dc6ec33e">
             <static>true</static>
             <pose>0.6 -4.0 0.32 0 0 0</pose>
             <link name="link">
@@ -3545,7 +3545,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_84e6bd4c-9608-4e86-bdce-dee612c4eabc_aa662156-3255-420b-a96d-e386186eed29">
+        <model name="riser_riser_80268285-5291-475d-b9ea-2a03ebbe1ef6_254f730d-3a99-4d79-8cc5-aa12128035ba">
             <static>true</static>
             <pose>0.75 -4.0 0.32 0 0 0</pose>
             <link name="link">
@@ -3571,7 +3571,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_84e6bd4c-9608-4e86-bdce-dee612c4eabc_2c8d3b45-e005-4b7d-a37f-df1d84da92be">
+        <model name="tread_tread_80268285-5291-475d-b9ea-2a03ebbe1ef6_49ef64bf-bc10-4267-a63d-350d3b7aabda">
             <static>true</static>
             <pose>0.9 -4.0 0.48 0 0 0</pose>
             <link name="link">
@@ -3597,7 +3597,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_2581cc82-cac5-45cf-9f3f-c00868cb3b6c_930ddd7b-006d-47d8-9848-3abd0dce1b94">
+        <model name="riser_riser_6a5fe9ca-8d5e-4d05-9d73-330eb9fa9a97_ec2ae67e-9ca6-46fc-8f5b-947d9dd650fd">
             <static>true</static>
             <pose>1.05 -4.0 0.48 0 0 0</pose>
             <link name="link">
@@ -3623,7 +3623,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_2581cc82-cac5-45cf-9f3f-c00868cb3b6c_a6a48c2e-e2aa-4c71-9746-5f577b983dc7">
+        <model name="tread_tread_6a5fe9ca-8d5e-4d05-9d73-330eb9fa9a97_ffa24da6-0870-4379-bc0a-9e895bf2c060">
             <static>true</static>
             <pose>1.2 -4.0 0.64 0 0 0</pose>
             <link name="link">
@@ -3649,7 +3649,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_660a0eef-2ca6-4320-9870-90523cb9f8cd_7e8a33da-201b-4cd1-8c19-3d2beb5928ec">
+        <model name="riser_riser_b6228aff-6c39-4b82-82a1-75a04a5216a2_15c2874f-3b48-4aba-912f-cb9c5971f7c6">
             <static>true</static>
             <pose>1.35 -4.0 0.64 0 0 0</pose>
             <link name="link">
@@ -3675,7 +3675,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_660a0eef-2ca6-4320-9870-90523cb9f8cd_9760f25b-1dbe-4c9f-9366-763a442b9e87">
+        <model name="tread_tread_b6228aff-6c39-4b82-82a1-75a04a5216a2_7e82a85d-2ad7-40cc-b21b-96c4212eda69">
             <static>true</static>
             <pose>1.5 -4.0 0.8 0 0 0</pose>
             <link name="link">
@@ -3701,7 +3701,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_b0b854d0-9aa1-454c-9893-ee9f0c91d065_06e90111-83e5-4b2a-94b0-c6598b10ecbe">
+        <model name="riser_riser_0420127a-948c-4e92-bb1a-1c0821512112_2bb66bfa-adb2-4779-87bb-fc37d92632c6">
             <static>true</static>
             <pose>1.6500000000000001 -4.0 0.8 0 0 0</pose>
             <link name="link">
@@ -3727,7 +3727,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_b0b854d0-9aa1-454c-9893-ee9f0c91d065_49e2fcb9-090d-4ae3-8044-c9c3196ef599">
+        <model name="tread_tread_0420127a-948c-4e92-bb1a-1c0821512112_1e60a0bf-e2e1-454a-a7d4-78c43ee1452f">
             <static>true</static>
             <pose>1.8 -4.0 0.9600000000000001 0 0 0</pose>
             <link name="link">
@@ -3753,7 +3753,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_6d1fe717-6945-45b3-a7ff-dfa2f1481385_ece81dd0-ccff-4aaa-8e6d-29fc0b6bc50d">
+        <model name="riser_riser_7a859b45-bb37-4b91-9d60-ae6a9be17842_f96cb54b-b596-4fa3-b699-87b3bce18d9e">
             <static>true</static>
             <pose>1.9500000000000002 -4.0 0.9600000000000001 0 0 0</pose>
             <link name="link">
@@ -3779,7 +3779,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_6d1fe717-6945-45b3-a7ff-dfa2f1481385_ea4db5c5-7559-4b7f-b448-f21fa1e39af0">
+        <model name="tread_tread_7a859b45-bb37-4b91-9d60-ae6a9be17842_cb64fa00-be26-475a-af72-7cd95ddbf23d">
             <static>true</static>
             <pose>2.1 -4.0 1.12 0 0 0</pose>
             <link name="link">
@@ -3805,7 +3805,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_9c17862d-cb88-4672-8d5d-fc6e7705ee3b_8f1e6f4e-5833-47f2-a659-3b14fff2f84d">
+        <model name="riser_riser_68947b79-2a8c-4d95-b5d2-7d317724cef8_12c84b9e-8c1f-4565-921f-3643605227a1">
             <static>true</static>
             <pose>2.25 -4.0 1.12 0 0 0</pose>
             <link name="link">
@@ -3831,7 +3831,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_9c17862d-cb88-4672-8d5d-fc6e7705ee3b_00a0cd27-5d4d-4336-b971-f8ae284328ea">
+        <model name="tread_tread_68947b79-2a8c-4d95-b5d2-7d317724cef8_3ece4e3a-8c55-4f19-84df-01e07a964381">
             <static>true</static>
             <pose>2.4 -4.0 1.28 0 0 0</pose>
             <link name="link">
@@ -3857,7 +3857,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_c009c5b0-6f1d-40f3-955f-3d66cff7c293_8f8f50a3-9b8d-4952-bd95-ad9f43ab122a">
+        <model name="riser_riser_2851edcf-fdf3-483e-a581-8d7fed676b2f_84033f40-f9f6-4da1-b16d-1603c08977ee">
             <static>true</static>
             <pose>2.55 -4.0 1.28 0 0 0</pose>
             <link name="link">
@@ -3883,7 +3883,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_c009c5b0-6f1d-40f3-955f-3d66cff7c293_d3206531-45de-4d33-b17d-42f95f5a9ee1">
+        <model name="tread_tread_2851edcf-fdf3-483e-a581-8d7fed676b2f_4e0c5bc8-655a-42c8-b4f5-c29c150156b7">
             <static>true</static>
             <pose>2.6999999999999997 -4.0 1.44 0 0 0</pose>
             <link name="link">
@@ -3909,7 +3909,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_c4544fc0-ce03-43ab-be84-12ee72ae2d09_e526481a-0009-4b75-a703-87f49d689c5f">
+        <model name="riser_riser_e507df73-6838-4364-a47b-57c27dc0b4f8_20ec289f-3e2a-4088-9498-d46254160dd3">
             <static>true</static>
             <pose>2.8499999999999996 -4.0 1.44 0 0 0</pose>
             <link name="link">
@@ -3935,7 +3935,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_c4544fc0-ce03-43ab-be84-12ee72ae2d09_a226cc58-a069-4507-a3e4-0371cb3a7c88">
+        <model name="tread_tread_e507df73-6838-4364-a47b-57c27dc0b4f8_6542c4db-214c-4cf5-b71b-adaab8019ae0">
             <static>true</static>
             <pose>2.9999999999999996 -4.0 1.5999999999999999 0 0 0</pose>
             <link name="link">
@@ -3961,7 +3961,7 @@
             </link>
         </model>
         
-        <model name="wall_stairs_invalid_1_left_05182695-d9fb-4740-b8c5-9390f8f083d8">
+        <model name="wall_stairs_invalid_1_left_ec205400-8bb0-42cc-aa7a-9a137c70528d">
             <static>true</static>
             <pose>1.5 -4.55 0.0 0 0 0.0</pose>
             <link name="link">
@@ -3987,7 +3987,7 @@
             </link>
         </model>
         
-        <model name="wall_stairs_invalid_1_right_2ef453ef-c8c8-497e-b2b1-67c227a47a27">
+        <model name="wall_stairs_invalid_1_right_2bd78cf2-a5cd-418a-94f3-2311c6ab3b13">
             <static>true</static>
             <pose>1.5 -3.45 0.0 0 0 0.0</pose>
             <link name="link">
@@ -4013,7 +4013,7 @@
             </link>
         </model>
         
-        <model name="platform_stairs_invalid_1_landing_8d4ea271-dd5d-43b5-b533-5b5744a4be34">
+        <model name="platform_stairs_invalid_1_landing_eea04eb0-ce96-4117-92b4-34809efbc66e">
             <static>true</static>
             <pose>3.6999999999999993 -4.0 1.5999999999999999 0 0 0</pose>
             <link name="link">
@@ -4035,7 +4035,7 @@
             </link>
         </model>
         
-        <model name="tactile_strip_tactile_strip_before_16d3e762-d752-4147-99d8-eac2302ce2f8_86f1d08e-551b-4cb9-9262-6000fcbc442c">
+        <model name="tactile_strip_tactile_strip_before_ba6dccbf-96f6-4c84-a471-28c2fa513998_47efde0d-9462-4f53-817f-e93aaea50bb9">
             <static>true</static>
             <pose>-0.6 -8.0 0.0 0 0 0</pose>
             <link name="link">
@@ -4061,7 +4061,7 @@
             </link>
         </model>
         
-        <model name="tactile_strip_tactile_strip_after_16d3e762-d752-4147-99d8-eac2302ce2f8_fc828271-d032-465d-b4f9-58adee9b55bd">
+        <model name="tactile_strip_tactile_strip_after_ba6dccbf-96f6-4c84-a471-28c2fa513998_1dfc1b36-a812-4d2e-a891-82aed6aae32e">
             <static>true</static>
             <pose>2.3 -8.0 1.5999999999999999 0 0 0</pose>
             <link name="link">
@@ -4087,7 +4087,7 @@
             </link>
         </model>
         
-        <model name="handrail_handrail_16d3e762-d752-4147-99d8-eac2302ce2f8_{'height': 0.95, 'extension_length': 0.3, 'offset_from_wall': 0.04}_34a05a07-01a7-4b0b-92a2-6fc0d68d81b4">
+        <model name="handrail_handrail_ba6dccbf-96f6-4c84-a471-28c2fa513998_{'height': 0.95, 'extension_length': 0.3, 'offset_from_wall': 0.04}_45653559-5851-44b0-84e6-108609f4c3dc">
             <static>true</static>
             <pose>0.8 -8.56 1.75 0 -0.7853981633974483 0</pose>
             <link name="link">
@@ -4114,7 +4114,7 @@
             </link>
         </model>
         
-        <model name="handrail_handrail_16d3e762-d752-4147-99d8-eac2302ce2f8_{'height': 0.95, 'extension_length': 0.3, 'offset_from_wall': 0.04}_e3e3623a-0124-4584-b22b-b0fbed71ec67">
+        <model name="handrail_handrail_ba6dccbf-96f6-4c84-a471-28c2fa513998_{'height': 0.95, 'extension_length': 0.3, 'offset_from_wall': 0.04}_097d068b-f822-4ea7-b53b-6445236d7d59">
             <static>true</static>
             <pose>0.8 -7.44 1.75 0 -0.7853981633974483 0</pose>
             <link name="link">
@@ -4141,7 +4141,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_46ebc285-f616-4723-84cc-790426692610_a93e5e19-3f17-421d-9cf5-8c059c2b9a4a">
+        <model name="riser_riser_0fd16189-d3a7-48ca-bf40-b6a18c769892_22d180ec-ee4f-4729-bbbe-681f19a4386a">
             <static>true</static>
             <pose>0.1 -8.0 0.0 0 0 0</pose>
             <link name="link">
@@ -4167,7 +4167,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_46ebc285-f616-4723-84cc-790426692610_558b2ff7-46fb-41f4-823d-c51235a0c060">
+        <model name="tread_tread_0fd16189-d3a7-48ca-bf40-b6a18c769892_8a82b1d4-f3fc-4b81-a943-94d738de16da">
             <static>true</static>
             <pose>0.2 -8.0 0.2 0 0 0</pose>
             <link name="link">
@@ -4193,7 +4193,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_b0b8563b-7bce-47d3-9d4f-8183b310fa3f_f19a0227-4d64-403e-9174-2a88ec4936aa">
+        <model name="riser_riser_bf9ac35c-88f7-4fa1-8b29-65452099236e_9dd44057-5b77-4751-8890-66b24c6e03c9">
             <static>true</static>
             <pose>0.30000000000000004 -8.0 0.2 0 0 0</pose>
             <link name="link">
@@ -4219,7 +4219,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_b0b8563b-7bce-47d3-9d4f-8183b310fa3f_8e0ad087-cf58-439a-9e13-b64eb80a7ecf">
+        <model name="tread_tread_bf9ac35c-88f7-4fa1-8b29-65452099236e_c8f56ecf-9eed-4b75-9817-57def64b5bde">
             <static>true</static>
             <pose>0.4 -8.0 0.4 0 0 0</pose>
             <link name="link">
@@ -4245,7 +4245,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_b85e8e2d-c00b-4bcf-ad53-46603503072f_634c575d-74f0-41f0-9743-e0420083fb5c">
+        <model name="riser_riser_d5effb7a-b39c-41ff-bbb1-f23a96cb4aae_77ecbbb1-9517-41bc-99f4-03c6953e9362">
             <static>true</static>
             <pose>0.5 -8.0 0.4 0 0 0</pose>
             <link name="link">
@@ -4271,7 +4271,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_b85e8e2d-c00b-4bcf-ad53-46603503072f_5ed57122-e681-4eb0-8d81-eee0cb031033">
+        <model name="tread_tread_d5effb7a-b39c-41ff-bbb1-f23a96cb4aae_068f4681-e151-4dc8-89c8-7aa5666637b6">
             <static>true</static>
             <pose>0.6 -8.0 0.6000000000000001 0 0 0</pose>
             <link name="link">
@@ -4297,7 +4297,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_55603493-1740-410c-8f34-117a5e550584_b932c417-4b72-4141-b285-8242169a5fcd">
+        <model name="riser_riser_9ff6e137-7ff6-4f0f-b3c6-1c01fefe9fa7_7d449e3a-c2b6-4309-8300-a38528e85710">
             <static>true</static>
             <pose>0.7 -8.0 0.6000000000000001 0 0 0</pose>
             <link name="link">
@@ -4323,7 +4323,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_55603493-1740-410c-8f34-117a5e550584_2a28ec69-24df-41e0-a117-2bb14ec38074">
+        <model name="tread_tread_9ff6e137-7ff6-4f0f-b3c6-1c01fefe9fa7_56db3d6f-ec94-4f56-a619-c578167ddbcb">
             <static>true</static>
             <pose>0.7999999999999999 -8.0 0.8 0 0 0</pose>
             <link name="link">
@@ -4349,7 +4349,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_cf877689-4e59-49a1-90c6-562ecacc6b25_a48ac0f3-3cd5-4bc0-92d9-f8ae3be13c1e">
+        <model name="riser_riser_065c5ee9-29c7-45c0-9493-bf14632a73e4_d1239d90-d3ad-4872-9af5-6d720d0c8b68">
             <static>true</static>
             <pose>0.8999999999999999 -8.0 0.8 0 0 0</pose>
             <link name="link">
@@ -4375,7 +4375,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_cf877689-4e59-49a1-90c6-562ecacc6b25_5c767a1d-221c-4b71-bde6-1df38a793b2b">
+        <model name="tread_tread_065c5ee9-29c7-45c0-9493-bf14632a73e4_3f51db55-fa10-4199-bd79-0d61629913ac">
             <static>true</static>
             <pose>0.9999999999999999 -8.0 1.0 0 0 0</pose>
             <link name="link">
@@ -4401,7 +4401,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_ccc038b2-1134-4ed7-8fc7-ebde35ce0d50_b28d55ab-be2b-4094-82ec-1f184cf1eb4b">
+        <model name="riser_riser_a861fa4a-ed4b-483e-8a5e-e84393d3197a_c151730d-de9d-499b-8682-c98ec652c931">
             <static>true</static>
             <pose>1.0999999999999999 -8.0 1.0 0 0 0</pose>
             <link name="link">
@@ -4427,7 +4427,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_ccc038b2-1134-4ed7-8fc7-ebde35ce0d50_7204f366-d219-4edf-8eaa-c428ee985ddb">
+        <model name="tread_tread_a861fa4a-ed4b-483e-8a5e-e84393d3197a_4256d3e7-27f6-4a2b-b14b-c13e600bf3ee">
             <static>true</static>
             <pose>1.2 -8.0 1.2 0 0 0</pose>
             <link name="link">
@@ -4453,7 +4453,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_f647daf4-04ea-4b85-ae33-08840aad3bb0_43014b25-33f4-4a12-a0c0-a9565d46e372">
+        <model name="riser_riser_64fc71e0-6cd0-4ff4-a4f6-bda00cd375ae_c4a4765f-4550-45dd-9047-1e260758a2fd">
             <static>true</static>
             <pose>1.2999999999999998 -8.0 1.2 0 0 0</pose>
             <link name="link">
@@ -4479,7 +4479,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_f647daf4-04ea-4b85-ae33-08840aad3bb0_83a20f2c-5af0-47c1-8ded-3abd9bae7937">
+        <model name="tread_tread_64fc71e0-6cd0-4ff4-a4f6-bda00cd375ae_fdc9ed0b-0852-493c-806f-3ebac80aeea1">
             <static>true</static>
             <pose>1.4 -8.0 1.4 0 0 0</pose>
             <link name="link">
@@ -4505,7 +4505,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_418d55d1-9abe-41fc-9752-02d12795c2df_949b783d-0868-4187-b4f0-d0f6c078f077">
+        <model name="riser_riser_caa694e8-261d-46e5-a3c5-c5f9cb061977_279b2124-7e60-4f15-aa99-428242dc39f7">
             <static>true</static>
             <pose>1.4999999999999998 -8.0 1.4 0 0 0</pose>
             <link name="link">
@@ -4531,7 +4531,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_418d55d1-9abe-41fc-9752-02d12795c2df_b1e18c1d-8ac3-45f7-94b0-f185363d3b8c">
+        <model name="tread_tread_caa694e8-261d-46e5-a3c5-c5f9cb061977_61327583-bfc7-4943-b172-ca0994507b30">
             <static>true</static>
             <pose>1.5999999999999999 -8.0 1.5999999999999999 0 0 0</pose>
             <link name="link">
@@ -4557,7 +4557,7 @@
             </link>
         </model>
         
-        <model name="wall_stairs_invalid_2_left_11f0a79c-b419-4621-843b-19049c0808e3">
+        <model name="wall_stairs_invalid_2_left_4c9fdba4-f48a-426c-a5d5-ee370a5b975e">
             <static>true</static>
             <pose>0.8 -8.65 0.0 0 0 0.0</pose>
             <link name="link">
@@ -4583,7 +4583,7 @@
             </link>
         </model>
         
-        <model name="wall_stairs_invalid_2_right_b06e9c7c-c8ec-44eb-b862-309ba349dadb">
+        <model name="wall_stairs_invalid_2_right_0b380bdd-e392-4aa6-9016-85053db1b7d6">
             <static>true</static>
             <pose>0.8 -7.3500000000000005 0.0 0 0 0.0</pose>
             <link name="link">
@@ -4609,7 +4609,7 @@
             </link>
         </model>
         
-        <model name="platform_stairs_invalid_2_landing_a33c7004-08fa-4969-806e-1e7afe420906">
+        <model name="platform_stairs_invalid_2_landing_4b21e9f2-8b20-45c7-a967-378f1c04d353">
             <static>true</static>
             <pose>2.3 -8.0 1.5999999999999999 0 0 0</pose>
             <link name="link">
@@ -4631,7 +4631,7 @@
             </link>
         </model>
         
-        <model name="handrail_handrail_90fc7c03-feb3-4831-a045-6ba0b764fc8f_{'height': 0.95, 'extension_length': 0.3, 'offset_from_wall': 0.04}_bcbded52-3f1b-494a-8567-7e8d1fa35915">
+        <model name="handrail_handrail_334ac3bb-0b48-41e2-9271-e1b675eb571f_{'height': 0.95, 'extension_length': 0.3, 'offset_from_wall': 0.04}_aca9fab8-0f13-418a-bf42-31326757939a">
             <static>true</static>
             <pose>2.4000000000000004 -12.56 1.67 0 -0.29145679447786704 0</pose>
             <link name="link">
@@ -4658,7 +4658,7 @@
             </link>
         </model>
         
-        <model name="handrail_handrail_90fc7c03-feb3-4831-a045-6ba0b764fc8f_{'height': 0.95, 'extension_length': 0.3, 'offset_from_wall': 0.04}_d98a18be-bc61-48ec-b3f1-ad64ae4c2219">
+        <model name="handrail_handrail_334ac3bb-0b48-41e2-9271-e1b675eb571f_{'height': 0.95, 'extension_length': 0.3, 'offset_from_wall': 0.04}_a6d3bd67-9fcc-4006-a7f7-fb74aa5581d9">
             <static>true</static>
             <pose>2.4000000000000004 -11.44 1.67 0 -0.29145679447786704 0</pose>
             <link name="link">
@@ -4685,7 +4685,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_934baff5-0e9a-4eff-94c1-d1be2f05a47c_eca3488b-138a-4bdb-872f-b02e4b769353">
+        <model name="riser_riser_f79dbd7d-b974-4cb8-9a55-d80f5a312021_a0191617-1c5c-4327-b5b6-209adbe51cb7">
             <static>true</static>
             <pose>0.2 -12.0 0.0 0 0 0</pose>
             <link name="link">
@@ -4711,7 +4711,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_934baff5-0e9a-4eff-94c1-d1be2f05a47c_47ae0f87-5254-437d-a848-837d5b69ca05">
+        <model name="tread_tread_f79dbd7d-b974-4cb8-9a55-d80f5a312021_68e49c88-5d5c-491e-b299-2df62b684e17">
             <static>true</static>
             <pose>0.4 -12.0 0.12 0 0 0</pose>
             <link name="link">
@@ -4737,7 +4737,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_d3804eb6-8ec1-4b48-b205-2a305090adb4_f746c3e5-35f3-443b-8fa0-083c53ac125c">
+        <model name="riser_riser_21510540-4ef7-4a93-9b71-e6cf3b867489_8b17b8b4-6be3-4b3f-aef8-79cb035780e8">
             <static>true</static>
             <pose>0.6000000000000001 -12.0 0.12 0 0 0</pose>
             <link name="link">
@@ -4763,7 +4763,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_d3804eb6-8ec1-4b48-b205-2a305090adb4_dbf08b7a-62c5-46b8-be65-f4127b1d3f1e">
+        <model name="tread_tread_21510540-4ef7-4a93-9b71-e6cf3b867489_96c0c671-d362-4382-b272-60ca84518153">
             <static>true</static>
             <pose>0.8 -12.0 0.24 0 0 0</pose>
             <link name="link">
@@ -4789,7 +4789,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_21a01736-b515-4937-ba65-43cd307bed08_33cc65ab-43a2-4c6f-8f67-57f6ca80c6dd">
+        <model name="riser_riser_b828ba6f-296a-4e49-b509-ea6c536ff527_160650d1-56e4-458b-9ce6-3597d3bbf623">
             <static>true</static>
             <pose>1.0 -12.0 0.24 0 0 0</pose>
             <link name="link">
@@ -4815,7 +4815,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_21a01736-b515-4937-ba65-43cd307bed08_9097cee4-5576-4514-b69c-1f996b4535e3">
+        <model name="tread_tread_b828ba6f-296a-4e49-b509-ea6c536ff527_39dd500f-bb49-49a7-a3f7-76412dab1a91">
             <static>true</static>
             <pose>1.2 -12.0 0.36 0 0 0</pose>
             <link name="link">
@@ -4841,7 +4841,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_07b0456a-4e27-4584-abe3-f5b4418f52bd_20b6044b-945d-4600-8fea-adf795602e32">
+        <model name="riser_riser_842ed6d8-3c86-4359-ba2c-fa71770653c6_ecccacc8-85d0-4162-8a33-9bb15306f289">
             <static>true</static>
             <pose>1.4 -12.0 0.36 0 0 0</pose>
             <link name="link">
@@ -4867,7 +4867,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_07b0456a-4e27-4584-abe3-f5b4418f52bd_5c69f1d2-2f87-4e2a-9c32-e802d6f2960a">
+        <model name="tread_tread_842ed6d8-3c86-4359-ba2c-fa71770653c6_ef1fa3ef-e709-45ba-bb47-c0bfc2acc5a4">
             <static>true</static>
             <pose>1.5999999999999999 -12.0 0.48 0 0 0</pose>
             <link name="link">
@@ -4893,7 +4893,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_ffa5562f-d752-40b8-bb2d-e4d00c01337d_bf34c1f8-15d0-4dc1-a36a-cdb4de391e8a">
+        <model name="riser_riser_06faf2bb-a8ae-452b-b35f-16a55bf3dbd4_0b2991ee-bf35-4310-94f1-5bc69cb6ed1d">
             <static>true</static>
             <pose>1.7999999999999998 -12.0 0.48 0 0 0</pose>
             <link name="link">
@@ -4919,7 +4919,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_ffa5562f-d752-40b8-bb2d-e4d00c01337d_f03173c8-7eed-4c41-94f5-71406e49ef5a">
+        <model name="tread_tread_06faf2bb-a8ae-452b-b35f-16a55bf3dbd4_94ac080c-9c5f-48b5-8e37-964ed36a9ad1">
             <static>true</static>
             <pose>1.9999999999999998 -12.0 0.6 0 0 0</pose>
             <link name="link">
@@ -4945,7 +4945,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_d1ff4692-cbc4-4ca9-8175-2dc20b66195e_a46fb8b1-959d-47eb-b9c6-32cf0d74d4b0">
+        <model name="riser_riser_a50d08cd-4d48-4264-835a-82110000b588_0a347023-3128-418d-9c5e-b3a1e66e00ed">
             <static>true</static>
             <pose>2.1999999999999997 -12.0 0.6 0 0 0</pose>
             <link name="link">
@@ -4971,7 +4971,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_d1ff4692-cbc4-4ca9-8175-2dc20b66195e_f7605f83-e15b-4cea-ae66-176227782ffd">
+        <model name="tread_tread_a50d08cd-4d48-4264-835a-82110000b588_59ae9d4a-99b2-4ff5-b31b-2a0c60345695">
             <static>true</static>
             <pose>2.4 -12.0 0.72 0 0 0</pose>
             <link name="link">
@@ -4997,7 +4997,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_ae603abd-555d-42b5-a444-dbbdeb1d7204_23969308-a8f6-46e3-89fe-5bab4287cdee">
+        <model name="riser_riser_fd55b394-43c7-4451-9429-861714e7d709_d34aa84f-d520-420e-beb8-4353c743256c">
             <static>true</static>
             <pose>2.5999999999999996 -12.0 0.72 0 0 0</pose>
             <link name="link">
@@ -5023,7 +5023,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_ae603abd-555d-42b5-a444-dbbdeb1d7204_42242198-657f-4188-b770-6ad216c2c581">
+        <model name="tread_tread_fd55b394-43c7-4451-9429-861714e7d709_c2cdafce-199f-4223-9bbe-e345a90a8458">
             <static>true</static>
             <pose>2.8 -12.0 0.84 0 0 0</pose>
             <link name="link">
@@ -5049,7 +5049,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_877a86bf-c9e6-4bb6-9d73-c83060f2a13e_00d73319-9977-4416-bc0b-c841769267bb">
+        <model name="riser_riser_63169348-e5a6-4635-9f59-b612e62b5f37_17200672-e04e-4297-bf2a-463eca0cc338">
             <static>true</static>
             <pose>2.9999999999999996 -12.0 0.84 0 0 0</pose>
             <link name="link">
@@ -5075,7 +5075,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_877a86bf-c9e6-4bb6-9d73-c83060f2a13e_e54287c1-72e9-4a61-927c-2e4a1071f903">
+        <model name="tread_tread_63169348-e5a6-4635-9f59-b612e62b5f37_05f98d78-d92c-4843-9a8b-f65af18b45cc">
             <static>true</static>
             <pose>3.1999999999999997 -12.0 0.96 0 0 0</pose>
             <link name="link">
@@ -5101,7 +5101,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_0cefed91-ff58-4224-adaa-5c6072a44663_4d61d479-ae25-44e6-877a-1d43915b40f6">
+        <model name="riser_riser_2a98098b-df18-407b-93c1-d02a06ea57cb_b0fc3951-4760-4f4e-8718-eb29cede9834">
             <static>true</static>
             <pose>3.3999999999999995 -12.0 0.96 0 0 0</pose>
             <link name="link">
@@ -5127,7 +5127,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_0cefed91-ff58-4224-adaa-5c6072a44663_a3b9331d-5453-46a7-a5b0-1aacd54d83eb">
+        <model name="tread_tread_2a98098b-df18-407b-93c1-d02a06ea57cb_7e4e7e31-b924-437c-b8b3-3c58e94bc083">
             <static>true</static>
             <pose>3.5999999999999996 -12.0 1.08 0 0 0</pose>
             <link name="link">
@@ -5153,7 +5153,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_33b4180b-416b-4f28-ac73-fd9b0ce6c827_90fe43fc-7380-45f6-a23d-d97cac01027a">
+        <model name="riser_riser_a9adfdef-dd6a-46cf-a624-64878ee6d1a2_ab0b8df3-1813-42d4-8c40-3eee7cd1fc81">
             <static>true</static>
             <pose>3.7999999999999994 -12.0 1.08 0 0 0</pose>
             <link name="link">
@@ -5179,7 +5179,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_33b4180b-416b-4f28-ac73-fd9b0ce6c827_a2ec4326-39c2-4a95-8a63-47f7c72a0a90">
+        <model name="tread_tread_a9adfdef-dd6a-46cf-a624-64878ee6d1a2_34dc4fff-7e03-4dea-b039-441c3245b7f6">
             <static>true</static>
             <pose>3.9999999999999996 -12.0 1.2000000000000002 0 0 0</pose>
             <link name="link">
@@ -5205,7 +5205,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_03fee173-ca76-46d9-b508-48685122367a_87180bef-e6b9-4fe3-8c2f-f63672cf4152">
+        <model name="riser_riser_43ff67b2-7c53-4240-a1f6-58775a6e8945_5e93c5f4-c372-43ed-97da-61dbaf11d889">
             <static>true</static>
             <pose>4.199999999999999 -12.0 1.2000000000000002 0 0 0</pose>
             <link name="link">
@@ -5231,7 +5231,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_03fee173-ca76-46d9-b508-48685122367a_1792235b-f705-4fcb-8f2b-45763d06db38">
+        <model name="tread_tread_43ff67b2-7c53-4240-a1f6-58775a6e8945_1f99e6dd-7ae6-4333-81cb-90653d595d0d">
             <static>true</static>
             <pose>4.3999999999999995 -12.0 1.3200000000000003 0 0 0</pose>
             <link name="link">
@@ -5257,7 +5257,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_6038e752-69e3-469a-9e1b-1e17e6138ab1_c99189ba-cdd8-423c-a021-2471a643ecfc">
+        <model name="riser_riser_7bf7846c-ea40-465e-b720-1a5e889895d7_83cba89c-5283-4ca0-89c3-d6a50e197286">
             <static>true</static>
             <pose>4.6 -12.0 1.3200000000000003 0 0 0</pose>
             <link name="link">
@@ -5283,7 +5283,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_6038e752-69e3-469a-9e1b-1e17e6138ab1_2294abb4-d33b-4942-9d0e-2e99e1b60bba">
+        <model name="tread_tread_7bf7846c-ea40-465e-b720-1a5e889895d7_09cbb573-52cb-46a6-adb6-4e861bc006b2">
             <static>true</static>
             <pose>4.8 -12.0 1.4400000000000004 0 0 0</pose>
             <link name="link">
@@ -5309,7 +5309,7 @@
             </link>
         </model>
         
-        <model name="wall_stairs_invalid_3_left_56cb39a3-592e-4b7a-aed2-f360ea6fd879">
+        <model name="wall_stairs_invalid_3_left_8c227ee2-c0b2-423a-83b2-b73c16e25cb3">
             <static>true</static>
             <pose>2.4000000000000004 -12.65 0.0 0 0 0.0</pose>
             <link name="link">
@@ -5335,7 +5335,7 @@
             </link>
         </model>
         
-        <model name="wall_stairs_invalid_3_right_2f56012e-97e3-4459-8e5c-6aedb9a647d8">
+        <model name="wall_stairs_invalid_3_right_451dbd30-0927-4275-8ee6-71ac35bcd494">
             <static>true</static>
             <pose>2.4000000000000004 -11.35 0.0 0 0 0.0</pose>
             <link name="link">
@@ -5361,7 +5361,7 @@
             </link>
         </model>
         
-        <model name="tactile_strip_tactile_strip_before_7cfbcb55-9fe7-48a8-8b78-94a0ce33d573_4930ff68-1fed-428e-9d84-5e7943e12b61">
+        <model name="tactile_strip_tactile_strip_before_f980ff0a-83e7-4e4f-a77f-460416cf23fe_f4d1d756-e918-477a-826d-30c0bc44d720">
             <static>true</static>
             <pose>-0.6499999999999999 -16.0 0.0 0 0 0</pose>
             <link name="link">
@@ -5387,7 +5387,7 @@
             </link>
         </model>
         
-        <model name="tactile_strip_tactile_strip_after_7cfbcb55-9fe7-48a8-8b78-94a0ce33d573_e0228626-2e51-45d1-a24a-0d6995313f33">
+        <model name="tactile_strip_tactile_strip_after_f980ff0a-83e7-4e4f-a77f-460416cf23fe_c9d3cc64-1aaf-4768-9695-87c45fe683e1">
             <static>true</static>
             <pose>3.7999999999999994 -16.0 1.5999999999999999 0 0 0</pose>
             <link name="link">
@@ -5413,7 +5413,7 @@
             </link>
         </model>
         
-        <model name="handrail_handrail_7cfbcb55-9fe7-48a8-8b78-94a0ce33d573_{'height': 0.95, 'extension_length': 0.3, 'offset_from_wall': 0.04}_51deb9cb-b1c4-49d8-8ce4-bbbb49729c1b">
+        <model name="handrail_handrail_f980ff0a-83e7-4e4f-a77f-460416cf23fe_{'height': 0.95, 'extension_length': 0.3, 'offset_from_wall': 0.04}_1cb58210-cbf6-4c32-b300-48deeef40401">
             <static>true</static>
             <pose>1.5 -16.66 1.75 0 -0.48995732625372834 0</pose>
             <link name="link">
@@ -5440,7 +5440,7 @@
             </link>
         </model>
         
-        <model name="handrail_handrail_7cfbcb55-9fe7-48a8-8b78-94a0ce33d573_{'height': 0.95, 'extension_length': 0.3, 'offset_from_wall': 0.04}_edb131eb-2042-41f3-8c34-ca04dec48975">
+        <model name="handrail_handrail_f980ff0a-83e7-4e4f-a77f-460416cf23fe_{'height': 0.95, 'extension_length': 0.3, 'offset_from_wall': 0.04}_f57e1e76-4f27-4154-9580-fc464d5179af">
             <static>true</static>
             <pose>1.5 -15.34 1.75 0 -0.48995732625372834 0</pose>
             <link name="link">
@@ -5467,7 +5467,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_71745954-37e7-404f-8105-fa6fadcc4ac5_85aac27a-88b4-4882-98cb-3acfa93191da">
+        <model name="riser_riser_1db3bb87-cb92-468d-a342-87a92e6d8c9d_a11fb29d-1369-4ad9-9c97-307b21da97fc">
             <static>true</static>
             <pose>0.15 -16.0 0.0 0 0 0</pose>
             <link name="link">
@@ -5493,7 +5493,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_71745954-37e7-404f-8105-fa6fadcc4ac5_013367a4-01a6-4f1a-b42e-a6faf91a5bcd">
+        <model name="tread_tread_1db3bb87-cb92-468d-a342-87a92e6d8c9d_5d93c793-80b1-43d4-8a8f-ccc3c1e0006e">
             <static>true</static>
             <pose>0.3 -16.0 0.16 0 0 0</pose>
             <link name="link">
@@ -5519,7 +5519,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_1a39f468-0bc2-4ef2-b378-d08260dc24e4_c12e5bf4-3103-41be-bf11-09d2d9a6e5ed">
+        <model name="riser_riser_88b35c26-6036-4f28-8fb5-44b0a8a7183d_dd4b3f6b-e282-42fe-9318-3d303463e7ab">
             <static>true</static>
             <pose>0.44999999999999996 -16.0 0.16 0 0 0</pose>
             <link name="link">
@@ -5545,7 +5545,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_1a39f468-0bc2-4ef2-b378-d08260dc24e4_a2617554-af34-4cf0-9472-ec14d9bdcf31">
+        <model name="tread_tread_88b35c26-6036-4f28-8fb5-44b0a8a7183d_e225a093-83e7-4eb7-8d75-10e6fc779ee9">
             <static>true</static>
             <pose>0.6 -16.0 0.32 0 0 0</pose>
             <link name="link">
@@ -5571,7 +5571,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_30563589-4641-4279-9868-d71823226abf_00aafdde-9a4b-4f39-9b46-1b71dc0f00ef">
+        <model name="riser_riser_a01ec06b-ca2b-49d8-ab6f-ffe775830d87_aa0fa8bd-2345-4b22-8f22-1ac94c31dfe3">
             <static>true</static>
             <pose>0.75 -16.0 0.32 0 0 0</pose>
             <link name="link">
@@ -5597,7 +5597,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_30563589-4641-4279-9868-d71823226abf_d5bb1e14-6dd6-400f-8534-76d90947db6a">
+        <model name="tread_tread_a01ec06b-ca2b-49d8-ab6f-ffe775830d87_452e9f39-744b-4b06-b27c-502b36cbb514">
             <static>true</static>
             <pose>0.9 -16.0 0.48 0 0 0</pose>
             <link name="link">
@@ -5623,7 +5623,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_d44727e9-fa70-4ec4-96a6-55a5671339a7_da701d6b-f5e7-4441-8a21-4957141dcc1e">
+        <model name="riser_riser_ee9fe814-f8a6-47ad-b049-17e21d3dea5f_ebc83158-633d-47ed-98e0-48ae4ff6e9e4">
             <static>true</static>
             <pose>1.05 -16.0 0.48 0 0 0</pose>
             <link name="link">
@@ -5649,7 +5649,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_d44727e9-fa70-4ec4-96a6-55a5671339a7_ca37fc63-f715-4532-8fcf-1b8b9bf6b11f">
+        <model name="tread_tread_ee9fe814-f8a6-47ad-b049-17e21d3dea5f_937abe58-31fe-4536-91f3-a0d4e507564d">
             <static>true</static>
             <pose>1.2 -16.0 0.64 0 0 0</pose>
             <link name="link">
@@ -5675,7 +5675,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_f4ea813f-02ab-4801-9363-7663b847d804_d233251e-3afc-4799-9fa3-2b5e46bac18c">
+        <model name="riser_riser_ed288e78-264d-450a-9d46-a66aeb1e32d1_4d4afe49-08f4-4eb1-98e7-8fc1a9320f2b">
             <static>true</static>
             <pose>1.35 -16.0 0.64 0 0 0</pose>
             <link name="link">
@@ -5701,7 +5701,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_f4ea813f-02ab-4801-9363-7663b847d804_ee241622-d753-4408-9532-cc689fb3eb8a">
+        <model name="tread_tread_ed288e78-264d-450a-9d46-a66aeb1e32d1_f61b1bb2-da99-4179-9630-156e3cbb0fbb">
             <static>true</static>
             <pose>1.5 -16.0 0.8 0 0 0</pose>
             <link name="link">
@@ -5727,7 +5727,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_5c5e916f-5985-4d8e-a9af-06c1da240e2d_f00263f5-2403-418f-b284-dac566438186">
+        <model name="riser_riser_3ddf61e4-0bbf-4f8a-95f0-f3d46b866e3c_efdc3010-9175-4f2b-9fc8-2595e9986a90">
             <static>true</static>
             <pose>1.6500000000000001 -16.0 0.8 0 0 0</pose>
             <link name="link">
@@ -5753,7 +5753,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_5c5e916f-5985-4d8e-a9af-06c1da240e2d_51515679-8996-4931-ac6f-ed95e891834c">
+        <model name="tread_tread_3ddf61e4-0bbf-4f8a-95f0-f3d46b866e3c_36fe4122-80bf-4476-9b2b-2d6fe1a33146">
             <static>true</static>
             <pose>1.8 -16.0 0.9600000000000001 0 0 0</pose>
             <link name="link">
@@ -5779,7 +5779,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_2e2cc554-ffca-4215-8d63-bd8d6b985f02_ba6675da-fc82-4087-bfed-2ce386d72b9d">
+        <model name="riser_riser_c876d133-7099-4fd6-a2e0-2b4f10240c09_cdbbe05a-69ec-4d2c-aea9-51be4c1e96a7">
             <static>true</static>
             <pose>1.9500000000000002 -16.0 0.9600000000000001 0 0 0</pose>
             <link name="link">
@@ -5805,7 +5805,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_2e2cc554-ffca-4215-8d63-bd8d6b985f02_60c3f697-08cb-4eb3-aaf8-3fc08e76cee4">
+        <model name="tread_tread_c876d133-7099-4fd6-a2e0-2b4f10240c09_1b20820a-5a2e-4603-adfe-a481a2d29269">
             <static>true</static>
             <pose>2.1 -16.0 1.12 0 0 0</pose>
             <link name="link">
@@ -5831,7 +5831,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_2bd7800c-bd01-4c3a-8ec6-2c50b0ff0f0e_71ca3324-e314-449e-9c7e-9932f51e689a">
+        <model name="riser_riser_84be6132-741f-4fec-a031-4b10a25c0bce_9439507c-3eea-4be6-8208-6b8e9fff62e7">
             <static>true</static>
             <pose>2.25 -16.0 1.12 0 0 0</pose>
             <link name="link">
@@ -5857,7 +5857,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_2bd7800c-bd01-4c3a-8ec6-2c50b0ff0f0e_ebf8b298-d8ce-4c8a-abf3-5a00f4bc46cf">
+        <model name="tread_tread_84be6132-741f-4fec-a031-4b10a25c0bce_37c9985b-e0dd-44f2-b403-b78ba7d6fce5">
             <static>true</static>
             <pose>2.4 -16.0 1.28 0 0 0</pose>
             <link name="link">
@@ -5883,7 +5883,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_65d61d89-07a7-49c6-b32d-1acaaa6ac6bd_126e454a-109d-44f4-aa48-0073662bb4f8">
+        <model name="riser_riser_c882f34b-14e4-40c0-ad63-9f751554914e_6eddcc3c-42fd-4fb4-946f-3e9c09017f69">
             <static>true</static>
             <pose>2.55 -16.0 1.28 0 0 0</pose>
             <link name="link">
@@ -5909,7 +5909,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_65d61d89-07a7-49c6-b32d-1acaaa6ac6bd_26d5a59d-69ae-40f9-afba-bd99c170277e">
+        <model name="tread_tread_c882f34b-14e4-40c0-ad63-9f751554914e_71f61f81-de12-48ef-93e6-5c9b6c4a20e3">
             <static>true</static>
             <pose>2.6999999999999997 -16.0 1.44 0 0 0</pose>
             <link name="link">
@@ -5935,7 +5935,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_79ddee33-fa0e-4596-9428-53713bcdf4b9_44db18e9-66f9-4c7a-9326-82f555ef2815">
+        <model name="riser_riser_09f16ea2-fef2-4b60-8272-19d955b08c25_8408a1b2-b086-4b69-b4c3-79553a4bfa87">
             <static>true</static>
             <pose>2.8499999999999996 -16.0 1.44 0 0 0</pose>
             <link name="link">
@@ -5961,7 +5961,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_79ddee33-fa0e-4596-9428-53713bcdf4b9_04c72dfa-29d2-4f98-bb68-dc6c52778e00">
+        <model name="tread_tread_09f16ea2-fef2-4b60-8272-19d955b08c25_d22a97ef-9dfa-43ed-b735-d0f25fccbae6">
             <static>true</static>
             <pose>2.9999999999999996 -16.0 1.5999999999999999 0 0 0</pose>
             <link name="link">
@@ -5987,7 +5987,7 @@
             </link>
         </model>
         
-        <model name="wall_stairs_invalid_4_left_62f0a5a0-b33f-4021-ac68-c65fee6a5112">
+        <model name="wall_stairs_invalid_4_left_a44f4d51-66cd-4ce5-b765-ab3804b780f1">
             <static>true</static>
             <pose>1.5 -16.75 0.0 0 0 0.0</pose>
             <link name="link">
@@ -6013,7 +6013,7 @@
             </link>
         </model>
         
-        <model name="wall_stairs_invalid_4_right_fc16b3ef-5b13-42d2-9992-582cb9f67f95">
+        <model name="wall_stairs_invalid_4_right_65ad76f0-6225-4ed8-9b1c-0419573217d4">
             <static>true</static>
             <pose>1.5 -15.25 0.0 0 0 0.0</pose>
             <link name="link">
@@ -6039,7 +6039,7 @@
             </link>
         </model>
         
-        <model name="platform_stairs_invalid_4_landing_642e7ad9-341a-46b2-bb01-c96eae59252d">
+        <model name="platform_stairs_invalid_4_landing_c2bdfd01-fa9d-412c-a99a-f1f230a26d4c">
             <static>true</static>
             <pose>3.7999999999999994 -16.0 1.5999999999999999 0 0 0</pose>
             <link name="link">
@@ -6061,7 +6061,7 @@
             </link>
         </model>
         
-        <model name="tactile_strip_tactile_strip_before_e54c01fe-13b1-4671-a403-8a92d3f4941b_fcdb99f6-9435-4333-88b6-99045bddf83d">
+        <model name="tactile_strip_tactile_strip_before_17d97e36-98d3-48f7-ad10-50356535565b_ecd95b5c-7429-4b46-bb8f-fcdc3d8025f3">
             <static>true</static>
             <pose>-0.625 -20.0 0.0 0 0 0</pose>
             <link name="link">
@@ -6087,7 +6087,7 @@
             </link>
         </model>
         
-        <model name="tactile_strip_tactile_strip_after_e54c01fe-13b1-4671-a403-8a92d3f4941b_64ce1c36-97c4-4dbb-bffe-5c338809004b">
+        <model name="tactile_strip_tactile_strip_after_17d97e36-98d3-48f7-ad10-50356535565b_b5370adf-9b1d-4676-9c9c-fc94aae698f5">
             <static>true</static>
             <pose>3.4749999999999996 -20.0 1.44 0 0 0</pose>
             <link name="link">
@@ -6113,7 +6113,7 @@
             </link>
         </model>
         
-        <model name="handrail_handrail_e54c01fe-13b1-4671-a403-8a92d3f4941b_{'height': 1.1, 'extension_length': 0.3, 'offset_from_wall': 0.04}_bee19068-c727-489b-9fb0-ffe60767563e">
+        <model name="handrail_handrail_17d97e36-98d3-48f7-ad10-50356535565b_{'height': 1.1, 'extension_length': 0.3, 'offset_from_wall': 0.04}_0c5d9911-2ebc-4bc7-96f0-71d6635490e0">
             <static>true</static>
             <pose>1.3499999999999999 -20.61 1.82 0 -0.48995732625372834 0</pose>
             <link name="link">
@@ -6140,7 +6140,7 @@
             </link>
         </model>
         
-        <model name="handrail_handrail_e54c01fe-13b1-4671-a403-8a92d3f4941b_{'height': 1.1, 'extension_length': 0.3, 'offset_from_wall': 0.04}_32a9b4c1-affb-4d59-9183-c149c171ec5e">
+        <model name="handrail_handrail_17d97e36-98d3-48f7-ad10-50356535565b_{'height': 1.1, 'extension_length': 0.3, 'offset_from_wall': 0.04}_905bee03-385a-4e38-8609-c5ccc538856e">
             <static>true</static>
             <pose>1.3499999999999999 -19.39 1.82 0 -0.48995732625372834 0</pose>
             <link name="link">
@@ -6167,7 +6167,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_566cdae9-22b1-4ce2-9039-bdda57424000_dbba4b3c-5114-48e9-a3eb-8b905d70b9a0">
+        <model name="riser_riser_137b0e59-a008-4633-bdee-bb1a7d8c9170_21d0a4cc-1b57-49a1-bc43-f871a286d02f">
             <static>true</static>
             <pose>0.15 -20.0 0.0 0 0 0</pose>
             <link name="link">
@@ -6193,7 +6193,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_566cdae9-22b1-4ce2-9039-bdda57424000_435ae0f2-3e7f-437c-a3a4-a30906f004a4">
+        <model name="tread_tread_137b0e59-a008-4633-bdee-bb1a7d8c9170_bdb4f86a-f167-41e7-99ba-c6b88144cb7f">
             <static>true</static>
             <pose>0.3 -20.0 0.16 0 0 0</pose>
             <link name="link">
@@ -6219,7 +6219,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_4e7ac2bb-3c93-40ad-a976-532ef011a3a1_8ba88e88-af91-49a9-b8f9-564b135531a3">
+        <model name="riser_riser_bdcc62ba-e1b1-455b-8eca-cc587fe8a232_1645f188-4b3a-4723-9e87-ff1708fc138d">
             <static>true</static>
             <pose>0.44999999999999996 -20.0 0.16 0 0 0</pose>
             <link name="link">
@@ -6245,7 +6245,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_4e7ac2bb-3c93-40ad-a976-532ef011a3a1_1d746e62-090d-44b3-ba62-caf02ffa0a47">
+        <model name="tread_tread_bdcc62ba-e1b1-455b-8eca-cc587fe8a232_80e5d06f-c2a0-41f9-acaf-7fa3b3a8c069">
             <static>true</static>
             <pose>0.6 -20.0 0.32 0 0 0</pose>
             <link name="link">
@@ -6271,7 +6271,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_ff4a0d29-3f7b-4377-9480-d04b31de2d14_8731d06a-4f31-43f5-8c78-1b29ba194331">
+        <model name="riser_riser_66db1ea3-4a97-4456-a0d7-7994261e3e64_29c66f40-6045-4efa-a524-1afe57abbeb0">
             <static>true</static>
             <pose>0.75 -20.0 0.32 0 0 0</pose>
             <link name="link">
@@ -6297,7 +6297,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_ff4a0d29-3f7b-4377-9480-d04b31de2d14_7024c953-2cfb-4ed4-94b6-20282620c07d">
+        <model name="tread_tread_66db1ea3-4a97-4456-a0d7-7994261e3e64_adcb3fe5-534a-4a80-8da4-e397c79945ed">
             <static>true</static>
             <pose>0.9 -20.0 0.48 0 0 0</pose>
             <link name="link">
@@ -6323,7 +6323,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_7a1f7b66-e56a-44fd-9903-4952e88fee0b_158810d1-88f4-4a6f-a721-0f12e4079ad3">
+        <model name="riser_riser_94cd9eb9-e1f0-424c-8654-578d6db4f332_9c316746-e40c-42de-b974-c6c38b24c356">
             <static>true</static>
             <pose>1.05 -20.0 0.48 0 0 0</pose>
             <link name="link">
@@ -6349,7 +6349,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_7a1f7b66-e56a-44fd-9903-4952e88fee0b_8a07bfd1-a686-4dab-9885-8d3771399cd5">
+        <model name="tread_tread_94cd9eb9-e1f0-424c-8654-578d6db4f332_e158fe49-6ecc-4e69-b77c-51f55aad9319">
             <static>true</static>
             <pose>1.2 -20.0 0.64 0 0 0</pose>
             <link name="link">
@@ -6375,7 +6375,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_aeec10b6-b7eb-4c04-849e-cd896acd04fd_9cf96cff-810e-4a2d-bb40-4eda08dbe5c8">
+        <model name="riser_riser_51eec882-dac0-46bf-b1c7-6e1d90e02942_10997c99-a3b5-496f-aee3-34d15c7764ec">
             <static>true</static>
             <pose>1.35 -20.0 0.64 0 0 0</pose>
             <link name="link">
@@ -6401,7 +6401,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_aeec10b6-b7eb-4c04-849e-cd896acd04fd_f3d97307-a850-4a18-84cf-e45c08336292">
+        <model name="tread_tread_51eec882-dac0-46bf-b1c7-6e1d90e02942_635230e8-fa0a-4326-bce2-629965a7c131">
             <static>true</static>
             <pose>1.5 -20.0 0.8 0 0 0</pose>
             <link name="link">
@@ -6427,7 +6427,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_edadb4c3-e683-4eb3-af3f-56f4bef3eaa7_5d5ba8e7-d9fc-4fc2-82d1-36cf62daddb2">
+        <model name="riser_riser_82f6e962-368e-4459-837c-626dca24f584_ccb75082-a873-43da-a75f-3f6454a06a97">
             <static>true</static>
             <pose>1.6500000000000001 -20.0 0.8 0 0 0</pose>
             <link name="link">
@@ -6453,7 +6453,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_edadb4c3-e683-4eb3-af3f-56f4bef3eaa7_3bd3fe9f-3594-421a-ad07-87be470dc978">
+        <model name="tread_tread_82f6e962-368e-4459-837c-626dca24f584_248f011f-7441-4488-a87d-761c625e607c">
             <static>true</static>
             <pose>1.8 -20.0 0.9600000000000001 0 0 0</pose>
             <link name="link">
@@ -6479,7 +6479,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_2549daea-ef23-42e5-bab7-676bb578cf9c_b9642c78-cbed-419f-8901-6c444e1ae198">
+        <model name="riser_riser_c8289034-6faf-4676-bfbb-874d23f0d86a_b2eaaa3d-3aac-4211-a76b-1f4db37555b9">
             <static>true</static>
             <pose>1.9500000000000002 -20.0 0.9600000000000001 0 0 0</pose>
             <link name="link">
@@ -6505,7 +6505,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_2549daea-ef23-42e5-bab7-676bb578cf9c_a98f022e-00ff-4ad5-9861-eee3cef46df0">
+        <model name="tread_tread_c8289034-6faf-4676-bfbb-874d23f0d86a_5849a914-05dc-44b4-8f50-cd6913d3cd9c">
             <static>true</static>
             <pose>2.1 -20.0 1.12 0 0 0</pose>
             <link name="link">
@@ -6531,7 +6531,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_370aebc1-0067-4ba7-b639-678238a21bf3_376c0ec1-b8db-415c-9c4f-db69d53259e7">
+        <model name="riser_riser_3601f0ac-f078-436f-b78f-3630b17f7193_7124fa93-f64e-4806-8bf2-9a58033023be">
             <static>true</static>
             <pose>2.25 -20.0 1.12 0 0 0</pose>
             <link name="link">
@@ -6557,7 +6557,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_370aebc1-0067-4ba7-b639-678238a21bf3_51d59f0d-dd8f-49ce-91e6-49a0792dd040">
+        <model name="tread_tread_3601f0ac-f078-436f-b78f-3630b17f7193_84f7e6b2-5b85-41c1-ae68-275404970543">
             <static>true</static>
             <pose>2.4 -20.0 1.28 0 0 0</pose>
             <link name="link">
@@ -6583,7 +6583,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_c3c52a9b-3ba7-4674-b91b-70d613c680d4_2c939d28-77ec-416d-8651-3b719058c2d2">
+        <model name="riser_riser_ae143249-31c4-421c-a638-cd0baa6722ac_1386e4b8-d808-4e03-abcc-78edf9fe164e">
             <static>true</static>
             <pose>2.55 -20.0 1.28 0 0 0</pose>
             <link name="link">
@@ -6609,7 +6609,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_c3c52a9b-3ba7-4674-b91b-70d613c680d4_caf6baef-09a8-40a2-872a-7e45a617cf67">
+        <model name="tread_tread_ae143249-31c4-421c-a638-cd0baa6722ac_395645da-badd-42fa-89fa-688184626c75">
             <static>true</static>
             <pose>2.6999999999999997 -20.0 1.44 0 0 0</pose>
             <link name="link">
@@ -6635,7 +6635,7 @@
             </link>
         </model>
         
-        <model name="wall_stairs_invalid_5_left_72cf94be-ccce-4f39-87c4-fd618767ad18">
+        <model name="wall_stairs_invalid_5_left_76e33e90-2140-4e45-ac1c-8b3dace37bd2">
             <static>true</static>
             <pose>1.3499999999999999 -20.7 0.0 0 0 0.0</pose>
             <link name="link">
@@ -6661,7 +6661,7 @@
             </link>
         </model>
         
-        <model name="wall_stairs_invalid_5_right_757a79d0-0edd-4386-8206-f490d55a500b">
+        <model name="wall_stairs_invalid_5_right_add77634-5a95-49e4-b9ae-f48edf288099">
             <static>true</static>
             <pose>1.3499999999999999 -19.3 0.0 0 0 0.0</pose>
             <link name="link">
@@ -6687,7 +6687,7 @@
             </link>
         </model>
         
-        <model name="platform_stairs_invalid_5_landing_5487f325-2221-433a-bfb0-b23d027e9a30">
+        <model name="platform_stairs_invalid_5_landing_11b71142-f572-496e-948b-2a8f371c93f8">
             <static>true</static>
             <pose>3.4749999999999996 -20.0 1.44 0 0 0</pose>
             <link name="link">
@@ -6709,7 +6709,7 @@
             </link>
         </model>
         
-        <model name="tactile_strip_tactile_strip_before_812bb322-d0b3-4ce1-a437-823aac1eb3cf_8389fadb-9724-4968-a42d-de5d9fd109f5">
+        <model name="tactile_strip_tactile_strip_before_2b56a6f0-3218-41c2-86fc-c0dd96b93221_ab39e7c2-6d45-466a-8c99-5f4edc02b914">
             <static>true</static>
             <pose>-0.6 -24.0 0.0 0 0 0</pose>
             <link name="link">
@@ -6735,7 +6735,7 @@
             </link>
         </model>
         
-        <model name="tactile_strip_tactile_strip_after_812bb322-d0b3-4ce1-a437-823aac1eb3cf_a5bb3ce2-d34d-49ef-82c3-cad0922202ed">
+        <model name="tactile_strip_tactile_strip_after_2b56a6f0-3218-41c2-86fc-c0dd96b93221_484cfbb2-44c5-42c4-9bce-44c3e6b859d5">
             <static>true</static>
             <pose>3.749999999999999 -24.0 1.5999999999999999 0 0 0</pose>
             <link name="link">
@@ -6761,7 +6761,7 @@
             </link>
         </model>
         
-        <model name="handrail_handrail_812bb322-d0b3-4ce1-a437-823aac1eb3cf_{'height': 0.95, 'extension_length': 0.3, 'offset_from_wall': 0.04}_b3ccdab5-9c9a-495e-928b-92a166d20269">
+        <model name="handrail_handrail_2b56a6f0-3218-41c2-86fc-c0dd96b93221_{'height': 0.95, 'extension_length': 0.3, 'offset_from_wall': 0.04}_a9e6002a-669d-4ecb-bc29-3dc651953296">
             <static>true</static>
             <pose>1.5 -24.560000000000002 1.75 0 -0.48995732625372834 0</pose>
             <link name="link">
@@ -6788,7 +6788,7 @@
             </link>
         </model>
         
-        <model name="handrail_handrail_812bb322-d0b3-4ce1-a437-823aac1eb3cf_{'height': 0.95, 'extension_length': 0.3, 'offset_from_wall': 0.04}_94d347c7-4c62-4128-9a25-d1a05489b0a9">
+        <model name="handrail_handrail_2b56a6f0-3218-41c2-86fc-c0dd96b93221_{'height': 0.95, 'extension_length': 0.3, 'offset_from_wall': 0.04}_4619990d-1c4b-4b35-a17a-43257b215d89">
             <static>true</static>
             <pose>1.5 -23.439999999999998 1.75 0 -0.48995732625372834 0</pose>
             <link name="link">
@@ -6815,7 +6815,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_c25d97eb-26b1-47f1-bf00-151874524aac_d03dac3f-2428-4109-a8ee-2859aee95b2f">
+        <model name="riser_riser_d97b4f4f-f397-46a4-9e12-d0b798156274_2511c685-f05d-43fe-a0de-04f69aff0d28">
             <static>true</static>
             <pose>0.15 -24.0 0.0 0 0 0</pose>
             <link name="link">
@@ -6841,7 +6841,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_c25d97eb-26b1-47f1-bf00-151874524aac_f6602558-624f-4a41-85ba-eb70a4d00916">
+        <model name="tread_tread_d97b4f4f-f397-46a4-9e12-d0b798156274_a10ba6d0-46c5-4db8-9878-3e66953cc6a3">
             <static>true</static>
             <pose>0.3 -24.0 0.16 0 0 0</pose>
             <link name="link">
@@ -6867,7 +6867,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_e880c4f6-af9d-4eb0-a029-51195dc7c86e_3d5e03be-8dad-4ead-bb2b-167c7f1facb6">
+        <model name="riser_riser_ef993d64-85e9-4170-8a9c-85f5642de05d_795ccfd2-acf3-4a48-bd07-b45424d03d1f">
             <static>true</static>
             <pose>0.44999999999999996 -24.0 0.16 0 0 0</pose>
             <link name="link">
@@ -6893,7 +6893,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_e880c4f6-af9d-4eb0-a029-51195dc7c86e_4cd24e92-73ac-453f-8399-0320020fd89d">
+        <model name="tread_tread_ef993d64-85e9-4170-8a9c-85f5642de05d_52f575cd-ab71-4457-b320-cce6c4190640">
             <static>true</static>
             <pose>0.6 -24.0 0.32 0 0 0</pose>
             <link name="link">
@@ -6919,7 +6919,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_f8700b2c-9925-4f97-a6da-06724039cdaa_64814ac1-1551-423a-a3f1-95a86c92d25b">
+        <model name="riser_riser_8685c501-67ff-4af5-a15f-ef427bc54a6c_cfacc1d7-427c-4c7c-b54b-95d0f8b4bd8f">
             <static>true</static>
             <pose>0.75 -24.0 0.32 0 0 0</pose>
             <link name="link">
@@ -6945,7 +6945,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_f8700b2c-9925-4f97-a6da-06724039cdaa_54cb4a7b-c70c-486c-85fc-d7ac993cbf5f">
+        <model name="tread_tread_8685c501-67ff-4af5-a15f-ef427bc54a6c_3192d416-0288-4628-87f7-1427b2523ad7">
             <static>true</static>
             <pose>0.9 -24.0 0.48 0 0 0</pose>
             <link name="link">
@@ -6971,7 +6971,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_91f6d564-4695-4129-847b-be6fd959ab8d_684df231-5e7b-4324-9d9c-12a5508d8150">
+        <model name="riser_riser_9a999dcb-689b-4e8f-a6d4-eb10e45c4c38_7a4e64af-983f-4c0a-b6eb-f033b323e839">
             <static>true</static>
             <pose>1.05 -24.0 0.48 0 0 0</pose>
             <link name="link">
@@ -6997,7 +6997,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_91f6d564-4695-4129-847b-be6fd959ab8d_6182c90e-c02d-45a3-ac00-58d2d3011a09">
+        <model name="tread_tread_9a999dcb-689b-4e8f-a6d4-eb10e45c4c38_03c23eeb-e06d-4aa4-8a58-ca62728ce34d">
             <static>true</static>
             <pose>1.2 -24.0 0.64 0 0 0</pose>
             <link name="link">
@@ -7023,7 +7023,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_0d6ec2da-4708-4c10-be4a-55227987a981_3f9a8aa3-235e-49c0-b5bc-2a89dc3673d8">
+        <model name="riser_riser_25e06982-c762-49f9-bba1-0682aa81db44_3d307644-2872-4bde-8773-8f870a574d39">
             <static>true</static>
             <pose>1.35 -24.0 0.64 0 0 0</pose>
             <link name="link">
@@ -7049,7 +7049,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_0d6ec2da-4708-4c10-be4a-55227987a981_70bd6e81-cae5-4203-b88e-a8ce888515b9">
+        <model name="tread_tread_25e06982-c762-49f9-bba1-0682aa81db44_cd4c8edc-c16e-439c-9086-407302880d20">
             <static>true</static>
             <pose>1.5 -24.0 0.8 0 0 0</pose>
             <link name="link">
@@ -7075,7 +7075,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_42b0d06f-6758-4c83-a9ed-b7189c31ed38_dde8ca79-fa50-4de7-b0f7-4fbb9c03ae85">
+        <model name="riser_riser_bcf193ca-0653-46fd-818a-25a428bd56c7_4809e0ed-769a-4753-a58b-ee6fc4cf8f11">
             <static>true</static>
             <pose>1.6500000000000001 -24.0 0.8 0 0 0</pose>
             <link name="link">
@@ -7101,7 +7101,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_42b0d06f-6758-4c83-a9ed-b7189c31ed38_5e9d6c1b-8dd6-4b22-b022-f2b195ae04fa">
+        <model name="tread_tread_bcf193ca-0653-46fd-818a-25a428bd56c7_23f4c3c1-98ec-4d83-a47b-7ee6983c27dd">
             <static>true</static>
             <pose>1.8 -24.0 0.9600000000000001 0 0 0</pose>
             <link name="link">
@@ -7127,7 +7127,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_b116fe94-0d78-4577-8ef8-5eb2125a7e21_2f0a9d53-c921-4e2a-8e9f-b9b998a3989b">
+        <model name="riser_riser_6e2615db-fac6-40ff-a2f9-d1fff339742d_9e1edd77-7b10-4257-a576-7c9a5de44334">
             <static>true</static>
             <pose>1.9500000000000002 -24.0 0.9600000000000001 0 0 0</pose>
             <link name="link">
@@ -7153,7 +7153,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_b116fe94-0d78-4577-8ef8-5eb2125a7e21_134406dd-cb79-4d42-8afd-633d0dde9ff6">
+        <model name="tread_tread_6e2615db-fac6-40ff-a2f9-d1fff339742d_d622177a-7c5e-4457-bd69-95ceab0b31e8">
             <static>true</static>
             <pose>2.1 -24.0 1.12 0 0 0</pose>
             <link name="link">
@@ -7179,7 +7179,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_9571defe-33be-43a0-a667-fa0ba4049e73_54059653-0be4-4a50-b30b-dd6862f6287a">
+        <model name="riser_riser_6fc4a8ee-3f2b-41bc-81a7-ce01f9a3b591_518ebb94-5799-44c6-9c8a-98c373638db6">
             <static>true</static>
             <pose>2.25 -24.0 1.12 0 0 0</pose>
             <link name="link">
@@ -7205,7 +7205,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_9571defe-33be-43a0-a667-fa0ba4049e73_d26daf64-9d64-4a90-bcb2-ca6782c3b728">
+        <model name="tread_tread_6fc4a8ee-3f2b-41bc-81a7-ce01f9a3b591_481a418d-67ad-4d46-bee1-30aa27a0dd14">
             <static>true</static>
             <pose>2.4 -24.0 1.28 0 0 0</pose>
             <link name="link">
@@ -7231,7 +7231,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_198b0b8b-3e0a-43db-a5db-907fb1d3d949_bc4532f8-2c32-4589-8590-af2c28738f44">
+        <model name="riser_riser_9b87474a-5d53-451e-b8ad-8006fccf50a9_0f621de5-19eb-44c3-8f57-9d3ef581ba79">
             <static>true</static>
             <pose>2.55 -24.0 1.28 0 0 0</pose>
             <link name="link">
@@ -7257,7 +7257,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_198b0b8b-3e0a-43db-a5db-907fb1d3d949_3ad0d098-567e-4fa0-b695-5e74fdcd180d">
+        <model name="tread_tread_9b87474a-5d53-451e-b8ad-8006fccf50a9_6ecb7812-1643-4581-a578-eb79f16d6ae0">
             <static>true</static>
             <pose>2.6999999999999997 -24.0 1.44 0 0 0</pose>
             <link name="link">
@@ -7283,7 +7283,7 @@
             </link>
         </model>
         
-        <model name="riser_riser_cd1bf7e1-aa0b-4a69-a97c-c25bb729c2e0_7eab9326-c476-4dda-94e3-dffc1ad184f0">
+        <model name="riser_riser_1abbdad6-8cd8-4770-a7f4-954f61e80c08_34b9deb2-600a-46f0-baa8-6533730efb7f">
             <static>true</static>
             <pose>2.8499999999999996 -24.0 1.44 0 0 0</pose>
             <link name="link">
@@ -7309,7 +7309,7 @@
             </link>
         </model>
         
-        <model name="tread_tread_cd1bf7e1-aa0b-4a69-a97c-c25bb729c2e0_a11e018c-4e76-4c90-9d88-f9ab5b0f6ccb">
+        <model name="tread_tread_1abbdad6-8cd8-4770-a7f4-954f61e80c08_2305fae4-3a74-469f-ba54-a11fc00875d7">
             <static>true</static>
             <pose>2.9999999999999996 -24.0 1.5999999999999999 0 0 0</pose>
             <link name="link">
@@ -7335,7 +7335,7 @@
             </link>
         </model>
         
-        <model name="wall_stairs_invalid_6_left_3190175b-5461-4f3a-a12e-58cf8c96a610">
+        <model name="wall_stairs_invalid_6_left_a48621f0-25cb-40c7-8805-a06096a0a025">
             <static>true</static>
             <pose>1.5 -24.650000000000002 0.0 0 0 0.0</pose>
             <link name="link">
@@ -7361,7 +7361,7 @@
             </link>
         </model>
         
-        <model name="wall_stairs_invalid_6_right_6406a136-7eaf-4f77-a90e-73a2ba16a37c">
+        <model name="wall_stairs_invalid_6_right_9d2c1025-accf-475e-bd42-4c6b7cce303e">
             <static>true</static>
             <pose>1.5 -23.349999999999998 0.0 0 0 0.0</pose>
             <link name="link">
@@ -7387,7 +7387,7 @@
             </link>
         </model>
         
-        <model name="platform_stairs_invalid_6_landing_ceb02a32-4390-4475-b30e-a826283bd113">
+        <model name="platform_stairs_invalid_6_landing_09b89121-1503-4d54-a783-75b95de204b6">
             <static>true</static>
             <pose>3.749999999999999 -24.0 1.5999999999999999 0 0 0</pose>
             <link name="link">
