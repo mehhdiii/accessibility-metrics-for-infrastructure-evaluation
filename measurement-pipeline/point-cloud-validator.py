@@ -1,7 +1,7 @@
 import open3d as o3d
 import numpy as np
 
-pcd = o3d.io.read_point_cloud("point-clouds/output.pcd")
+pcd = o3d.io.read_point_cloud("point-clouds/frame_db.pcd")
 output_file = "point-clouds/frame_filtered.pcd"
 
 print(pcd)  # prints number of points and basic info

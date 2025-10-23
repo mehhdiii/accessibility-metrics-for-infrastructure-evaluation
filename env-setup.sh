@@ -47,3 +47,24 @@ sudo apt update
 sudo apt install nano
 sudo apt install zsh-autosuggestions zsh-syntax-highlighting zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+
+#aliases
+alias ss="source /data/ros_ws/install/setup.bash"
+
+#launch commands:
+#ros2 launch turtlebot4_ignition_bringup turtlebot4_ignition.launch.py
+
+ros2 run ros_gz_bridge parameter_bridge \
+/world/default/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/image@sensor_msgs/msg/Image[ignition.msgs.Image \
+/world/default/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/depth_image@sensor_msgs/msg/Image[ignition.msgs.Image \
+/world/default/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/points@sensor_msgs/msg/PointCloud2[ignition.msgs.PointCloudPacked \
+/world/default/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/camera_info@sensor_msgs/msg/CameraInfo[ignition.msgs.CameraInfo
+
+#rviz2 rviz2
+
+#to check the frame transformations:
+#ros2 topic echo /tf_static | grep oakd
+
+pip3 install open3d
+pip3 install numpy
