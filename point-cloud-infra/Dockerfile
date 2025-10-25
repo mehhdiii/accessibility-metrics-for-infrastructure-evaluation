@@ -8,6 +8,8 @@ RUN apt update && apt install -y \
     libboost-all-dev \
     libgl1-mesa-glx \
     libx11-6 \
+    python3 python3-pip \
+    && pip3 install --no-cache-dir flask \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /data

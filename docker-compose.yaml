@@ -27,7 +27,7 @@ services:
       context: .           # directory with your Dockerfile
       dockerfile: point-cloud-infra/Dockerfile
     container_name: pcl-dev-container
-    command: tail -f /dev/null
+    command: python3 /data/point-cloud-infra/server.py
     ports:
       - 6082:80
     deploy:
