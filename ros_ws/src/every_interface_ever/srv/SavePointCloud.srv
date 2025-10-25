@@ -1,0 +1,6 @@
+string name
+int32 frame_number
+---
+bool success
+string message
+int32 pointcloud_id
