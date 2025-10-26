@@ -1,0 +1,15 @@
+int32 id
+float32 step_depth
+float32 step_height
+float32 step_width
+float32 slope_deg
+float32 stair_angle_deg
+float32 pos_x
+float32 pos_y
+float32 sep_dist_parallel
+float32 sep_dist_perpendicular
+float32 anchor_point
+int32 stair_parts
+int32 risers
+int32 treads
+string created_at

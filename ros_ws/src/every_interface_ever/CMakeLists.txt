@@ -8,6 +8,7 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
+find_package(builtin_interfaces REQUIRED)
 
 # uncomment the following section in order to fill in
 # further dependencies manually.
@@ -15,6 +16,9 @@ find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/SavePointCloud.srv"
+  "srv/GetStairCaseMetrics.srv"
+  "msg/CalculatedPtMetrics.msg"
+  DEPENDENCIES builtin_interfaces
 )
 
 if(BUILD_TESTING)
