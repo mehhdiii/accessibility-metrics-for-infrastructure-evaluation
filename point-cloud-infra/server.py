@@ -7,14 +7,19 @@ app = Flask(__name__)
 def run_binary():
     data = request.get_json(force=True)  # parse JSON body
     pointcloud_id = data.get("pointcloud_id")
+    enable_viewer = data.get("enable_viewer")
 
     if not isinstance(pointcloud_id, int):
         return jsonify({"success": False, "error": "Missing or invalid 'id' (must be integer)"}), 400
 
     print(f"Received request with id={pointcloud_id}", flush=True)
+    props = ["/data/point-cloud-infra/StairwayDetection/build/stair_det", str(pointcloud_id), "/data/point-cloud-infra/StairwayDetection/point-clouds/output.pcd", "mysql", "3306", "stairuser", "stairpass", "stairs_db"]
 
+    if (enable_viewer):
+
+        props.append("--enable-viewer")
     result = subprocess.run(
-        ["/data/point-cloud-infra/StairwayDetection/build/stair_det", str(pointcloud_id), "/data/point-cloud-infra/StairwayDetection/point-clouds/output.pcd", "mysql", "3306", "stairuser", "stairpass", "stairs_db", "--enable-viewer"],
+        props,
         capture_output=True, text=True
     )
 

@@ -1,0 +1,11 @@
+bool width_ok
+bool tread_ok
+bool riser_tread_relation_ok
+bool stair_angle_ok
+bool step_profile_ok
+bool floor_marking_ok
+bool parapet_height_ok
+bool sphere_block_ok
+bool handrail_height_ok
+bool handrail_extension_ok
+bool handrail_clearance_ok

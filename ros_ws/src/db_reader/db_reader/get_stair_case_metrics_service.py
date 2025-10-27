@@ -12,7 +12,7 @@ class StairCaseMetrics(Node):
         self.get_logger().info('✅ GetStair service is ready.')
 
     def get_stair_callback(self, request, response):
-        stair_id = request.id
+        pointcloud_id = request.id
         try:
             conn = mysql.connector.connect(
                 host="mysql",
@@ -21,13 +21,13 @@ class StairCaseMetrics(Node):
                 database="stairs_db"
             )
             cursor = conn.cursor(dictionary=True)
-            cursor.execute("SELECT * FROM stairs WHERE id = %s", (stair_id,))
+            cursor.execute("SELECT * FROM stairs WHERE pointcloud_id = %s ORDER BY created_at DESC LIMIT 1", (pointcloud_id,))
             row = cursor.fetchone()
             cursor.close()
             conn.close()
 
             if not row:
-                self.get_logger().warn(f"No stair found for id={stair_id}")
+                self.get_logger().warn(f"No stair found for pointcloud_id={pointcloud_id}")
                 return response  # return empty/default response
 
             # Fill the response fields
@@ -52,7 +52,7 @@ class StairCaseMetrics(Node):
                 created_at_str = dt.strftime("%Y-%m-%dT%H:%M:%S")
                 response.metrics.created_at = created_at_str
 
-            self.get_logger().info(f"✅ Stair ID {stair_id} fetched successfully.")
+            self.get_logger().info(f"✅ Stair ID {pointcloud_id} fetched successfully.")
             return response
 
         except Exception as e:

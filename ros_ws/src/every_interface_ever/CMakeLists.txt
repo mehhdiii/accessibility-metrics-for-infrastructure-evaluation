@@ -18,6 +18,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/SavePointCloud.srv"
   "srv/GetStairCaseMetrics.srv"
   "msg/CalculatedPtMetrics.msg"
+  "msg/StaircaseComplianceStatus.msg"
   DEPENDENCIES builtin_interfaces
 )
 
