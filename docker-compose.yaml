@@ -61,3 +61,18 @@ services:
         - "6083:3306"
       volumes:
         - ./mysql_data:/var/lib/mysql
+
+  decree-compliance-checker:
+    build:
+      context: ./decree-compliance       # directory with your Dockerfile
+      dockerfile: Dockerfile
+    command: >
+      uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+    container_name: decree-compliance-checker
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    working_dir: /app
+
+    volumes:
+      - ./decree-compliance/app:/app
