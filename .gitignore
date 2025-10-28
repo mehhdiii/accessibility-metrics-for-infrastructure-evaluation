@@ -6,3 +6,7 @@ mehdi-github-key.pub
 mehdi-github-key
 
 __pycache__
+plugins/
+
+mysql_data/
+.vscode/
