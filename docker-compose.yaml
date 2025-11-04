@@ -1,8 +1,11 @@
 services:
   ros-humble-container:
-    image: ros:humble
+    build:
+      context: .
+      dockerfile: ./docker-files/Dockerfile
     container_name: ros-humble-container
     command: tail -f /dev/null
+    network_mode: host
     ports:
       - 6080:80
     deploy:
@@ -15,6 +18,9 @@ services:
     environment:
       - DISPLAY=${DISPLAY}  
       - QT_X11_NO_MITSHM=1    
+      - ROS_DOMAIN_ID=17
+      - ROS_LOCALHOST_ONLY=0
+      - CYCLONEDDS_URI=file:///data/cyclonedds.xml
     volumes:
       - ./:/data
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
@@ -76,3 +82,4 @@ services:
 
     volumes:
       - ./decree-compliance/app:/app
+

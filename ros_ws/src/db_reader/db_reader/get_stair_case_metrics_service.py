@@ -32,15 +32,15 @@ class StairCaseMetrics(Node):
 
             # Fill the response fields
             response.metrics.id = row["id"]
-            response.metrics.step_depth = float(row["step_depth"])
-            response.metrics.step_height = float(row["step_height"])
-            response.metrics.step_width = float(row["step_width"])
+            response.metrics.step_depth = float(row["step_depth"])/1000
+            response.metrics.step_height = float(row["step_height"])/1000
+            response.metrics.step_width = float(row["step_width"])/1000
             response.metrics.slope_deg = float(row["slope_deg"])
             response.metrics.stair_angle_deg = float(row["stair_angle_deg"])
             response.metrics.pos_x = float(row["pos_x"])
             response.metrics.pos_y = float(row["pos_y"])
-            response.metrics.sep_dist_parallel = float(row["sep_dist_parallel"])
-            response.metrics.sep_dist_perpendicular = float(row["sep_dist_perpendicular"])
+            response.metrics.sep_dist_parallel = float(row["sep_dist_parallel"])/1000
+            response.metrics.sep_dist_perpendicular = float(row["sep_dist_perpendicular"])/1000
             response.metrics.anchor_point = float(row["anchor_point"])
             response.metrics.stair_parts = int(row["stair_parts"])
             response.metrics.risers = int(row["risers"])

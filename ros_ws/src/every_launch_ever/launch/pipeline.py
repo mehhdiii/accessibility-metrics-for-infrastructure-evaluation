@@ -6,10 +6,10 @@ from launch_ros.actions import Node
 def generate_launch_description():
     return LaunchDescription([
         # 1. Start TurtleBot world
-        ExecuteProcess(
-            cmd=['ros2', 'launch', 'turtlebot4_ignition_bringup', 'turtlebot4_ignition.launch.py'],
-            output='screen'
-        ),
+        # ExecuteProcess(
+        #     cmd=['ros2', 'launch', 'turtlebot4_ignition_bringup', 'turtlebot4_ignition.launch.py'],
+        #     output='screen'
+        # ),
 
         # 2. Start ros_gz_bridge for the RGB-D camera
         ExecuteProcess(
