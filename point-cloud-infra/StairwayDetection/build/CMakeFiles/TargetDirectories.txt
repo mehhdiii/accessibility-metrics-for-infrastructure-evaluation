@@ -1,0 +1,3 @@
+/data/point-cloud-infra/StairwayDetection/build/CMakeFiles/rebuild_cache.dir
+/data/point-cloud-infra/StairwayDetection/build/CMakeFiles/edit_cache.dir
+/data/point-cloud-infra/StairwayDetection/build/CMakeFiles/stair_det.dir
