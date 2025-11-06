@@ -29,3 +29,8 @@ ADD CONSTRAINT fk_pointcloud
     FOREIGN KEY (pointcloud_id) REFERENCES pointclouds(id)
     ON DELETE SET NULL
     ON UPDATE CASCADE;
+
+
+ALTER TABLE `pointcloud`
+ADD COLUMN `image_2d` LONGBLOB NULL COMMENT 'Stores 2D image data',
+ADD COLUMN `camera_params` JSON NULL COMMENT 'Stores camera parameters in JSON format';
