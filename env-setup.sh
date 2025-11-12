@@ -72,3 +72,7 @@
 
 
 rosdep install --from-path src -yi
+pip3 install python-dotenv
+
+export ROS_TOPICS_FILE=/data/config/topics.yaml
+

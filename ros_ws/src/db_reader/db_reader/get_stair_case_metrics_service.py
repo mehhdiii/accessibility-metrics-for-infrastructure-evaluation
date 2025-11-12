@@ -5,10 +5,27 @@ from every_interface_ever.srv import GetStairCaseMetrics  # Adjust pkg name
 import mysql.connector
 from datetime import datetime
 
+from dotenv import load_dotenv
+import os, yaml
+
+#specify name of the node for reading config
+node_name = "db_reader"
+
+#load config:
+load_dotenv()
+config_path = os.getenv("ROS_TOPICS_FILE", "/data/ros_ws/src/common_configs/topics.yaml")
+with open(config_path) as f:
+    config = yaml.safe_load(f)
+
+#fetch relevant node's config
+node_configs = config[node_name]
+
+
 class StairCaseMetrics(Node):
     def __init__(self):
         super().__init__('get_stair_case_metrics_service')
-        self.srv = self.create_service(GetStairCaseMetrics, 'get_stair_case_metrics', self.get_stair_callback)
+        
+        self.srv = self.create_service(GetStairCaseMetrics, node_configs["services"]["get_stair_case_metrics"], self.get_stair_callback)
         self.get_logger().info('✅ GetStair service is ready.')
 
     def get_stair_callback(self, request, response):

@@ -12,9 +12,21 @@ import random
 import string
 from dataclasses import dataclass, fields, field, asdict
 import requests
-
-
 from typing import Dict
+from dotenv import load_dotenv
+import os, yaml
+
+#specify name of the node for reading config
+node_name = "orchestrator"
+
+#load config:
+load_dotenv()
+config_path = os.getenv("ROS_TOPICS_FILE", "/data/ros_ws/src/common_configs/topics.yaml")
+with open(config_path) as f:
+    config = yaml.safe_load(f)
+
+#fetch relevant node's config
+node_configs = config[node_name]
 
 @dataclass
 class StairCompliance:
@@ -132,7 +144,6 @@ class StairMetricsDTO:
 class StaircaseOrchestrationService(Node):
     def __init__(self):
         super().__init__('staircase_orchestration_service')
-
         self.data: StairMetricsDTO
         self.compliance: StairCompliance
         self.data_ready = False
@@ -141,34 +152,50 @@ class StaircaseOrchestrationService(Node):
         # Subscribe to the button topics:
         self.savePcSubscription = self.create_subscription(
             String,
-            '/save_pt_request',
+            node_configs["subscribers"]["save_point_request"], 
             self.save_pc_requested,
             10
         )
         self.saveAndProcessPcSubscription = self.create_subscription(
             String,
-            '/save_and_process_pt_request',
+            node_configs["subscribers"]["save_and_process_point_request"],
             self.save_and_process_pc_requested,
             10
         )
         
         # publishers to send data to UI:
-        self.stairCasePublisher = self.create_publisher(CalculatedPtMetrics, '/stairs_calculated_metrics', 10)
+        self.stairCasePublisher = self.create_publisher(
+            CalculatedPtMetrics, 
+            node_configs["publishers"]["stairs_calculated_metrics"],
+            10
+        )
         # publisher to send success on point_cloud_save
-        self.pointCloudSaverPublisher = self.create_publisher(Bool, '/pc_saved_response', 10)
+        self.pointCloudSaverPublisher = self.create_publisher(
+            Bool, 
+            node_configs["publishers"]["pc_saved_response"],
+            10
+        )
         # publish compliance status message to UI:
-        self.stairCaseComplianceStatusPublisher = self.create_publisher(StaircaseComplianceStatus, '/stairs_compliance_status', 10)
-
-
+        self.stairCaseComplianceStatusPublisher = self.create_publisher(
+            StaircaseComplianceStatus, 
+            node_configs["publishers"]["stairs_compliance_status"],
+            10
+        )
 
 
         #service clients for saving pointcloud and triggering processing pipeline:
-        self.savePointCloudClient = self.create_client(SavePointCloud, 'save_pointcloud')
+        self.savePointCloudClient = self.create_client(
+            SavePointCloud, 
+            node_configs["clients"]["save_pointcloud"], 
+        )
         if not self.savePointCloudClient.wait_for_service(timeout_sec=5.0):
             self.get_logger().error('Service /save_pointcloud not available')
             return
         
-        self.getStaircaseMetricsClient = self.create_client(GetStairCaseMetrics, 'get_stair_case_metrics')
+        self.getStaircaseMetricsClient = self.create_client(
+            GetStairCaseMetrics, 
+            node_configs["clients"]["get_stair_case_metrics"]
+        )
         if not self.getStaircaseMetricsClient.wait_for_service(timeout_sec=5.0):
             self.get_logger().error('Service /get_stair_case_metrics not available')
             return

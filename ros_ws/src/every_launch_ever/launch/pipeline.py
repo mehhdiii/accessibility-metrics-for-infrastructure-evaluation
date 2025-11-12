@@ -3,13 +3,24 @@ from launch import LaunchDescription
 from launch.actions import ExecuteProcess
 from launch_ros.actions import Node
 
+from dotenv import load_dotenv
+import os, yaml
+
+# #specify name of the node for reading config
+# node_name = "pipeline"
+
+# #load config:
+load_dotenv()
+config_path = os.getenv("ROS_TOPICS_FILE", "/data/ros_ws/src/common_configs/topics.yaml")
+with open(config_path) as f:
+    config = yaml.safe_load(f)
+
+# #fetch relevant node's config
+env_configs = config["env"]
+
 def generate_launch_description():
-    return LaunchDescription([
-        # 1. Start TurtleBot world
-        # ExecuteProcess(
-        #     cmd=['ros2', 'launch', 'turtlebot4_ignition_bringup', 'turtlebot4_ignition.launch.py'],
-        #     output='screen'
-        # ),
+
+    launch_actions = [
 
         # 2. Start ros_gz_bridge for the RGB-D camera
         ExecuteProcess(
@@ -52,4 +63,15 @@ def generate_launch_description():
             cmd=['rviz2'],
             output='screen'
         ),
-    ])
+    ]
+
+    if (env_configs["simulation"]):
+            # 1. Start TurtleBot world
+
+            launch_actions.append(ExecuteProcess(
+                cmd=['ros2', 'launch', 'turtlebot4_ignition_bringup', 'turtlebot4_ignition.launch.py'],
+                output='screen'
+            ))
+
+
+    return LaunchDescription(launch_actions)
