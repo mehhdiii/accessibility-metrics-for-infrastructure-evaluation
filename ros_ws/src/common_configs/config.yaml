@@ -1,5 +1,6 @@
 # Each node has its own section with all its topics, subscribers, publishers, services, and clients.
 
+# set to false when using real robot (other variables need to changed, please go down and follow instructions):
 env:
   simulation: true
 
@@ -23,15 +24,18 @@ orchestrator:
 
 pc_saver:
   subscribers:
-    #use the first ones for simulation, consecutive for real robot
-    camera_depth_points: "/world/default/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/points"
+    #ONLY FOR REAL ROBOT: uncomment this one if pointcloud is being published by realsense node directly:
     # camera_depth_points: "/camera/camera/depth/color/points"
-    # camera_depth_points: "/manuallycomputed/points"
-    
+
+
+    #FOR SIMULATION:
+    camera_depth_points: "/world/default/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/points"
     camera_color_image: "/world/default/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/image"
-    # camera_color_image: "/camera/camera/color/image_raw"
-    
     camera_depth_info: "/world/default/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/camera_info"
+
+    #FOR REAL ROBOT:
+    # camera_depth_points: "/manuallycomputed/points"
+    # camera_color_image: "/camera/camera/color/image_raw"
     # camera_depth_info: "/camera/camera/depth/camera_info"
 
   services:
@@ -50,3 +54,15 @@ pointcloud_maker:
     depth_image: "/camera/camera/aligned_depth_to_color/image_raw"
     camera_info: "/camera/camera/color/camera_info"
     point_cloud: "/manuallycomputed/points"
+
+pipeline:
+  topics:
+    pointcloud: "/world/default/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/points"
+    depth_image: "/world/default/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/depth_image"
+    image: "/world/default/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/image"
+    image_info: "/world/default/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/camera_info"
+    
+    gz_pointcloud: "sensor_msgs/msg/PointCloud2[ignition.msgs.PointCloudPacked"
+    gz_image: "sensor_msgs/msg/Image[ignition.msgs.Image"
+    gz_depth_image: "sensor_msgs/msg/Image[ignition.msgs.Image"
+    gz_image_info: "sensor_msgs/msg/CameraInfo[ignition.msgs.CameraInfo"
