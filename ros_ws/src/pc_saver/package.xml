@@ -7,8 +7,8 @@
   <maintainer email="mehdiraza1@hotmail.com">root</maintainer>
   <license>Open source. use with reference</license>
 
-  <buildtool_depend>ament_cmake</buildtool_depend>
-  <buildtool_depend>ament_python</buildtool_depend>
+  <!-- <buildtool_depend>ament_python</buildtool_depend> -->
+
 
 
   <depend>rclpy</depend>

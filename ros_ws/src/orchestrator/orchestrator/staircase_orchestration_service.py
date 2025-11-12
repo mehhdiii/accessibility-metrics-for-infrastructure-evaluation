@@ -136,8 +136,8 @@ class StaircaseOrchestrationService(Node):
         self.data: StairMetricsDTO
         self.compliance: StairCompliance
         self.data_ready = False
-        self.algorithm_url = 'http://pcl-dev-container:80/run'
-        self.compliance_calculator_url = 'http://decree-compliance-checker:8000/check'
+        self.algorithm_url = 'http://localhost:8001/run'
+        self.compliance_calculator_url = 'http://localhost:8000/check'
         # Subscribe to the button topics:
         self.savePcSubscription = self.create_subscription(
             String,

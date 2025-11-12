@@ -15,7 +15,7 @@ class StairCaseMetrics(Node):
         pointcloud_id = request.id
         try:
             conn = mysql.connector.connect(
-                host="mysql",
+                host="localhost",
                 user="stairuser",
                 password="stairpass",
                 database="stairs_db"

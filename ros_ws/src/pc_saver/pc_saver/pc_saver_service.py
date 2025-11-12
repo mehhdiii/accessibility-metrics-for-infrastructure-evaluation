@@ -12,7 +12,7 @@ import json
 from every_interface_ever.srv import SavePointCloud
 
 # --- MySQL config ---
-MYSQL_HOST = "mysql"
+MYSQL_HOST = "localhost"
 MYSQL_USER = "stairuser"
 MYSQL_PASSWORD = "stairpass"
 MYSQL_DB = "stairs_db"
@@ -31,7 +31,8 @@ class PCSaverService(Node):
         # Subscribe to point cloud
         self.create_subscription(
             PointCloud2,
-            '/world/default/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/points',
+            # '/world/default/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/points',
+            '/camera/camera/depth/color/points',
             self.pc_callback,
             10
         )
@@ -39,7 +40,8 @@ class PCSaverService(Node):
         # Subscribe to RGB image
         self.create_subscription(
             Image,
-            '/world/default/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/image',
+            # '/world/default/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/image',
+            '/camera/camera/color/image_raw',
             self.image_callback,
             10
         )
@@ -47,7 +49,8 @@ class PCSaverService(Node):
         # Subscribe to camera info
         self.create_subscription(
             CameraInfo,
-            '/world/default/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/camera_info',
+            # '/world/default/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/camera_info',
+            '/camera/camera/depth/camera_info',
             self.camera_info_callback,
             10
         )
