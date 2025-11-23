@@ -10,6 +10,7 @@ import cv2
 from cv_bridge import CvBridge
 import json
 from every_interface_ever.srv import SavePointCloud
+from rclpy.qos import QoSProfile, ReliabilityPolicy
 
 # --- MySQL config ---
 MYSQL_HOST = "localhost"
@@ -45,6 +46,10 @@ class PCSaverService(Node):
         self.latest_camera_info = None
         self.bridge = CvBridge()
 
+        qos_profile = QoSProfile(
+            depth=10,
+            reliability=ReliabilityPolicy.BEST_EFFORT
+        )
         # Subscribe to point cloud
         self.create_subscription(
             PointCloud2,
@@ -52,7 +57,7 @@ class PCSaverService(Node):
             node_configs["subscribers"]["camera_depth_points"],
             # '/camera/camera/depth/color/points',
             self.pc_callback,
-            10
+            qos_profile
         )
 
         # Subscribe to RGB image

@@ -2,7 +2,7 @@
 
 # set to false when using real robot (other variables need to changed, please go down and follow instructions):
 env:
-  simulation: true
+  simulation: false
 
 db_reader:
   services:
@@ -29,15 +29,15 @@ pc_saver:
 
 
     #FOR SIMULATION:
-    camera_depth_points: "/world/default/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/points"
-    camera_color_image: "/world/default/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/image"
-    camera_depth_info: "/world/default/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/camera_info"
+    # camera_depth_points: "/world/default/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/points"
+    # camera_color_image: "/world/default/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/image"
+    # camera_depth_info: "/world/default/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/camera_info"
 
-    #FOR REAL ROBOT:
-    # camera_depth_points: "/manuallycomputed/points"
-    # camera_color_image: "/camera/camera/color/image_raw"
-    # camera_depth_info: "/camera/camera/depth/camera_info"
-
+    # #FOR REAL ROBOT:
+    camera_depth_points: "/manuallycomputed/points"
+    camera_color_image: "/camera/camera/color/image_raw"
+    camera_depth_info: "/camera/camera/depth/camera_info"
+    # camera_depth_info: "/camera/camera/color/camera_info"
   services:
     save_pointcloud: "save_pointcloud"
 
@@ -66,3 +66,9 @@ pipeline:
     gz_image: "sensor_msgs/msg/Image[ignition.msgs.Image"
     gz_depth_image: "sensor_msgs/msg/Image[ignition.msgs.Image"
     gz_image_info: "sensor_msgs/msg/CameraInfo[ignition.msgs.CameraInfo"
+  
+  robot:
+    x: -2.0
+    y: -4.0
+    z: 0
+    yaw: 0

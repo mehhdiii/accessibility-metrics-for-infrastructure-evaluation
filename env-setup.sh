@@ -73,6 +73,12 @@
 
 rosdep install --from-path src -yi
 pip3 install python-dotenv
+sudo apt install ros-humble-image-transport-plugins
+
+#to increase udp buffer size: (To make permanent, add to /etc/sysctl.conf:)
+sudo sysctl -w net.core.rmem_max=4194304    # 4 MB
+sudo sysctl -w net.core.rmem_default=2097152  # 2 MB
+
 
 export ROS_TOPICS_FILE=/data/config/topics.yaml
 

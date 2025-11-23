@@ -59,7 +59,14 @@ def generate_launch_description():
             # 1. Start TurtleBot world
 
             launch_actions.append(ExecuteProcess(
-                cmd=['ros2', 'launch', 'turtlebot4_ignition_bringup', 'turtlebot4_ignition.launch.py'],
+                cmd=[
+                'ros2', 'launch',
+                'turtlebot4_ignition_bringup', 'turtlebot4_ignition.launch.py',
+                f'x:={node_configs["robot"]["x"]}',
+                f'y:={node_configs["robot"]["y"]}',
+                f'z:={node_configs["robot"]["z"]}',
+                f'yaw:={node_configs["robot"]["yaw"]}',
+            ],
                 output='screen'
             ))
 

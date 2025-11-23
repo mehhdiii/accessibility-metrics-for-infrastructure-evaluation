@@ -16,6 +16,8 @@ with open(config_path) as f:
 #fetch relevant node's config
 node_configs = config[node_name]
 
+print(node_configs)
+
 image_raw = node_configs["topics"]["image"]
 depth_image = node_configs["topics"]["depth_image"]
 camera_info = node_configs["topics"]["camera_info"]
