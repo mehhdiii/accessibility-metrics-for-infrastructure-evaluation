@@ -6,6 +6,7 @@ from every_interface_ever.srv import SavePointCloud
 from every_interface_ever.msg import CalculatedPtMetrics
 from every_interface_ever.srv import GetStairCaseMetrics 
 from every_interface_ever.msg import StaircaseComplianceStatus
+import time
 
 import datetime
 import random
@@ -242,13 +243,16 @@ class StaircaseOrchestrationService(Node):
         then triggers db_reader pipeline to fetch those metrics from database and publishes them to UI topic.
         Also calls an http server to check if the calculated metrics are compliant with whats set out as the standard.
         """
+        start_time_first = time.perf_counter()
         future = self.save_point_cloud_helper()
                 # Attach a local callback to handle the response
         def saveCallback(fut):
+            elapsed = time.perf_counter() - start_time_first
             try:
                 response = fut.result()
                 self.get_logger().info(f"Point cloud saved successfully. pointcloud_id: {response.pointcloud_id}")
-                
+                self.get_logger().info(f"pointcloud saved in DB. took: {elapsed:.4f} seconds")
+
                 self.data = StairMetricsDTO(pointcloud_id=response.pointcloud_id)
                 savedMsg = Bool()
                 savedMsg.data = response.success
@@ -258,9 +262,10 @@ class StaircaseOrchestrationService(Node):
                     future2 = self.get_metrics_helper(pointcloud_id=self.data.pointcloud_id)
                     def getMetricsCallback(fut):
                         try:
-                            
                             response = fut.result()                            
                             self.data.mapFromCalculatedPtMetricsMsg(response.metrics)
+                            elapsedFinal = time.perf_counter() - start_time_first
+                            self.get_logger().info(f"complete pipeline took: {elapsedFinal:.4f} seconds")
                             if (self.data.check_if_filled()):
                                 metricsMessage = StairMetricsDTO.to_calculated_pt_metrics_msg(self.data)
                                 self.get_logger().info(f"publishing metrics to UI")
@@ -290,12 +295,14 @@ class StaircaseOrchestrationService(Node):
             "enable_viewer": False
         }
 
+        start_time = time.perf_counter()
         # Send POST request with JSON body
         response = requests.post(self.algorithm_url, json=payload)
-
+        elapsed = time.perf_counter() - start_time
         # Check response
         if response.status_code == 200:
-            
+            self.get_logger().info(f"pointcloud processed. took: {elapsed:.4f} seconds")
+
             self.get_logger().info(f"processing algorithm responded with: {response.json()}")  # parse JSON response if any
             return response.json()['success']
         else:

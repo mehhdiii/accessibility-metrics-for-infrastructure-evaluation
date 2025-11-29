@@ -74,11 +74,20 @@
 rosdep install --from-path src -yi
 pip3 install python-dotenv
 sudo apt install ros-humble-image-transport-plugins
+sudo apt install ros-humble-pcl-ros
 
 #to increase udp buffer size: (To make permanent, add to /etc/sysctl.conf:)
 sudo sysctl -w net.core.rmem_max=4194304    # 4 MB
 sudo sysctl -w net.core.rmem_default=2097152  # 2 MB
 
+pip install \
+  opentelemetry-api \
+  opentelemetry-sdk \
+  opentelemetry-exporter-otlp \
+  opentelemetry-instrumentation-logging \
+  opentelemetry-instrumentation-system-metrics
+
+export ROS_LOG_DIR=/data/logging/ros2_logs
 
 export ROS_TOPICS_FILE=/data/config/topics.yaml
 

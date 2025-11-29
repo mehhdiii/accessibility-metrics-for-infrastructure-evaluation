@@ -7,6 +7,7 @@
             </Interfaces>
             <AllowMulticast>spdp</AllowMulticast>
             <MaxMessageSize>65500B</MaxMessageSize>
+            
         </General>
         <Discovery>
             <EnableTopicDiscoveryEndpoints>true</EnableTopicDiscoveryEndpoints>

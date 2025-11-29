@@ -93,3 +93,26 @@ services:
     volumes:
       - ./decree-compliance/app:/app
 
+  # datadog:
+  #   image: gcr.io/datadoghq/agent:latest
+  #   container_name: datadog-agent
+  #   environment:
+  #     - DD_API_KEY=2b7d5744ca522e867da8845d01c66df4
+  #     - DD_SITE=datadoghq.eu
+  #     - DD_LOGS_ENABLED=true
+  #     - DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL=true
+  #     - DD_CONTAINER_EXCLUDE_LOGS="name:datadog-agent"
+  #     - DD_DOGSTATSD_NON_LOCAL_TRAFFIC=true
+  #     - DD_AC_EXCLUDE="name:datadog-agent"
+  #     - DD_ENABLE_PAYLOADS_EVENTS=true
+  #     - DD_PROCESS_AGENT_ENABLED=false
+  #     - DD_APM_ENABLED=false
+  #   # ports:
+  #   #   - "8126:8126"    # APM (disabled but okay)
+  #   #   - "8125:8125/udp" # DogStatsD (metrics)
+  #   volumes:
+  #     - /var/run/docker.sock:/var/run/docker.sock:ro
+  #     - /proc/:/host/proc/:ro
+  #     - /sys/fs/cgroup:/host/sys/fs/cgroup:ro
+  #   network_mode: host
+
