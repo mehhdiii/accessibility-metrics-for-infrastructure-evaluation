@@ -458,3 +458,77 @@ INSERT INTO gtStaircase (
     -1,
     -1
 );
+
+
+INSERT INTO gtStaircase (
+    name,
+    description,
+    root_name,
+    type,
+    width,
+    num_steps,
+    riser_height,
+    tread_depth,
+    tactile_strips_before_length,
+    tactile_strips_after_length,
+    parapet_height,
+    parapet_max_opening_diameter,
+    handrails_side,
+    handrails_height,
+    handrails_extension_length,
+    handrails_offset_from_wall
+) VALUES (
+    'historic_center_3',
+    'Genova historic center building',
+    'indoor_staircase_artificial_light',
+    'staircase',
+    0.76,
+    -1,
+    0.267,
+    0.238,
+    -1,
+    -1,
+    -1,
+    -1,
+    'one',
+    -1,
+    -1,
+    -1
+);
+
+
+INSERT INTO gtStaircase (
+    name,
+    description,
+    root_name,
+    type,
+    width,
+    num_steps,
+    riser_height,
+    tread_depth,
+    tactile_strips_before_length,
+    tactile_strips_after_length,
+    parapet_height,
+    parapet_max_opening_diameter,
+    handrails_side,
+    handrails_height,
+    handrails_extension_length,
+    handrails_offset_from_wall
+) VALUES (
+    'historic_center_2',
+    'Genova historic center building',
+    'indoor_staircase_artificial_light',
+    'staircase',
+    0.7243,
+    -1,
+    0.206,
+    0.2703,
+    -1,
+    -1,
+    -1,
+    -1,
+    'one',
+    -1,
+    -1,
+    -1
+);
