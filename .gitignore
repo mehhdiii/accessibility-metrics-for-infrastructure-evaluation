@@ -11,3 +11,4 @@ plugins/
 mysql_data/
 .vscode/
 cdds.log.*
+*.log
