@@ -6,14 +6,25 @@ import os
 import time
 import numpy as np
 
+plt.rcParams.update({
+    'font.size': 20,            # default text size
+    'axes.titlesize': 20,       # plot title
+    'axes.labelsize': 22,       # x/y labels
+    'xtick.labelsize': 16,      # x tick labels
+    'ytick.labelsize': 18,      # y tick labels
+    'legend.fontsize': 20,      # legend text
+})
+
 # -----------------------------
 # CONFIG
 # -----------------------------
 API_URL = "http://localhost:8000/check"
-csv_file = "results/vesuvio-outdoor-above-night-2.csv"  # Replace with your SQL export
+csv_file = "results/top-down-combined.csv"  # Replace with your SQL export
+
+outputfileName = csv_file.split('/')[0] + "/" + csv_file.split('/')[1].split(".")[0]
 
 # Create folders
-os.makedirs("results/plots", exist_ok=True)
+os.makedirs(outputfileName, exist_ok=True)
 
 # -----------------------------
 # Load CSV
@@ -44,6 +55,7 @@ def call_api(width_m, riser_m, tread_m):
 gt_width_ok, gt_tread_ok, gt_riser_tread_ok = [], [], []
 alg_width_ok, alg_tread_ok, alg_riser_tread_ok = [], [], []
 
+gt_overall, alg_overall = [], []
 gt_time_s, alg_time_s = [], []
 
 for _, row in df.iterrows():
@@ -52,13 +64,16 @@ for _, row in df.iterrows():
     w_gt = row["width_gt_mm"] / 1000
     r_gt = row["riser_gt_mm"] / 1000
     t_gt = row["tread_gt_mm"] / 1000
+    print(t_gt)
 
     gt_res, gt_elapsed = call_api(w_gt, r_gt, t_gt)
+    print(gt_res['tread_ok'])
     gt_time_s.append(gt_elapsed)
 
     gt_width_ok.append(gt_res["width_ok"])
     gt_tread_ok.append(gt_res["tread_ok"])
     gt_riser_tread_ok.append(gt_res["riser_tread_relation_ok"])
+    gt_overall.append(gt_res["width_ok"] and gt_res['tread_ok'] and gt_res["riser_tread_relation_ok"])
 
     # --- Algorithm-predicted values (mm → m) ---
     w_alg = row["width_alg_mm"] / 1000
@@ -71,14 +86,16 @@ for _, row in df.iterrows():
     alg_width_ok.append(alg_res["width_ok"])
     alg_tread_ok.append(alg_res["tread_ok"])
     alg_riser_tread_ok.append(alg_res["riser_tread_relation_ok"])
-
+    alg_overall.append(alg_res["width_ok"] and alg_res["tread_ok"] and alg_res["riser_tread_relation_ok"])
 # Add compliance to dataframe
 df["gt_width_ok"] = gt_width_ok
 df["gt_tread_ok"] = gt_tread_ok
 df["gt_riser_tread_relation_ok"] = gt_riser_tread_ok
+df["gt_overall_ok"] = gt_overall
 df["alg_width_ok"] = alg_width_ok
 df["alg_tread_ok"] = alg_tread_ok
 df["alg_riser_tread_relation_ok"] = alg_riser_tread_ok
+df["alg_overall_ok"] = alg_overall
 
 # Add timing info
 df["gt_api_time_s"] = gt_time_s
@@ -88,17 +105,15 @@ df["alg_api_time_s"] = alg_time_s
 # Helper to save confusion matrices
 # -----------------------------
 def save_confusion_matrix(gt, pred, title, filename):
-    cm = confusion_matrix(gt, pred, labels=[True, False])
-    cm_percent = np.where(cm.sum(axis=1, keepdims=True) == 0, 0, cm / cm.sum(axis=1, keepdims=True) * 100)
+    cm = confusion_matrix(gt, pred, labels=[False, True], normalize='true') * 100
+    # cm_percent = np.where(cm.sum(axis=1, keepdims=True) == 0, 0, cm / cm.sum(axis=1, keepdims=True) * 100)
 
-
-    disp = ConfusionMatrixDisplay(confusion_matrix=cm_percent)
+    disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=['NC', 'C'])
     plt.figure(figsize=(6, 6))
-    disp.plot(colorbar=True)
-    disp.plot(values_format=".1f")  # shows percentages with 1 decimal
+    disp.plot(colorbar=True, values_format=".2f")  # shows percentages with 1 decimal
     plt.title(title)
     plt.tight_layout()
-    plt.savefig(f"results/plots/{filename}.pdf")
+    plt.savefig(f"{outputfileName}/{filename}.pdf")
     plt.close()
 
 # -----------------------------
@@ -111,8 +126,8 @@ save_confusion_matrix(df["gt_tread_ok"], df["alg_tread_ok"],
                       "Tread Compliance (GT vs ALG)", "confusion_tread_ok")
 
 save_confusion_matrix(df["gt_riser_tread_relation_ok"], df["alg_riser_tread_relation_ok"],
-                      "Riser–Tread Relation Compliance (GT vs ALG)", "confusion_riser_tread_relation_ok")
-
+                      "R–T Relation Compliance (GT vs ALG)", "confusion_riser_tread_relation_ok")
+save_confusion_matrix(df["gt_overall_ok"], df["alg_overall_ok"], "Overall Compliance (GT vs ALG)", "confusion_overall_ok")
 # -----------------------------
 # Plot API response times
 # -----------------------------
@@ -124,24 +139,45 @@ plt.ylabel("API Response Time (s)")
 plt.title("API Response Time per Staircase")
 plt.legend()
 plt.tight_layout()
-plt.savefig("results/plots/api_response_times.pdf")
+plt.savefig(f"{outputfileName}/api_response_times.pdf")
 plt.close()
 
-print("All confusion matrices and API response time plots saved in results/plots/")
+print(f"All confusion matrices and API response time plots saved in {outputfileName}")
 
 
 
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+# from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, balanced_accuracy_score
 
 # -----------------------------
 # Helper to calculate metrics
 # -----------------------------
+from sklearn.metrics import (
+    balanced_accuracy_score,
+    precision_score,
+    recall_score,
+    f1_score
+)
+
 def classification_metrics(gt, pred):
-    accuracy = accuracy_score(gt, pred)
-    precision = precision_score(gt, pred)
-    recall = recall_score(gt, pred)
-    f1 = f1_score(gt, pred)
-    return accuracy, precision, recall, f1
+    metrics = {}
+
+    # Balanced accuracy (good for imbalance)
+    metrics["balanced_accuracy"] = balanced_accuracy_score(gt, pred)
+
+    # Precision / Recall / F1 for class 1 (compliant)
+    metrics["precision_compliant"] = precision_score(gt, pred, pos_label=1)
+    metrics["recall_compliant"] = recall_score(gt, pred, pos_label=1)
+    metrics["f1_compliant"] = f1_score(gt, pred, pos_label=1)
+
+    # Precision / Recall / F1 for class 0 (non-compliant)
+    metrics["precision_noncompliant"] = precision_score(gt, pred, pos_label=0)
+    metrics["recall_noncompliant"] = recall_score(gt, pred, pos_label=0)
+    metrics["f1_noncompliant"] = f1_score(gt, pred, pos_label=0)
+
+    # Macro-averaged F1 (balanced across classes)
+    metrics["f1_macro"] = f1_score(gt, pred, average='macro')
+
+    return metrics
 
 # -----------------------------
 # Compute metrics for all compliance types
@@ -151,23 +187,26 @@ metrics_results = {}
 for name, gt_col, alg_col in [
     ("Width compliance", "gt_width_ok", "alg_width_ok"),
     ("Tread compliance", "gt_tread_ok", "alg_tread_ok"),
-    ("Riser–Tread relation", "gt_riser_tread_relation_ok", "alg_riser_tread_relation_ok")
+    ("Riser–Tread relation", "gt_riser_tread_relation_ok", "alg_riser_tread_relation_ok"),
+    ("Over staircase compliance", "gt_overall_ok", "alg_overall_ok")
 ]:
-    acc, prec, rec, f1 = classification_metrics(df[gt_col], df[alg_col])
-    metrics_results[name] = {
-        "Accuracy": acc,
-        "Precision": prec,
-        "Recall": rec,
-        "F1-score": f1
-    }
+    # acc, prec, rec, f1 = classification_metrics(df[gt_col], df[alg_col])
+    # metrics_results[name] = {
+    #     "Accuracy": acc,
+    #     "Precision": prec,
+    #     "Recall": rec,
+    #     "F1-score": f1
+    # }
+    metrics_results[name] = classification_metrics(df[gt_col], df[alg_col])
 
 # -----------------------------
 # Print metrics
 # -----------------------------
-for name, vals in metrics_results.items():
-    print(f"{name}:")
-    for metric_name, value in vals.items():
-        print(f"  {metric_name}: {value:.3f}")
+with open(f"{outputfileName}/metrics", "w") as f:
+    for name, vals in metrics_results.items():
+        f.write(f"{name}:\n")
+        for metric_name, value in vals.items():
+            f.write(f"  {metric_name}: {value:.3f}\n")
 
 
 # quantify deviation of compliant examples from blondel rule
@@ -175,8 +214,8 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # Compute riser-tread sum
-df['blondel_sum_gt'] = 2*df['riser_gt_mm']/100 + df['tread_gt_mm']/100  # cm
-df['blondel_sum_alg'] = 2*df['riser_alg_mm']/100 + df['tread_alg_mm']/100  # cm
+df['blondel_sum_gt'] = 2*df['riser_gt_mm']/10 + df['tread_gt_mm']/10  # cm
+df['blondel_sum_alg'] = 2*df['riser_alg_mm']/10 + df['tread_alg_mm']/10  # cm
 
 # Keep only rows where GT is compliant
 df_compliant = df[(df['blondel_sum_gt'] >= 62) & (df['blondel_sum_gt'] <= 64)].copy()
@@ -200,5 +239,5 @@ plt.ylabel("Deviation from Blondel range (cm)")
 plt.xlabel("Staircase")
 plt.title("Blondel Deviation per Staircase (GT Compliant, ALG Non-Compliant Only)")
 plt.tight_layout()
-plt.savefig("results/plots/blondel_deviation_negative_only.pdf")
+plt.savefig(f"{outputfileName}/blondel_deviation_negative_only.pdf")
 plt.close()
