@@ -6,15 +6,28 @@ from every_interface_ever.srv import SavePointCloud
 from every_interface_ever.msg import CalculatedPtMetrics
 from every_interface_ever.srv import GetStairCaseMetrics 
 from every_interface_ever.msg import StaircaseComplianceStatus
+import time
 
 import datetime
 import random
 import string
 from dataclasses import dataclass, fields, field, asdict
 import requests
-
-
 from typing import Dict
+from dotenv import load_dotenv
+import os, yaml
+
+#specify name of the node for reading config
+node_name = "orchestrator"
+
+#load config:
+load_dotenv()
+config_path = os.getenv("ROS_TOPICS_FILE", "/data/ros_ws/src/common_configs/topics.yaml")
+with open(config_path) as f:
+    config = yaml.safe_load(f)
+
+#fetch relevant node's config
+node_configs = config[node_name]
 
 @dataclass
 class StairCompliance:
@@ -132,43 +145,58 @@ class StairMetricsDTO:
 class StaircaseOrchestrationService(Node):
     def __init__(self):
         super().__init__('staircase_orchestration_service')
-
         self.data: StairMetricsDTO
         self.compliance: StairCompliance
         self.data_ready = False
-        self.algorithm_url = 'http://pcl-dev-container:80/run'
-        self.compliance_calculator_url = 'http://decree-compliance-checker:8000/check'
+        self.algorithm_url = 'http://localhost:8001/run'
+        self.compliance_calculator_url = 'http://localhost:8000/check'
         # Subscribe to the button topics:
         self.savePcSubscription = self.create_subscription(
             String,
-            '/save_pt_request',
+            node_configs["subscribers"]["save_point_request"], 
             self.save_pc_requested,
             10
         )
         self.saveAndProcessPcSubscription = self.create_subscription(
             String,
-            '/save_and_process_pt_request',
+            node_configs["subscribers"]["save_and_process_point_request"],
             self.save_and_process_pc_requested,
             10
         )
         
         # publishers to send data to UI:
-        self.stairCasePublisher = self.create_publisher(CalculatedPtMetrics, '/stairs_calculated_metrics', 10)
+        self.stairCasePublisher = self.create_publisher(
+            CalculatedPtMetrics, 
+            node_configs["publishers"]["stairs_calculated_metrics"],
+            10
+        )
         # publisher to send success on point_cloud_save
-        self.pointCloudSaverPublisher = self.create_publisher(Bool, '/pc_saved_response', 10)
+        self.pointCloudSaverPublisher = self.create_publisher(
+            Bool, 
+            node_configs["publishers"]["pc_saved_response"],
+            10
+        )
         # publish compliance status message to UI:
-        self.stairCaseComplianceStatusPublisher = self.create_publisher(StaircaseComplianceStatus, '/stairs_compliance_status', 10)
-
-
+        self.stairCaseComplianceStatusPublisher = self.create_publisher(
+            StaircaseComplianceStatus, 
+            node_configs["publishers"]["stairs_compliance_status"],
+            10
+        )
 
 
         #service clients for saving pointcloud and triggering processing pipeline:
-        self.savePointCloudClient = self.create_client(SavePointCloud, 'save_pointcloud')
+        self.savePointCloudClient = self.create_client(
+            SavePointCloud, 
+            node_configs["clients"]["save_pointcloud"], 
+        )
         if not self.savePointCloudClient.wait_for_service(timeout_sec=5.0):
             self.get_logger().error('Service /save_pointcloud not available')
             return
         
-        self.getStaircaseMetricsClient = self.create_client(GetStairCaseMetrics, 'get_stair_case_metrics')
+        self.getStaircaseMetricsClient = self.create_client(
+            GetStairCaseMetrics, 
+            node_configs["clients"]["get_stair_case_metrics"]
+        )
         if not self.getStaircaseMetricsClient.wait_for_service(timeout_sec=5.0):
             self.get_logger().error('Service /get_stair_case_metrics not available')
             return
@@ -215,13 +243,16 @@ class StaircaseOrchestrationService(Node):
         then triggers db_reader pipeline to fetch those metrics from database and publishes them to UI topic.
         Also calls an http server to check if the calculated metrics are compliant with whats set out as the standard.
         """
+        start_time_first = time.perf_counter()
         future = self.save_point_cloud_helper()
                 # Attach a local callback to handle the response
         def saveCallback(fut):
+            elapsed = time.perf_counter() - start_time_first
             try:
                 response = fut.result()
                 self.get_logger().info(f"Point cloud saved successfully. pointcloud_id: {response.pointcloud_id}")
-                
+                self.get_logger().info(f"pointcloud saved in DB. took: {elapsed:.4f} seconds")
+
                 self.data = StairMetricsDTO(pointcloud_id=response.pointcloud_id)
                 savedMsg = Bool()
                 savedMsg.data = response.success
@@ -231,9 +262,10 @@ class StaircaseOrchestrationService(Node):
                     future2 = self.get_metrics_helper(pointcloud_id=self.data.pointcloud_id)
                     def getMetricsCallback(fut):
                         try:
-                            
                             response = fut.result()                            
                             self.data.mapFromCalculatedPtMetricsMsg(response.metrics)
+                            elapsedFinal = time.perf_counter() - start_time_first
+                            self.get_logger().info(f"complete pipeline took: {elapsedFinal:.4f} seconds")
                             if (self.data.check_if_filled()):
                                 metricsMessage = StairMetricsDTO.to_calculated_pt_metrics_msg(self.data)
                                 self.get_logger().info(f"publishing metrics to UI")
@@ -263,12 +295,14 @@ class StaircaseOrchestrationService(Node):
             "enable_viewer": False
         }
 
+        start_time = time.perf_counter()
         # Send POST request with JSON body
         response = requests.post(self.algorithm_url, json=payload)
-
+        elapsed = time.perf_counter() - start_time
         # Check response
         if response.status_code == 200:
-            
+            self.get_logger().info(f"pointcloud processed. took: {elapsed:.4f} seconds")
+
             self.get_logger().info(f"processing algorithm responded with: {response.json()}")  # parse JSON response if any
             return response.json()['success']
         else:

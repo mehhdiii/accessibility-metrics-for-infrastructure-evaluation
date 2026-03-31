@@ -28,14 +28,15 @@ async def check_stairs(params: StairParams) -> Dict:
     checks = {}
 
     # Minimum width for public stairway (≥ 1.20 m)
-    checks["width_ok"] = w >= 120
+    checks["width_ok"] = w >= 1.20
 
     # Minimum tread (≥ 30 cm)
-    checks["tread_ok"] = p >= 30
+    checks["tread_ok"] = p >= 0.30
 
     # Riser–tread relation (2h + p = 62–64 cm)
-    checks["riser_tread_relation_ok"] = 62 <= (2 * h + p) <= 64
+    checks["riser_tread_relation_ok"] = 0.62 <= (2 * h + p) <= 0.64
 
+    print(checks)
     # Step slope consistency (approx. 20–38° typical comfort)
     # checks["stair_angle_ok"] = 20 <= params.stair_angle_deg <= 38
 

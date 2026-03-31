@@ -10,13 +10,31 @@ import cv2
 from cv_bridge import CvBridge
 import json
 from every_interface_ever.srv import SavePointCloud
+from rclpy.qos import QoSProfile, ReliabilityPolicy
 
 # --- MySQL config ---
-MYSQL_HOST = "mysql"
+MYSQL_HOST = "localhost"
 MYSQL_USER = "stairuser"
 MYSQL_PASSWORD = "stairpass"
 MYSQL_DB = "stairs_db"
 MYSQL_PORT = 3306
+
+
+from dotenv import load_dotenv
+import os, yaml
+
+#specify name of the node for reading config
+node_name = "pc_saver"
+
+#load config:
+load_dotenv()
+config_path = os.getenv("ROS_TOPICS_FILE", "/data/ros_ws/src/common_configs/topics.yaml")
+with open(config_path) as f:
+    config = yaml.safe_load(f)
+
+#fetch relevant node's config
+node_configs = config[node_name]
+
 
 
 class PCSaverService(Node):
@@ -28,18 +46,26 @@ class PCSaverService(Node):
         self.latest_camera_info = None
         self.bridge = CvBridge()
 
+        qos_profile = QoSProfile(
+            depth=10,
+            reliability=ReliabilityPolicy.BEST_EFFORT
+        )
         # Subscribe to point cloud
         self.create_subscription(
             PointCloud2,
-            '/world/default/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/points',
+            # '/world/default/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/points',
+            node_configs["subscribers"]["camera_depth_points"],
+            # '/camera/camera/depth/color/points',
             self.pc_callback,
-            10
+            qos_profile
         )
 
         # Subscribe to RGB image
         self.create_subscription(
             Image,
-            '/world/default/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/image',
+            # '/world/default/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/image',
+            node_configs["subscribers"]["camera_color_image"],
+            # '/camera/camera/color/image_raw',
             self.image_callback,
             10
         )
@@ -47,13 +73,19 @@ class PCSaverService(Node):
         # Subscribe to camera info
         self.create_subscription(
             CameraInfo,
-            '/world/default/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/camera_info',
+            # '/world/default/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/camera_info',
+            node_configs["subscribers"]["camera_depth_info"],
+            # '/camera/camera/depth/camera_info',
             self.camera_info_callback,
             10
         )
 
         # Service
-        self.srv = self.create_service(SavePointCloud, 'save_pointcloud', self.save_pointcloud_callback)
+        self.srv = self.create_service(
+            SavePointCloud,
+            node_configs["services"]["save_pointcloud"],
+            # 'save_pointcloud', 
+            self.save_pointcloud_callback)
 
         self.get_logger().info("PCSaverService ready. Waiting for /save_pointcloud requests...")
 

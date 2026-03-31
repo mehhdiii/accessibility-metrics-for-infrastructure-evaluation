@@ -34,3 +34,30 @@ ADD CONSTRAINT fk_pointcloud
 ALTER TABLE `pointcloud`
 ADD COLUMN `image_2d` LONGBLOB NULL COMMENT 'Stores 2D image data',
 ADD COLUMN `camera_params` JSON NULL COMMENT 'Stores camera parameters in JSON format';
+
+ALTER TABLE pointclouds
+    ADD COLUMN created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP;
+
+-- Create the gtStaircase table
+CREATE TABLE gtStaircase (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    description TEXT,
+    root_name VARCHAR(255),
+    type VARCHAR(50),
+    width DECIMAL(5,2),
+    num_steps INT,
+    riser_height DECIMAL(5,3),
+    tread_depth DECIMAL(5,3),
+    tactile_strips_before_length DECIMAL(5,3),
+    tactile_strips_after_length DECIMAL(5,3),
+    parapet_height DECIMAL(5,3),
+    parapet_max_opening_diameter DECIMAL(5,3),
+    handrails_side VARCHAR(50),
+    handrails_height DECIMAL(5,3),
+    handrails_extension_length DECIMAL(5,3),
+    handrails_offset_from_wall DECIMAL(5,3)
+);
+
+ALTER TABLE gtStaircase
+    ADD COLUMN created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP;

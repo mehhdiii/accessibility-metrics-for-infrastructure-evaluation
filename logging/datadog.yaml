@@ -1,0 +1,16 @@
+logs_config:
+  container_collect_all: true
+  container_use_file: false
+  container_exclude: []
+  logs_dd_url: https://http-intake.logs.datadoghq.com
+  logs_no_ssl: false
+  tags: ["env:dev", "robot:ros2"]
+
+
+# 2. Collect ROS2 logs from log files
+logs:
+  - type: file
+    path: /ros2_logs/*.log        # mount ROS_LOG_DIR into agent container
+    service: ros2
+    source: python
+    tags: ["env:dev", "component:ros2"]

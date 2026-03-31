@@ -2,25 +2,32 @@ services:
   ros-humble-container:
     build:
       context: .
-      dockerfile: ./docker-files/Dockerfile
+      dockerfile: ./ros2-infra/Dockerfile
     container_name: ros-humble-container
     command: tail -f /dev/null
     network_mode: host
-    ports:
-      - 6080:80
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: 1
-              capabilities: [gpu]
+    privileged: true
+    devices:
+      - "/dev/video0:/dev/video0"
+      - "/dev/video1:/dev/video1"
+      - "/dev/video2:/dev/video2"
+      - "/dev/video3:/dev/video3"
+      - "/dev/video4:/dev/video4"
+      - "/dev/video5:/dev/video5"
+      - "/dev/video6:/dev/video6"
+      - "/dev/video7:/dev/video7"
+      - "/dev/bus/usb:/dev/bus/usb"
+    # ports:
+    #   - 6080:80
+    gpus: all
     environment:
       - DISPLAY=${DISPLAY}  
       - QT_X11_NO_MITSHM=1    
       - ROS_DOMAIN_ID=17
       - ROS_LOCALHOST_ONLY=0
       - CYCLONEDDS_URI=file:///data/cyclonedds.xml
+      - IGN_GAZEBO_RESOURCE_PATH:/data
+      - RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
     volumes:
       - ./:/data
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
@@ -34,15 +41,16 @@ services:
       dockerfile: point-cloud-infra/Dockerfile
     container_name: pcl-dev-container
     command: python3 /data/point-cloud-infra/server.py
-    ports:
-      - 6082:80
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: 1
-              capabilities: [gpu]
+    network_mode: host
+    # ports:
+    #   - 6082:80
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
     environment:
       - DISPLAY=${DISPLAY}
       - QT_X11_NO_MITSHM=1
@@ -53,20 +61,21 @@ services:
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
     extra_hosts:
       - "host.docker.internal:host-gateway"
-    runtime: nvidia   # for legacy Compose (optional but safe)
 
   mysql:
-      image: mysql:8.0
-      container_name: stair_mysql
-      environment:
-        MYSQL_ROOT_PASSWORD: rootpass
-        MYSQL_DATABASE: stairs_db
-        MYSQL_USER: stairuser
-        MYSQL_PASSWORD: stairpass
-      ports:
-        - "6083:3306"
-      volumes:
-        - ./mysql_data:/var/lib/mysql
+    image: mysql:8.0
+    container_name: stair_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: stairs_db
+      MYSQL_USER: stairuser
+      MYSQL_PASSWORD: stairpass
+    network_mode: host
+
+    # ports:
+    #   - "6083:3306"
+    volumes:
+      - ./mysql_data:/var/lib/mysql
 
   decree-compliance-checker:
     build:
@@ -75,11 +84,35 @@ services:
     command: >
       uvicorn main:app --host 0.0.0.0 --port 8000 --reload
     container_name: decree-compliance-checker
-    ports:
-      - "8000:8000"
+    # ports:
+    #   - "8000:8000"
     restart: unless-stopped
     working_dir: /app
+    network_mode: host
 
     volumes:
       - ./decree-compliance/app:/app
+
+  datadog:
+    image: gcr.io/datadoghq/agent:latest
+    container_name: datadog-agent
+    environment:
+      - DD_API_KEY=2b7d5744ca522e867da8845d01c66df4
+      - DD_SITE=datadoghq.eu
+      - DD_LOGS_ENABLED=true
+      - DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL=true
+      - DD_CONTAINER_EXCLUDE_LOGS="name:datadog-agent"
+      - DD_DOGSTATSD_NON_LOCAL_TRAFFIC=true
+      - DD_AC_EXCLUDE="name:datadog-agent"
+      - DD_ENABLE_PAYLOADS_EVENTS=true
+      - DD_PROCESS_AGENT_ENABLED=false
+      - DD_APM_ENABLED=false
+    # ports:
+    #   - "8126:8126"    # APM (disabled but okay)
+    #   - "8125:8125/udp" # DogStatsD (metrics)
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /proc/:/host/proc/:ro
+      - /sys/fs/cgroup:/host/sys/fs/cgroup:ro
+    network_mode: host
 

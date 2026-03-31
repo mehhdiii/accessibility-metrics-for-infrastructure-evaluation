@@ -1,15 +1,154 @@
 {
     "valid_staircases": [
-        
         {
-            "name": "Valid Stairs 1 - Minimal compliant",
-            "description": "Width at minimum 1.2 m, H=0.16 m, D=0.30 m (Blondel 0.62), 10 steps, tactile strips, single handrail",
+            "name": "Valid Stairs 01",
+            "description": "valid staircase sample",
             "root": {
-                "name": "staircase_1",
+                "name": "staircase_01",
                 "type": "staircase",
-                "width": 1.2,
+                "width": 1.20,
+                "num_steps": 8,
+                "riser_height": 0.155,
+                "tread_depth": 0.31,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Valid Stairs 02",
+            "description": "valid staircase sample",
+            "root": {
+                "name": "staircase_02",
+                "type": "staircase",
+                "width": 1.40,
                 "num_steps": 10,
-                "riser_height": 0.16,
+                "riser_height": 0.160,
+                "tread_depth": 0.32,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Valid Stairs 03",
+            "description": "valid staircase sample",
+            "root": {
+                "name": "staircase_03",
+                "type": "staircase",
+                "width": 1.60,
+                "num_steps": 12,
+                "riser_height": 0.165,
+                "tread_depth": 0.31,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Valid Stairs 04",
+            "description": "valid staircase sample",
+            "root": {
+                "name": "staircase_04",
+                "type": "staircase",
+                "width": 2.00,
+                "num_steps": 14,
+                "riser_height": 0.157,
+                "tread_depth": 0.33,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Valid Stairs 05",
+            "description": "valid staircase sample",
+            "root": {
+                "name": "staircase_05",
+                "type": "staircase",
+                "width": 1.25,
+                "num_steps": 9,
+                "riser_height": 0.158,
+                "tread_depth": 0.32,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Valid Stairs 06",
+            "description": "valid staircase sample",
+            "root": {
+                "name": "staircase_06",
+                "type": "staircase",
+                "width": 1.80,
+                "num_steps": 16,
+                "riser_height": 0.170,
                 "tread_depth": 0.30,
                 "tactile_strips": {
                     "before_length": 0.30,
@@ -30,89 +169,659 @@
             }
         },
         {
-            "name": "Valid Stairs - Single Flight",
-            "description": "1.5 m wide, one continuous flight with 16 steps; H=0.17, D=0.30 (Blondel 0.64); dual handrails",
+            "name": "Valid Stairs 07",
+            "description": "valid staircase sample",
             "root": {
-                "name": "stairs_single_flight",
+                "name": "staircase_07",
                 "type": "staircase",
-                "width": 1.5,
-                "num_steps": 16,
-                "riser_height": 0.17,
-                "tread_depth": 0.30,
+                "width": 1.35,
+                "num_steps": 11,
+                "riser_height": 0.156,
+                "tread_depth": 0.33,
                 "tactile_strips": {
                     "before_length": 0.30,
                     "after_length": 0.30
                 },
                 "parapet": {
-                    "height": 1.05,
-                    "max_opening_diameter": 0.08
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
                 },
                 "handrails": [
                     {
                         "side": "both",
                         "height": 0.95,
                         "extension_length": 0.30,
-                        "offset_from_wall": 0.05
-                    },
-                    {
-                        "side": "both",
-                        "height": 0.75,
-                        "extension_length": 0.30,
-                        "offset_from_wall": 0.05
+                        "offset_from_wall": 0.04
                     }
                 ]
             }
         },
         {
-            "name": "Valid Stairs 3 - Wide public stair",
-            "description": "2.0 m wide, H=0.16, D=0.32 (Blondel 0.64), 12 steps; parapet 1.1 m; tactile strips; dual rails",
+            "name": "Valid Stairs 08",
+            "description": "valid staircase sample",
             "root": {
-                "name": "staircase_3",
+                "name": "staircase_08",
                 "type": "staircase",
-                "width": 2.0,
-                "num_steps": 12,
-                "riser_height": 0.16,
+                "width": 1.22,
+                "num_steps": 7,
+                "riser_height": 0.159,
                 "tread_depth": 0.32,
                 "tactile_strips": {
                     "before_length": 0.30,
                     "after_length": 0.30
                 },
                 "parapet": {
-                    "height": 1.10,
+                    "height": 1.00,
                     "max_opening_diameter": 0.10
                 },
                 "handrails": [
                     {
                         "side": "both",
-                        "height": 0.92,
+                        "height": 0.95,
                         "extension_length": 0.30,
-                        "offset_from_wall": 0.05
-                    },
-                    {
-                        "side": "both",
-                        "height": 0.75,
-                        "extension_length": 0.30,
-                        "offset_from_wall": 0.05
+                        "offset_from_wall": 0.04
                     }
                 ]
             }
         },
         {
-            "name": "Valid Stairs 4 - Discontinuous nosing",
-            "description": "1.4 m wide; H=0.165, D=0.31 (Blondel 0.64); nosing 0.02 m; rounded edge; parapet ok; tactile ok",
+            "name": "Valid Stairs 09",
+            "description": "valid staircase sample",
             "root": {
-                "name": "staircase_4",
+                "name": "staircase_09",
                 "type": "staircase",
-                "width": 1.4,
+                "width": 2.50,
+                "num_steps": 20,
+                "riser_height": 0.162,
+                "tread_depth": 0.31,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Valid Stairs 10",
+            "description": "valid staircase sample",
+            "root": {
+                "name": "staircase_10",
+                "type": "staircase",
+                "width": 1.50,
+                "num_steps": 13,
+                "riser_height": 0.163,
+                "tread_depth": 0.31,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Valid Stairs 11",
+            "description": "valid staircase sample",
+            "root": {
+                "name": "staircase_11",
+                "type": "staircase",
+                "width": 1.21,
+                "num_steps": 9,
+                "riser_height": 0.155,
+                "tread_depth": 0.32,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Valid Stairs 12",
+            "description": "valid staircase sample",
+            "root": {
+                "name": "staircase_12",
+                "type": "staircase",
+                "width": 1.28,
+                "num_steps": 15,
+                "riser_height": 0.166,
+                "tread_depth": 0.31,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Valid Stairs 13",
+            "description": "valid staircase sample",
+            "root": {
+                "name": "staircase_13",
+                "type": "staircase",
+                "width": 1.70,
+                "num_steps": 18,
+                "riser_height": 0.158,
+                "tread_depth": 0.32,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Valid Stairs 14",
+            "description": "valid staircase sample",
+            "root": {
+                "name": "staircase_14",
+                "type": "staircase",
+                "width": 1.23,
+                "num_steps": 6,
+                "riser_height": 0.170,
+                "tread_depth": 0.30,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Valid Stairs 15",
+            "description": "valid staircase sample",
+            "root": {
+                "name": "staircase_15",
+                "type": "staircase",
+                "width": 1.95,
+                "num_steps": 10,
+                "riser_height": 0.160,
+                "tread_depth": 0.31,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Valid Stairs 16",
+            "description": "valid staircase sample",
+            "root": {
+                "name": "staircase_16",
+                "type": "staircase",
+                "width": 1.30,
+                "num_steps": 11,
+                "riser_height": 0.162,
+                "tread_depth": 0.31,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Valid Stairs 17",
+            "description": "valid staircase sample",
+            "root": {
+                "name": "staircase_17",
+                "type": "staircase",
+                "width": 2.20,
+                "num_steps": 22,
+                "riser_height": 0.155,
+                "tread_depth": 0.32,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Valid Stairs 18",
+            "description": "valid staircase sample",
+            "root": {
+                "name": "staircase_18",
+                "type": "staircase",
+                "width": 1.45,
+                "num_steps": 12,
+                "riser_height": 0.159,
+                "tread_depth": 0.32,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Valid Stairs 19",
+            "description": "valid staircase sample",
+            "root": {
+                "name": "staircase_19",
+                "type": "staircase",
+                "width": 1.24,
                 "num_steps": 10,
                 "riser_height": 0.165,
                 "tread_depth": 0.31,
-                "step_profile": {
-                    "type": "discontinuous",
-                    "nosing_protrusion": 0.02,
-                    "edge_rounded": true,
-                    "substep_angle_deg": 78
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
                 },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Valid Stairs 20",
+            "description": "valid staircase sample",
+            "root": {
+                "name": "staircase_20",
+                "type": "staircase",
+                "width": 1.26,
+                "num_steps": 14,
+                "riser_height": 0.158,
+                "tread_depth": 0.33,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Valid Stairs 21",
+            "description": "valid staircase sample",
+            "root": {
+                "name": "staircase_21",
+                "type": "staircase",
+                "width": 1.34,
+                "num_steps": 17,
+                "riser_height": 0.157,
+                "tread_depth": 0.33,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Valid Stairs 22",
+            "description": "valid staircase sample",
+            "root": {
+                "name": "staircase_22",
+                "type": "staircase",
+                "width": 1.29,
+                "num_steps": 8,
+                "riser_height": 0.161,
+                "tread_depth": 0.31,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Valid Stairs 23",
+            "description": "valid staircase sample",
+            "root": {
+                "name": "staircase_23",
+                "type": "staircase",
+                "width": 2.10,
+                "num_steps": 19,
+                "riser_height": 0.156,
+                "tread_depth": 0.33,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Valid Stairs 24",
+            "description": "valid staircase sample",
+            "root": {
+                "name": "staircase_24",
+                "type": "staircase",
+                "width": 1.48,
+                "num_steps": 12,
+                "riser_height": 0.159,
+                "tread_depth": 0.32,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Valid Stairs 25",
+            "description": "valid staircase sample",
+            "root": {
+                "name": "staircase_25",
+                "type": "staircase",
+                "width": 1.36,
+                "num_steps": 13,
+                "riser_height": 0.164,
+                "tread_depth": 0.31,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Valid Stairs 26",
+            "description": "valid staircase sample",
+            "root": {
+                "name": "staircase_26",
+                "type": "staircase",
+                "width": 1.60,
+                "num_steps": 9,
+                "riser_height": 0.160,
+                "tread_depth": 0.32,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Valid Stairs 27",
+            "description": "valid staircase sample",
+            "root": {
+                "name": "staircase_27",
+                "type": "staircase",
+                "width": 1.33,
+                "num_steps": 7,
+                "riser_height": 0.157,
+                "tread_depth": 0.33,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Valid Stairs 28",
+            "description": "valid staircase sample",
+            "root": {
+                "name": "staircase_28",
+                "type": "staircase",
+                "width": 2.30,
+                "num_steps": 21,
+                "riser_height": 0.158,
+                "tread_depth": 0.32,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Valid Stairs 29",
+            "description": "valid staircase sample",
+            "root": {
+                "name": "staircase_29",
+                "type": "staircase",
+                "width": 1.72,
+                "num_steps": 15,
+                "riser_height": 0.161,
+                "tread_depth": 0.31,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Valid Stairs 30",
+            "description": "valid staircase sample",
+            "root": {
+                "name": "staircase_30",
+                "type": "staircase",
+                "width": 1.90,
+                "num_steps": 20,
+                "riser_height": 0.165,
+                "tread_depth": 0.31,
                 "tactile_strips": {
                     "before_length": 0.30,
                     "after_length": 0.30
@@ -134,15 +843,15 @@
     ],
     "invalid_staircases": [
         {
-            "name": "Invalid Stairs 1 - Too narrow",
-            "description": "Width 1.0 m < 1.20 m minimum",
+            "name": "Invalid Stairs 01",
+            "description": "Invalid: width below 1.20 m",
             "root": {
-                "name": "stairs_invalid_1",
+                "name": "staircase_31",
                 "type": "staircase",
-                "width": 1.0,
+                "width": 1.10,
                 "num_steps": 10,
-                "riser_height": 0.16,
-                "tread_depth": 0.30,
+                "riser_height": 0.160,
+                "tread_depth": 0.32,
                 "tactile_strips": {
                     "before_length": 0.30,
                     "after_length": 0.30
@@ -162,95 +871,42 @@
             }
         },
         {
-            "name": "Invalid Stairs 2 - Blondel too small",
-            "description": "H=0.20, D=0.20 → 2H+D = 0.60 m (below 0.62)",
+            "name": "Invalid Stairs 02",
+            "description": "Invalid: tread below 0.30 m",
             "root": {
-                "name": "stairs_invalid_2",
+                "name": "staircase_32",
                 "type": "staircase",
-                "width": 1.2,
-                "num_steps": 8,
-                "riser_height": 0.20,
-                "tread_depth": 0.20,
-                "tactile_strips": {
-                    "before_length": 0.30,
-                    "after_length": 0.30
-                },
-                "parapet": {
-                    "height": 1.00,
-                    "max_opening_diameter": 0.10
-                },
-                "handrails": [
-                    {
-                        "side": "both",
-                        "height": 0.95,
-                        "extension_length": 0.30,
-                        "offset_from_wall": 0.04
-                    }
-                ]
-            }
-        },
-        {
-            "name": "Invalid Stairs 3 - Blondel too large",
-            "description": "H=0.12, D=0.40 → 2H+D = 0.64 m OK, BUT tactile strips missing (use a different invalid too).",
-            "root": {
-                "name": "stairs_invalid_3",
-                "type": "staircase",
-                "width": 1.2,
-                "num_steps": 12,
-                "riser_height": 0.12,
-                "tread_depth": 0.40,
-                "tactile_strips": null,
-                "parapet": {
-                    "height": 1.00,
-                    "max_opening_diameter": 0.10
-                },
-                "handrails": [
-                    {
-                        "side": "both",
-                        "height": 0.95,
-                        "extension_length": 0.30,
-                        "offset_from_wall": 0.04
-                    }
-                ]
-            }
-        },
-        {
-            "name": "Invalid Stairs 4 - Parapet too low",
-            "description": "Parapet height 0.90 m < 1.00 m",
-            "root": {
-                "name": "stairs_invalid_4",
-                "type": "staircase",
-                "width": 1.4,
-                "num_steps": 10,
-                "riser_height": 0.16,
-                "tread_depth": 0.30,
-                "tactile_strips": {
-                    "before_length": 0.30,
-                    "after_length": 0.30
-                },
-                "parapet": {
-                    "height": 0.90,
-                    "max_opening_diameter": 0.10
-                },
-                "handrails": [
-                    {
-                        "side": "both",
-                        "height": 0.95,
-                        "extension_length": 0.30,
-                        "offset_from_wall": 0.04
-                    }
-                ]
-            }
-        },
-        {
-            "name": "Invalid Stairs 5 - Handrail wrong height",
-            "description": "Handrail at 1.10 m > 1.00 m allowed range",
-            "root": {
-                "name": "stairs_invalid_5",
-                "type": "staircase",
-                "width": 1.3,
+                "width": 1.25,
                 "num_steps": 9,
-                "riser_height": 0.16,
+                "riser_height": 0.160,
+                "tread_depth": 0.28,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Invalid Stairs 03",
+            "description": "Invalid: Blondel sum below 62 cm (too shallow)",
+            "root": {
+                "name": "staircase_33",
+                "type": "staircase",
+                "width": 1.40,
+                "num_steps": 12,
+                "riser_height": 0.140,
                 "tread_depth": 0.30,
                 "tactile_strips": {
                     "before_length": 0.30,
@@ -263,7 +919,7 @@
                 "handrails": [
                     {
                         "side": "both",
-                        "height": 1.10,
+                        "height": 0.95,
                         "extension_length": 0.30,
                         "offset_from_wall": 0.04
                     }
@@ -271,21 +927,743 @@
             }
         },
         {
-            "name": "Invalid Stairs 6 - Nosing out of spec",
-            "description": "Discontinuous nosing protrusion 0.04 m > 0.025 m",
+            "name": "Invalid Stairs 04",
+            "description": "Invalid: Blondel sum above 64 cm (too steep)",
             "root": {
-                "name": "stairs_invalid_6",
+                "name": "staircase_34",
                 "type": "staircase",
-                "width": 1.2,
-                "num_steps": 10,
-                "riser_height": 0.16,
-                "tread_depth": 0.30,
-                "step_profile": {
-                    "type": "discontinuous",
-                    "nosing_protrusion": 0.04,
-                    "edge_rounded": false,
-                    "substep_angle_deg": 70
+                "width": 1.60,
+                "num_steps": 11,
+                "riser_height": 0.180,
+                "tread_depth": 0.32,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
                 },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Invalid Stairs 05",
+            "description": "Invalid: width and tread both too small",
+            "root": {
+                "name": "staircase_35",
+                "type": "staircase",
+                "width": 0.95,
+                "num_steps": 8,
+                "riser_height": 0.160,
+                "tread_depth": 0.28,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Invalid Stairs 06",
+            "description": "Invalid: Blondel just below band (61.5 cm)",
+            "root": {
+                "name": "staircase_36",
+                "type": "staircase",
+                "width": 1.22,
+                "num_steps": 10,
+                "riser_height": 0.160,
+                "tread_depth": 0.295,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Invalid Stairs 07",
+            "description": "Invalid: Blondel just above band (64.5 cm)",
+            "root": {
+                "name": "staircase_37",
+                "type": "staircase",
+                "width": 1.30,
+                "num_steps": 9,
+                "riser_height": 0.167,
+                "tread_depth": 0.34,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Invalid Stairs 08",
+            "description": "Invalid: tread slightly under 0.30 m (0.295) and width under 1.20",
+            "root": {
+                "name": "staircase_38",
+                "type": "staircase",
+                "width": 1.15,
+                "num_steps": 7,
+                "riser_height": 0.160,
+                "tread_depth": 0.295,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Invalid Stairs 09",
+            "description": "Invalid: extreme riser too high (0.19 m)",
+            "root": {
+                "name": "staircase_39",
+                "type": "staircase",
+                "width": 1.50,
+                "num_steps": 12,
+                "riser_height": 0.190,
+                "tread_depth": 0.30,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Invalid Stairs 10",
+            "description": "Invalid: tread far below minimum (0.25 m)",
+            "root": {
+                "name": "staircase_40",
+                "type": "staircase",
+                "width": 1.60,
+                "num_steps": 14,
+                "riser_height": 0.160,
+                "tread_depth": 0.25,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Invalid Stairs 11",
+            "description": "Invalid: width below 1.20 and Blondel above band",
+            "root": {
+                "name": "staircase_41",
+                "type": "staircase",
+                "width": 1.10,
+                "num_steps": 10,
+                "riser_height": 0.175,
+                "tread_depth": 0.34,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Invalid Stairs 12",
+            "description": "Invalid: very shallow Blondel (59 cm)",
+            "root": {
+                "name": "staircase_42",
+                "type": "staircase",
+                "width": 1.30,
+                "num_steps": 8,
+                "riser_height": 0.150,
+                "tread_depth": 0.345,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Invalid Stairs 13",
+            "description": "Invalid: tread 0.29 m (just below min)",
+            "root": {
+                "name": "staircase_43",
+                "type": "staircase",
+                "width": 1.24,
+                "num_steps": 9,
+                "riser_height": 0.160,
+                "tread_depth": 0.29,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Invalid Stairs 14",
+            "description": "Invalid: riser very low (0.13 m) causing Blondel violation",
+            "root": {
+                "name": "staircase_44",
+                "type": "staircase",
+                "width": 1.50,
+                "num_steps": 10,
+                "riser_height": 0.130,
+                "tread_depth": 0.34,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Invalid Stairs 15",
+            "description": "Invalid: width below 1.20 and tread below 0.30",
+            "root": {
+                "name": "staircase_45",
+                "type": "staircase",
+                "width": 1.05,
+                "num_steps": 6,
+                "riser_height": 0.165,
+                "tread_depth": 0.28,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Invalid Stairs 16",
+            "description": "Invalid: Blondel significantly above 64 cm (66 cm)",
+            "root": {
+                "name": "staircase_46",
+                "type": "staircase",
+                "width": 1.30,
+                "num_steps": 11,
+                "riser_height": 0.180,
+                "tread_depth": 0.36,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Invalid Stairs 17",
+            "description": "Invalid: width below 1.20, riser too high",
+            "root": {
+                "name": "staircase_47",
+                "type": "staircase",
+                "width": 1.10,
+                "num_steps": 13,
+                "riser_height": 0.185,
+                "tread_depth": 0.31,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Invalid Stairs 18",
+            "description": "Invalid: tread < 0.30 and Blondel below band",
+            "root": {
+                "name": "staircase_48",
+                "type": "staircase",
+                "width": 1.40,
+                "num_steps": 10,
+                "riser_height": 0.158,
+                "tread_depth": 0.285,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Invalid Stairs 19",
+            "description": "Invalid: riser too low (0.12 m)",
+            "root": {
+                "name": "staircase_49",
+                "type": "staircase",
+                "width": 1.60,
+                "num_steps": 12,
+                "riser_height": 0.120,
+                "tread_depth": 0.36,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Invalid Stairs 20",
+            "description": "Invalid: width below 1.20 and tread 0.29 m",
+            "root": {
+                "name": "staircase_50",
+                "type": "staircase",
+                "width": 1.15,
+                "num_steps": 9,
+                "riser_height": 0.160,
+                "tread_depth": 0.29,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Invalid Stairs 21",
+            "description": "Invalid: Blondel slightly below (61.8 cm)",
+            "root": {
+                "name": "staircase_51",
+                "type": "staircase",
+                "width": 1.28,
+                "num_steps": 10,
+                "riser_height": 0.161,
+                "tread_depth": 0.297,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Invalid Stairs 22",
+            "description": "Invalid: tread well below minimum (0.24 m)",
+            "root": {
+                "name": "staircase_52",
+                "type": "staircase",
+                "width": 1.50,
+                "num_steps": 14,
+                "riser_height": 0.168,
+                "tread_depth": 0.24,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Invalid Stairs 23",
+            "description": "Invalid: riser very high (0.19 m) and tread low (0.29 m)",
+            "root": {
+                "name": "staircase_53",
+                "type": "staircase",
+                "width": 1.35,
+                "num_steps": 10,
+                "riser_height": 0.190,
+                "tread_depth": 0.29,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Invalid Stairs 24",
+            "description": "Invalid: width below 1.20 and riser too low (0.13 m)",
+            "root": {
+                "name": "staircase_54",
+                "type": "staircase",
+                "width": 1.00,
+                "num_steps": 7,
+                "riser_height": 0.130,
+                "tread_depth": 0.34,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Invalid Stairs 25",
+            "description": "Invalid: tread 0.27 m (below min)",
+            "root": {
+                "name": "staircase_55",
+                "type": "staircase",
+                "width": 1.28,
+                "num_steps": 11,
+                "riser_height": 0.160,
+                "tread_depth": 0.27,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Invalid Stairs 26",
+            "description": "Invalid: riser too high (0.18 m) producing Blondel > 64 for given tread",
+            "root": {
+                "name": "staircase_56",
+                "type": "staircase",
+                "width": 1.40,
+                "num_steps": 12,
+                "riser_height": 0.180,
+                "tread_depth": 0.31,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Invalid Stairs 27",
+            "description": "Invalid: width below 1.20 and tread below 0.30",
+            "root": {
+                "name": "staircase_57",
+                "type": "staircase",
+                "width": 1.10,
+                "num_steps": 5,
+                "riser_height": 0.170,
+                "tread_depth": 0.28,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Invalid Stairs 28",
+            "description": "Invalid: Blondel well below band (58 cm)",
+            "root": {
+                "name": "staircase_58",
+                "type": "staircase",
+                "width": 1.25,
+                "num_steps": 6,
+                "riser_height": 0.140,
+                "tread_depth": 0.30,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Invalid Stairs 29",
+            "description": "Invalid: tread 0.26 m and riser 0.175 m (Blondel out)",
+            "root": {
+                "name": "staircase_59",
+                "type": "staircase",
+                "width": 1.50,
+                "num_steps": 10,
+                "riser_height": 0.175,
+                "tread_depth": 0.26,
+                "tactile_strips": {
+                    "before_length": 0.30,
+                    "after_length": 0.30
+                },
+                "parapet": {
+                    "height": 1.00,
+                    "max_opening_diameter": 0.10
+                },
+                "handrails": [
+                    {
+                        "side": "both",
+                        "height": 0.95,
+                        "extension_length": 0.30,
+                        "offset_from_wall": 0.04
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Invalid Stairs 30",
+            "description": "Invalid: width below 1.20, riser 0.19, tread 0.25 (multiple violations)",
+            "root": {
+                "name": "staircase_60",
+                "type": "staircase",
+                "width": 1.10,
+                "num_steps": 4,
+                "riser_height": 0.190,
+                "tread_depth": 0.25,
                 "tactile_strips": {
                     "before_length": 0.30,
                     "after_length": 0.30

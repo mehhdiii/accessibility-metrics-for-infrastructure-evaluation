@@ -4,19 +4,30 @@ from sensor_msgs.msg import PointCloud2
 import open3d as o3d
 import sensor_msgs_py.point_cloud2 as pc2
 import numpy as np
+from rclpy.qos import QoSProfile, ReliabilityPolicy
+
+
+
+
 
 class PCSaver(Node):
     def __init__(self):
         super().__init__('pc_saver')
+        
+        qos_profile = QoSProfile(
+            depth=10,
+            reliability=ReliabilityPolicy.BEST_EFFORT
+        )
         self.sub = self.create_subscription(
             PointCloud2,
-            '/world/default/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/points',
+            '/manuallycomputed/points',
             self.pc_callback,
-            10
+            qos_profile
         )
 
     def pc_callback(self, msg):
         # Read points as a generator and convert to Nx3 float array
+        print('read poincloud')
         points_list = []
         for p in pc2.read_points(msg, field_names=("x","y","z"), skip_nans=True):
             points_list.append([float(p[0]), float(p[1]), float(p[2])])

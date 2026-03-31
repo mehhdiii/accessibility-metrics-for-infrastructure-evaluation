@@ -3,26 +3,27 @@ from launch import LaunchDescription
 from launch.actions import ExecuteProcess
 from launch_ros.actions import Node
 
+from dotenv import load_dotenv
+import os, yaml
+
+# #specify name of the node for reading config
+node_name = "pipeline"
+
+# #load config:
+load_dotenv()
+config_path = os.getenv("ROS_TOPICS_FILE", "/data/ros_ws/src/common_configs/topics.yaml")
+with open(config_path) as f:
+    config = yaml.safe_load(f)
+
+# #fetch relevant node's config
+env_configs = config["env"]
+
+node_configs = config[node_name]
+
+
 def generate_launch_description():
-    return LaunchDescription([
-        # 1. Start TurtleBot world
-        # ExecuteProcess(
-        #     cmd=['ros2', 'launch', 'turtlebot4_ignition_bringup', 'turtlebot4_ignition.launch.py'],
-        #     output='screen'
-        # ),
 
-        # 2. Start ros_gz_bridge for the RGB-D camera
-        ExecuteProcess(
-            cmd=[
-                'ros2', 'run', 'ros_gz_bridge', 'parameter_bridge',
-                '/world/default/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/image@sensor_msgs/msg/Image[ignition.msgs.Image',
-                '/world/default/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/depth_image@sensor_msgs/msg/Image[ignition.msgs.Image',
-                '/world/default/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/points@sensor_msgs/msg/PointCloud2[ignition.msgs.PointCloudPacked',
-                '/world/default/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/camera_info@sensor_msgs/msg/CameraInfo[ignition.msgs.CameraInfo'
-            ],
-            output='screen'
-        ),
-
+    launch_actions = [
         # 3. Start db_reader service
         Node(
             package='db_reader',
@@ -52,4 +53,36 @@ def generate_launch_description():
             cmd=['rviz2'],
             output='screen'
         ),
-    ])
+    ]
+
+    if (env_configs["simulation"]):
+            # 1. Start TurtleBot world
+
+            launch_actions.append(ExecuteProcess(
+                cmd=[
+                'ros2', 'launch',
+                'turtlebot4_ignition_bringup', 'turtlebot4_ignition.launch.py',
+                f'x:={node_configs["robot"]["x"]}',
+                f'y:={node_configs["robot"]["y"]}',
+                f'z:={node_configs["robot"]["z"]}',
+                f'yaw:={node_configs["robot"]["yaw"]}',
+            ],
+                output='screen'
+            ))
+
+            # 2. Start ros_gz_bridge for the RGB-D camera
+            launch_actions.append(
+                ExecuteProcess(
+                    cmd=[
+                        'ros2', 'run', 'ros_gz_bridge', 'parameter_bridge',
+                        f'{node_configs["topics"]["image"]}@{node_configs["topics"]["gz_image"]}',
+                        f'{node_configs["topics"]["depth_image"]}@{node_configs["topics"]["gz_depth_image"]}',
+                        f'{node_configs["topics"]["pointcloud"]}@{node_configs["topics"]["gz_pointcloud"]}',
+                        f'{node_configs["topics"]["image_info"]}@{node_configs["topics"]["gz_image_info"]}'
+                    ],
+                    output='screen'
+                )
+            )
+
+
+    return LaunchDescription(launch_actions)

@@ -13,7 +13,7 @@ def run_binary():
         return jsonify({"success": False, "error": "Missing or invalid 'id' (must be integer)"}), 400
 
     print(f"Received request with id={pointcloud_id}", flush=True)
-    props = ["/data/point-cloud-infra/StairwayDetection/build/stair_det", str(pointcloud_id), "/data/point-cloud-infra/StairwayDetection/point-clouds/output.pcd", "mysql", "3306", "stairuser", "stairpass", "stairs_db"]
+    props = ["/data/point-cloud-infra/StairwayDetection/build/stair_det", str(pointcloud_id), "/data/point-cloud-infra/StairwayDetection/point-clouds/output.pcd", "127.0.0.1", "3306", "stairuser", "stairpass", "stairs_db"]
 
     if (enable_viewer):
 
@@ -34,4 +34,4 @@ def run_binary():
     })
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=80)
+    app.run(host='0.0.0.0', port=8001)
